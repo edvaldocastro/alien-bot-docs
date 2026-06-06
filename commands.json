@@ -1,0 +1,3888 @@
+{
+  "title": "Comandos do Bot",
+  "generatedNotice": "Arquivo gerado automaticamente a partir da metadata real dos comandos.",
+  "updateCommand": "npm run generate:commands-docs",
+  "readingTips": [
+    "Prefixo dos exemplos: `/`.",
+    "O bot respeita o prefixo configurado no grupo em runtime.",
+    "Os comandos estao organizados por hierarquia de acesso e, dentro dela, por categoria.",
+    "A documentacao publica mostra apenas comandos e imagens liberados para consulta geral."
+  ],
+  "hierarchy": [
+    "`member`: qualquer usuario",
+    "`moderator`: moderador interno do bot, admin do grupo ou dono",
+    "`group_admin`: administrador do grupo ou dono",
+    "`owner`: dono do bot"
+  ],
+  "sections": [
+    {
+      "key": "member",
+      "title": "Membro",
+      "description": "Qualquer usuario pode executar estes comandos.",
+      "categories": [
+        {
+          "key": "utilities",
+          "title": "Utilitarios",
+          "commands": [
+            {
+              "name": "/botprofile",
+              "rawName": "botprofile",
+              "aliases": [
+                "/perfilbot",
+                "/sobremim"
+              ],
+              "examples": [
+                "/botprofile",
+                "/perfilbot",
+                "/sobremim"
+              ],
+              "tips": [
+                "Bom para conferir rapidamente como o bot esta se apresentando para o grupo."
+              ],
+              "usage": "/botprofile | /perfilbot",
+              "description": "Mostrar um resumo do perfil e da apresentacao do bot",
+              "outputExample": "Envia um card com a identidade visual atual do bot, nome, status e tema.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "any",
+              "requiredChatTypeLabel": "grupo ou privado",
+              "hidden": false,
+              "category": "utilities",
+              "categoryTitle": "Utilitarios"
+            },
+            {
+              "name": "/help",
+              "rawName": "help",
+              "aliases": [
+                "/ajuda"
+              ],
+              "examples": [
+                "/help",
+                "/ajuda banir",
+                "/help antilink"
+              ],
+              "tips": [
+                "Voce pode pedir ajuda usando o nome principal ou qualquer atalho do comando."
+              ],
+              "usage": "/help [comando] | /ajuda [comando]",
+              "description": "Mostrar os comandos disponiveis do bot",
+              "outputExample": "Exibe uma lista organizada de comandos disponiveis ou a ajuda detalhada de um comando especifico.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "any",
+              "requiredChatTypeLabel": "grupo ou privado",
+              "hidden": false,
+              "category": "utilities",
+              "categoryTitle": "Utilitarios"
+            },
+            {
+              "name": "/infogrupo",
+              "rawName": "infogrupo",
+              "aliases": [
+                "/grupo",
+                "/groupinfo",
+                "/infogroup"
+              ],
+              "examples": [
+                "/infogrupo",
+                "/grupo",
+                "/groupinfo"
+              ],
+              "tips": [
+                "Qualquer membro pode consultar dados basicos, admins e bloqueios visiveis."
+              ],
+              "usage": "/infogrupo | /grupo | /groupinfo",
+              "description": "Mostrar informacoes completas do grupo",
+              "outputExample": "Envia um resumo do grupo com participantes, admins, regras e configuracoes ativas.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "utilities",
+              "categoryTitle": "Utilitarios"
+            },
+            {
+              "name": "/menu",
+              "rawName": "menu",
+              "aliases": [
+                "/cardapio"
+              ],
+              "examples": [
+                "/menu",
+                "/cardapio"
+              ],
+              "tips": [
+                "Os menus usam PT-BR na exibicao e mantem aliases em ingles para consulta rapida."
+              ],
+              "usage": "/menu | /cardapio",
+              "description": "Mostrar o menu para usuarios comuns",
+              "outputExample": "Envia o menu principal do bot com uma imagem do tema atual e os atalhos principais.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "any",
+              "requiredChatTypeLabel": "grupo ou privado",
+              "hidden": false,
+              "category": "utilities",
+              "categoryTitle": "Utilitarios"
+            },
+            {
+              "name": "/menumembro",
+              "rawName": "menumembro",
+              "aliases": [
+                "/membermenu"
+              ],
+              "examples": [
+                "/menumembro",
+                "/membermenu"
+              ],
+              "tips": [
+                "Os menus usam PT-BR na exibicao e mantem aliases em ingles para consulta rapida."
+              ],
+              "usage": "/menumembro | /membermenu",
+              "description": "Mostrar o menu para membros comuns",
+              "outputExample": "Mostra o menu para membros comuns, com comandos de utilidade, midia e brincadeiras.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "any",
+              "requiredChatTypeLabel": "grupo ou privado",
+              "hidden": false,
+              "category": "utilities",
+              "categoryTitle": "Utilitarios"
+            },
+            {
+              "name": "/ping",
+              "rawName": "ping",
+              "aliases": [
+                "/teste"
+              ],
+              "examples": [
+                "/ping",
+                "/teste"
+              ],
+              "tips": [
+                "Bom para confirmar rapido se o bot esta respondendo no grupo ou no privado."
+              ],
+              "usage": "/ping | /teste",
+              "description": "Verificar se o bot esta online",
+              "outputExample": "Pong! O bot responde confirmando que esta online.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "any",
+              "requiredChatTypeLabel": "grupo ou privado",
+              "hidden": false,
+              "category": "utilities",
+              "categoryTitle": "Utilitarios"
+            },
+            {
+              "name": "/rules",
+              "rawName": "rules",
+              "aliases": [
+                "/regras"
+              ],
+              "examples": [
+                "/rules",
+                "/regras"
+              ],
+              "tips": [
+                "Use depois de atualizar as regras para lembrar o grupo do texto atual."
+              ],
+              "usage": "/rules | /regras",
+              "description": "Mostrar as regras atuais do grupo",
+              "outputExample": "Mostra as regras atuais do grupo.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "utilities",
+              "categoryTitle": "Utilitarios"
+            },
+            {
+              "name": "/status",
+              "rawName": "status",
+              "aliases": [
+                "/statusgrupo",
+                "/statusgeral",
+                "/groupstatus"
+              ],
+              "examples": [
+                "/status",
+                "/statusgrupo",
+                "/groupstatus"
+              ],
+              "tips": [
+                "Mostra as protecoes do grupo atual e os controles globais do dono.",
+                "Use os comandos do menuadm e menudono para ligar ou desligar cada recurso."
+              ],
+              "usage": "/status | /statusgrupo | /groupstatus",
+              "description": "Mostrar o status das protecoes e configuracoes do grupo",
+              "outputExample": "Mostra o status geral do grupo e das protecoes ativas.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "utilities",
+              "categoryTitle": "Utilitarios"
+            }
+          ]
+        },
+        {
+          "key": "media",
+          "title": "Midia",
+          "commands": [
+            {
+              "name": "/gif",
+              "rawName": "gif",
+              "aliases": [
+                "/togif",
+                "/gifvideo"
+              ],
+              "examples": [
+                "/gif respondendo a uma figurinha animada",
+                "/gif em um video curto"
+              ],
+              "tips": [
+                "Use em video curto ou figurinha animada.",
+                "Imagens estaticas nao sao aceitas nesse comando."
+              ],
+              "usage": "/gif",
+              "description": "Transformar sticker animada ou video curto em midia animada",
+              "outputExample": "Envia a midia convertida em GIF ou video animado.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "any",
+              "requiredChatTypeLabel": "grupo ou privado",
+              "hidden": false,
+              "category": "media",
+              "categoryTitle": "Midia"
+            },
+            {
+              "name": "/menumidia",
+              "rawName": "menumidia",
+              "aliases": [
+                "/mediamenu",
+                "/midia"
+              ],
+              "examples": [
+                "/menumidia",
+                "/midia"
+              ],
+              "tips": [
+                "Use esses comandos respondendo a uma midia ou na legenda da midia."
+              ],
+              "usage": "/menumidia | /midia",
+              "description": "Mostrar apenas os comandos de midia",
+              "outputExample": "Exibe comandos de midia como figurinha, conversao de sticker e GIF.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "any",
+              "requiredChatTypeLabel": "grupo ou privado",
+              "hidden": false,
+              "category": "media",
+              "categoryTitle": "Midia"
+            },
+            {
+              "name": "/sticker",
+              "rawName": "sticker",
+              "aliases": [
+                "/s",
+                "/figurinha",
+                "/f"
+              ],
+              "examples": [
+                "/sticker",
+                "/s",
+                "/figurinha respondendo a uma imagem"
+              ],
+              "tips": [
+                "Envie o comando na legenda da imagem ou responda a uma imagem/video curto.",
+                "Videos longos sao recusados para manter a conversao rapida."
+              ],
+              "usage": "/sticker | /s | /figurinha | /f",
+              "description": "Transformar imagem ou video curto em sticker",
+              "outputExample": "Envia uma figurinha criada a partir da imagem, video curto ou midia respondida.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "any",
+              "requiredChatTypeLabel": "grupo ou privado",
+              "hidden": false,
+              "category": "media",
+              "categoryTitle": "Midia"
+            },
+            {
+              "name": "/toimg",
+              "rawName": "toimg",
+              "aliases": [
+                "/toimage",
+                "/stickertoimg"
+              ],
+              "examples": [
+                "/toimg respondendo a uma figurinha"
+              ],
+              "tips": [
+                "Esse comando aceita apenas figurinha estatica."
+              ],
+              "usage": "/toimg",
+              "description": "Transformar sticker estatica em imagem",
+              "outputExample": "Converte uma figurinha estatica em imagem.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "any",
+              "requiredChatTypeLabel": "grupo ou privado",
+              "hidden": false,
+              "category": "media",
+              "categoryTitle": "Midia"
+            }
+          ]
+        },
+        {
+          "key": "entertainment",
+          "title": "Entretenimento",
+          "commands": [
+            {
+              "name": "/8ball",
+              "rawName": "8ball",
+              "aliases": [
+                "/bolamagica",
+                "/bola8",
+                "/oraculo"
+              ],
+              "examples": [
+                "/8ball vou ganhar hoje?"
+              ],
+              "tips": [
+                "Funciona quando o modo brincadeira esta ativado no grupo."
+              ],
+              "usage": "/8ball <pergunta> | /bolamagica <pergunta>",
+              "description": "Responder uma pergunta como bola magica",
+              "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "entertainment",
+              "categoryTitle": "Entretenimento"
+            },
+            {
+              "name": "/adivinhar",
+              "rawName": "adivinhar",
+              "aliases": [
+                "/guess",
+                "/numero",
+                "/chutar"
+              ],
+              "examples": [
+                "/adivinhar 7",
+                "/guess 3"
+              ],
+              "tips": [
+                "Funciona quando o modo brincadeira esta ativado no grupo."
+              ],
+              "usage": "/adivinhar <1-10> | /guess <1-10>",
+              "description": "Tentar adivinhar um numero de 1 a 10",
+              "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "entertainment",
+              "categoryTitle": "Entretenimento"
+            },
+            {
+              "name": "/casal",
+              "rawName": "casal",
+              "aliases": [
+                "/parromantico",
+                "/amoreterno"
+              ],
+              "examples": [
+                "/casal"
+              ],
+              "tips": [
+                "Funciona quando o modo brincadeira esta ativado no grupo."
+              ],
+              "usage": "/casal",
+              "description": "Sortear um casal aleatorio com imagem romantica",
+              "outputExample": "Envia uma imagem romantica sorteando duas pessoas do grupo.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "entertainment",
+              "categoryTitle": "Entretenimento"
+            },
+            {
+              "name": "/chance",
+              "rawName": "chance",
+              "aliases": [
+                "/probabilidade",
+                "/odds",
+                "/possibilidade"
+              ],
+              "examples": [
+                "/chance de chover hoje?",
+                "/probabilidade do grupo ganhar na loteria?"
+              ],
+              "tips": [
+                "Funciona quando o modo brincadeira esta ativado no grupo.",
+                "E uma brincadeira: o resultado e aleatorio, nao uma previsao real."
+              ],
+              "usage": "/chance <pergunta> | /probabilidade <pergunta>",
+              "description": "Calcular uma chance aleatoria para uma pergunta do grupo",
+              "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "entertainment",
+              "categoryTitle": "Entretenimento"
+            },
+            {
+              "name": "/dado",
+              "rawName": "dado",
+              "aliases": [
+                "/dice",
+                "/roll",
+                "/rolar"
+              ],
+              "examples": [
+                "/dado",
+                "/dado d20",
+                "/roll 12"
+              ],
+              "tips": [
+                "Funciona quando o modo brincadeira esta ativado no grupo."
+              ],
+              "usage": "/dado [d6|d20|numero]",
+              "description": "Rolar um dado comum ou personalizado",
+              "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "entertainment",
+              "categoryTitle": "Entretenimento"
+            },
+            {
+              "name": "/desafio",
+              "rawName": "desafio",
+              "aliases": [
+                "/dare"
+              ],
+              "examples": [
+                "/desafio"
+              ],
+              "tips": [
+                "Funciona quando o modo brincadeira esta ativado no grupo."
+              ],
+              "usage": "/desafio | /dare",
+              "description": "Sortear um desafio leve para o grupo",
+              "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "entertainment",
+              "categoryTitle": "Entretenimento"
+            },
+            {
+              "name": "/frase",
+              "rawName": "frase",
+              "aliases": [
+                "/quote",
+                "/mensagem"
+              ],
+              "examples": [
+                "/frase"
+              ],
+              "tips": [
+                "Funciona quando o modo brincadeira esta ativado no grupo."
+              ],
+              "usage": "/frase | /quote",
+              "description": "Enviar uma frase aleatoria",
+              "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "entertainment",
+              "categoryTitle": "Entretenimento"
+            },
+            {
+              "name": "/jokenpo",
+              "rawName": "jokenpo",
+              "aliases": [
+                "/ppt",
+                "/pedrapapeltesoura",
+                "/rps"
+              ],
+              "examples": [
+                "/jokenpo pedra",
+                "/ppt tesoura"
+              ],
+              "tips": [
+                "Funciona quando o modo brincadeira esta ativado no grupo."
+              ],
+              "usage": "/jokenpo <pedra|papel|tesoura>",
+              "description": "Jogar pedra, papel e tesoura com o bot",
+              "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "entertainment",
+              "categoryTitle": "Entretenimento"
+            },
+            {
+              "name": "/menubrincadeira",
+              "rawName": "menubrincadeira",
+              "aliases": [
+                "/menufun",
+                "/menujogos",
+                "/brincadeiras",
+                "/funmenu"
+              ],
+              "examples": [
+                "/menubrincadeira",
+                "/brincadeiras"
+              ],
+              "tips": [
+                "Admins ativam ou desativam esses comandos com modobrincadeira."
+              ],
+              "usage": "/menubrincadeira | /brincadeiras",
+              "description": "Mostrar apenas os comandos de entretenimento",
+              "outputExample": "Mostra comandos de jogos e brincadeiras disponiveis para o grupo.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "entertainment",
+              "categoryTitle": "Entretenimento"
+            },
+            {
+              "name": "/moeda",
+              "rawName": "moeda",
+              "aliases": [
+                "/coin",
+                "/coinflip",
+                "/caraoucoroa"
+              ],
+              "examples": [
+                "/moeda"
+              ],
+              "tips": [
+                "Funciona quando o modo brincadeira esta ativado no grupo."
+              ],
+              "usage": "/moeda | /caraoucoroa",
+              "description": "Jogar cara ou coroa",
+              "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "entertainment",
+              "categoryTitle": "Entretenimento"
+            },
+            {
+              "name": "/perfil",
+              "rawName": "perfil",
+              "aliases": [
+                "/profilefun",
+                "/meuperfil"
+              ],
+              "examples": [
+                "/perfil",
+                "/perfil @usuario",
+                "/meuperfil"
+              ],
+              "tips": [
+                "Funciona quando o modo brincadeira esta ativado no grupo.",
+                "Voce pode usar mencao ou responder a mensagem da pessoa."
+              ],
+              "usage": "/perfil [@pessoa] | /perfil respondendo uma mensagem | /meuperfil",
+              "description": "Gerar um card divertido com foto e bio de alguem do grupo",
+              "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "entertainment",
+              "categoryTitle": "Entretenimento"
+            },
+            {
+              "name": "/piada",
+              "rawName": "piada",
+              "aliases": [
+                "/joke"
+              ],
+              "examples": [
+                "/piada"
+              ],
+              "tips": [
+                "Funciona quando o modo brincadeira esta ativado no grupo."
+              ],
+              "usage": "/piada | /joke",
+              "description": "Enviar uma piada leve",
+              "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "entertainment",
+              "categoryTitle": "Entretenimento"
+            },
+            {
+              "name": "/play",
+              "rawName": "play",
+              "aliases": [
+                "/tocar"
+              ],
+              "examples": [
+                "/play Legiao Urbana Faroeste Caboclo",
+                "/tocar Djavan Oceano"
+              ],
+              "tips": [
+                "O bot baixa apenas um audio por vez em cada chat.",
+                "Playlists inteiras e arquivos grandes demais sao recusados.",
+                "Esse recurso depende de yt-dlp e ffmpeg no ambiente do bot."
+              ],
+              "usage": "/play <musica> | /tocar <musica>",
+              "description": "Buscar uma musica e enviar o audio",
+              "outputExample": "Envia o audio encontrado para a busca informada.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "any",
+              "requiredChatTypeLabel": "grupo ou privado",
+              "hidden": false,
+              "category": "entertainment",
+              "categoryTitle": "Entretenimento"
+            },
+            {
+              "name": "/quiz",
+              "rawName": "quiz",
+              "aliases": [
+                "/pergunta",
+                "/trivia"
+              ],
+              "examples": [
+                "/quiz"
+              ],
+              "tips": [
+                "Funciona quando o modo brincadeira esta ativado no grupo."
+              ],
+              "usage": "/quiz | /trivia",
+              "description": "Sortear uma pergunta de quiz com resposta",
+              "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "entertainment",
+              "categoryTitle": "Entretenimento"
+            },
+            {
+              "name": "/rankapaixonado",
+              "rawName": "rankapaixonado",
+              "aliases": [],
+              "examples": [
+                "/rankapaixonado"
+              ],
+              "tips": [
+                "Funciona apenas em grupos com o modo brincadeira ativado.",
+                "O ranking muda a cada execucao e menciona os participantes sorteados."
+              ],
+              "usage": "/rankapaixonado",
+              "description": "Sortear o rank dos emocionados do grupo",
+              "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "entertainment",
+              "categoryTitle": "Entretenimento"
+            },
+            {
+              "name": "/rankbebado",
+              "rawName": "rankbebado",
+              "aliases": [],
+              "examples": [
+                "/rankbebado"
+              ],
+              "tips": [
+                "Funciona apenas em grupos com o modo brincadeira ativado.",
+                "O ranking muda a cada execucao e menciona os participantes sorteados."
+              ],
+              "usage": "/rankbebado",
+              "description": "Sortear o rank dos bebuns do grupo",
+              "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "entertainment",
+              "categoryTitle": "Entretenimento"
+            },
+            {
+              "name": "/rankcaloteiro",
+              "rawName": "rankcaloteiro",
+              "aliases": [],
+              "examples": [
+                "/rankcaloteiro"
+              ],
+              "tips": [
+                "Funciona apenas em grupos com o modo brincadeira ativado.",
+                "O ranking muda a cada execucao e menciona os participantes sorteados."
+              ],
+              "usage": "/rankcaloteiro",
+              "description": "Sortear o rank dos caloteiros do grupo",
+              "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "entertainment",
+              "categoryTitle": "Entretenimento"
+            },
+            {
+              "name": "/rankchurrasqueiro",
+              "rawName": "rankchurrasqueiro",
+              "aliases": [],
+              "examples": [
+                "/rankchurrasqueiro"
+              ],
+              "tips": [
+                "Funciona apenas em grupos com o modo brincadeira ativado.",
+                "O ranking muda a cada execucao e menciona os participantes sorteados."
+              ],
+              "usage": "/rankchurrasqueiro",
+              "description": "Sortear o rank dos churrasqueiros do grupo",
+              "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "entertainment",
+              "categoryTitle": "Entretenimento"
+            },
+            {
+              "name": "/rankcorno",
+              "rawName": "rankcorno",
+              "aliases": [],
+              "examples": [
+                "/rankcorno"
+              ],
+              "tips": [
+                "Funciona apenas em grupos com o modo brincadeira ativado.",
+                "O ranking muda a cada execucao e menciona os participantes sorteados."
+              ],
+              "usage": "/rankcorno",
+              "description": "Sortear o rank dos cornos do grupo",
+              "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "entertainment",
+              "categoryTitle": "Entretenimento"
+            },
+            {
+              "name": "/rankdevendo",
+              "rawName": "rankdevendo",
+              "aliases": [],
+              "examples": [
+                "/rankdevendo"
+              ],
+              "tips": [
+                "Funciona apenas em grupos com o modo brincadeira ativado.",
+                "O ranking muda a cada execucao e menciona os participantes sorteados."
+              ],
+              "usage": "/rankdevendo",
+              "description": "Sortear o rank de quem esta devendo pix",
+              "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "entertainment",
+              "categoryTitle": "Entretenimento"
+            },
+            {
+              "name": "/rankfofoqueiro",
+              "rawName": "rankfofoqueiro",
+              "aliases": [],
+              "examples": [
+                "/rankfofoqueiro"
+              ],
+              "tips": [
+                "Funciona apenas em grupos com o modo brincadeira ativado.",
+                "O ranking muda a cada execucao e menciona os participantes sorteados."
+              ],
+              "usage": "/rankfofoqueiro",
+              "description": "Sortear o rank dos fofoqueiros do grupo",
+              "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "entertainment",
+              "categoryTitle": "Entretenimento"
+            },
+            {
+              "name": "/rankfurao",
+              "rawName": "rankfurao",
+              "aliases": [],
+              "examples": [
+                "/rankfurao"
+              ],
+              "tips": [
+                "Funciona apenas em grupos com o modo brincadeira ativado.",
+                "O ranking muda a cada execucao e menciona os participantes sorteados."
+              ],
+              "usage": "/rankfurao",
+              "description": "Sortear o rank dos furoes do role",
+              "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "entertainment",
+              "categoryTitle": "Entretenimento"
+            },
+            {
+              "name": "/rankgay",
+              "rawName": "rankgay",
+              "aliases": [],
+              "examples": [
+                "/rankgay"
+              ],
+              "tips": [
+                "Funciona apenas em grupos com o modo brincadeira ativado.",
+                "O ranking muda a cada execucao e menciona os participantes sorteados."
+              ],
+              "usage": "/rankgay",
+              "description": "Sortear o rank mais colorido do grupo",
+              "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "entertainment",
+              "categoryTitle": "Entretenimento"
+            },
+            {
+              "name": "/rankhelp",
+              "rawName": "rankhelp",
+              "aliases": [
+                "/rank"
+              ],
+              "examples": [
+                "/rank",
+                "/rankhelp"
+              ],
+              "tips": [
+                "Os ranks funcionam apenas em grupos com o modo brincadeira ativado."
+              ],
+              "usage": "/rank | /rankhelp",
+              "description": "Listar os ranks aleatorios disponiveis",
+              "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "entertainment",
+              "categoryTitle": "Entretenimento"
+            },
+            {
+              "name": "/rankpegador",
+              "rawName": "rankpegador",
+              "aliases": [],
+              "examples": [
+                "/rankpegador"
+              ],
+              "tips": [
+                "Funciona apenas em grupos com o modo brincadeira ativado.",
+                "O ranking muda a cada execucao e menciona os participantes sorteados."
+              ],
+              "usage": "/rankpegador",
+              "description": "Sortear o rank dos pegadores do grupo",
+              "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "entertainment",
+              "categoryTitle": "Entretenimento"
+            },
+            {
+              "name": "/rankpobre",
+              "rawName": "rankpobre",
+              "aliases": [],
+              "examples": [
+                "/rankpobre"
+              ],
+              "tips": [
+                "Funciona apenas em grupos com o modo brincadeira ativado.",
+                "O ranking muda a cada execucao e menciona os participantes sorteados."
+              ],
+              "usage": "/rankpobre",
+              "description": "Sortear o rank dos lisos do grupo",
+              "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "entertainment",
+              "categoryTitle": "Entretenimento"
+            },
+            {
+              "name": "/rankpreguicoso",
+              "rawName": "rankpreguicoso",
+              "aliases": [],
+              "examples": [
+                "/rankpreguicoso"
+              ],
+              "tips": [
+                "Funciona apenas em grupos com o modo brincadeira ativado.",
+                "O ranking muda a cada execucao e menciona os participantes sorteados."
+              ],
+              "usage": "/rankpreguicoso",
+              "description": "Sortear o rank dos preguicosos do grupo",
+              "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "entertainment",
+              "categoryTitle": "Entretenimento"
+            },
+            {
+              "name": "/rankputa",
+              "rawName": "rankputa",
+              "aliases": [],
+              "examples": [
+                "/rankputa"
+              ],
+              "tips": [
+                "Funciona apenas em grupos com o modo brincadeira ativado.",
+                "O ranking muda a cada execucao e menciona os participantes sorteados."
+              ],
+              "usage": "/rankputa",
+              "description": "Sortear o rank mais safado do grupo",
+              "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "entertainment",
+              "categoryTitle": "Entretenimento"
+            },
+            {
+              "name": "/rankrico",
+              "rawName": "rankrico",
+              "aliases": [],
+              "examples": [
+                "/rankrico"
+              ],
+              "tips": [
+                "Funciona apenas em grupos com o modo brincadeira ativado.",
+                "O ranking muda a cada execucao e menciona os participantes sorteados."
+              ],
+              "usage": "/rankrico",
+              "description": "Sortear o rank dos milionarios do grupo",
+              "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "entertainment",
+              "categoryTitle": "Entretenimento"
+            },
+            {
+              "name": "/ranksumido",
+              "rawName": "ranksumido",
+              "aliases": [],
+              "examples": [
+                "/ranksumido"
+              ],
+              "tips": [
+                "Funciona apenas em grupos com o modo brincadeira ativado.",
+                "O ranking muda a cada execucao e menciona os participantes sorteados."
+              ],
+              "usage": "/ranksumido",
+              "description": "Sortear o rank dos sumidos do grupo",
+              "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "entertainment",
+              "categoryTitle": "Entretenimento"
+            },
+            {
+              "name": "/roleta",
+              "rawName": "roleta",
+              "aliases": [
+                "/roulette",
+                "/sortear",
+                "/escolher"
+              ],
+              "examples": [
+                "/roleta pizza sushi hamburguer"
+              ],
+              "tips": [
+                "Funciona quando o modo brincadeira esta ativado no grupo."
+              ],
+              "usage": "/roleta opcao1 opcao2 opcao3",
+              "description": "Sortear uma opcao de uma lista",
+              "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "entertainment",
+              "categoryTitle": "Entretenimento"
+            },
+            {
+              "name": "/ship",
+              "rawName": "ship",
+              "aliases": [
+                "/shippar",
+                "/compatibilidade"
+              ],
+              "examples": [
+                "/ship @ana @bia",
+                "/ship Lua + Sol"
+              ],
+              "tips": [
+                "Funciona quando o modo brincadeira esta ativado no grupo."
+              ],
+              "usage": "/ship @pessoa1 @pessoa2 | /ship Lua + Sol",
+              "description": "Medir a compatibilidade divertida entre duas pessoas",
+              "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "entertainment",
+              "categoryTitle": "Entretenimento"
+            },
+            {
+              "name": "/slot",
+              "rawName": "slot",
+              "aliases": [
+                "/cassino",
+                "/slots",
+                "/caca-niquel"
+              ],
+              "examples": [
+                "/slot"
+              ],
+              "tips": [
+                "Funciona quando o modo brincadeira esta ativado no grupo."
+              ],
+              "usage": "/slot | /cassino",
+              "description": "Girar um caca-niquel simples",
+              "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "entertainment",
+              "categoryTitle": "Entretenimento"
+            },
+            {
+              "name": "/top5",
+              "rawName": "top5",
+              "aliases": [
+                "/ranking",
+                "/top",
+                "/topcinco"
+              ],
+              "examples": [
+                "/top5 mais sumidos",
+                "/ranking reis do grupo"
+              ],
+              "tips": [
+                "Funciona quando o modo brincadeira esta ativado no grupo."
+              ],
+              "usage": "/top5 <tema> | /ranking <tema>",
+              "description": "Sortear um top 5 divertido com membros do grupo",
+              "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "entertainment",
+              "categoryTitle": "Entretenimento"
+            },
+            {
+              "name": "/verdade",
+              "rawName": "verdade",
+              "aliases": [
+                "/truth"
+              ],
+              "examples": [
+                "/verdade"
+              ],
+              "tips": [
+                "Funciona quando o modo brincadeira esta ativado no grupo."
+              ],
+              "usage": "/verdade | /truth",
+              "description": "Sortear uma pergunta leve de verdade",
+              "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
+              "requiredRole": "member",
+              "requiredRoleLabel": "Membro",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "entertainment",
+              "categoryTitle": "Entretenimento"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "group_admin",
+      "title": "Administrador do Grupo",
+      "description": "Somente administradores do grupo e o dono do bot.",
+      "categories": [
+        {
+          "key": "utilities",
+          "title": "Utilitarios",
+          "commands": [
+            {
+              "name": "/menuadm",
+              "rawName": "menuadm",
+              "aliases": [
+                "/adminmenu"
+              ],
+              "examples": [
+                "/menuadm",
+                "/adminmenu"
+              ],
+              "tips": [
+                "Os menus usam PT-BR na exibicao e mantem aliases em ingles para consulta rapida."
+              ],
+              "usage": "/menuadm | /adminmenu",
+              "description": "Mostrar o menu de administracao do grupo",
+              "outputExample": "Envia o menu administrativo com controles de moderacao, configuracao e gestao do grupo.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "any",
+              "requiredChatTypeLabel": "grupo ou privado",
+              "hidden": false,
+              "category": "utilities",
+              "categoryTitle": "Utilitarios"
+            }
+          ]
+        },
+        {
+          "key": "moderation",
+          "title": "Moderacao",
+          "commands": [
+            {
+              "name": "/abrirgrupo",
+              "rawName": "abrirgrupo",
+              "aliases": [
+                "/opengroup",
+                "/abrigrupo"
+              ],
+              "examples": [
+                "/abrirgrupo",
+                "/abrirgrupo 05:00",
+                "/abrirgrupo 05:00 America/Sao_Paulo",
+                "/abrirgrupo off"
+              ],
+              "tips": [
+                "Use !fechargrupo para configurar a acao oposta.",
+                "Sem horario, a acao acontece imediatamente."
+              ],
+              "usage": "/abrirgrupo [HH:mm] [timezone] | /abrirgrupo off",
+              "description": "Abrir grupo imediatamente ou agendar a acao diaria do grupo.",
+              "outputExample": "Confirma a acao de moderacao e registra auditoria interna.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "moderation",
+              "categoryTitle": "Moderacao"
+            },
+            {
+              "name": "/ban",
+              "rawName": "ban",
+              "aliases": [
+                "/banir",
+                "/abduzir"
+              ],
+              "examples": [
+                "/ban @usuario Golpe, spam e desrespeito as regras",
+                "/banir @usuario Tentativa de fraude",
+                "/abduzir @usuario Sumiu com as regras da nave"
+              ],
+              "tips": [
+                "Voce pode mencionar, responder uma mensagem ou informar um numero."
+              ],
+              "usage": "/ban @usuario [motivo] | /banir @usuario [motivo] | /abduzir @usuario [motivo]",
+              "description": "Banir um membro: remove do grupo e adiciona a lista negra do grupo.",
+              "outputExample": "Confirma a acao de moderacao e registra auditoria interna.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "moderation",
+              "categoryTitle": "Moderacao"
+            },
+            {
+              "name": "/clearwarnings",
+              "rawName": "clearwarnings",
+              "aliases": [
+                "/clearwarns",
+                "/limparavisos",
+                "/limparadvertencias"
+              ],
+              "examples": [
+                "/clearwarnings @usuario",
+                "/limparavisos @usuario"
+              ],
+              "tips": [
+                "Use apos um reset de conduta ou quando a moderacao decidir zerar o historico."
+              ],
+              "usage": "/clearwarnings @usuario | /limparavisos @usuario",
+              "description": "Limpar todos os avisos ativos de um membro",
+              "outputExample": "Confirma a acao de moderacao e registra auditoria interna.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "moderation",
+              "categoryTitle": "Moderacao"
+            },
+            {
+              "name": "/fechargrupo",
+              "rawName": "fechargrupo",
+              "aliases": [
+                "/closegroup",
+                "/fechar"
+              ],
+              "examples": [
+                "/fechargrupo",
+                "/fechargrupo 05:00",
+                "/fechargrupo 05:00 America/Sao_Paulo",
+                "/fechargrupo off"
+              ],
+              "tips": [
+                "Use !abrirgrupo para configurar a acao oposta.",
+                "Sem horario, a acao acontece imediatamente."
+              ],
+              "usage": "/fechargrupo [HH:mm] [timezone] | /fechargrupo off",
+              "description": "Fechar grupo imediatamente ou agendar a acao diaria do grupo.",
+              "outputExample": "Confirma a acao de moderacao e registra auditoria interna.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "moderation",
+              "categoryTitle": "Moderacao"
+            },
+            {
+              "name": "/fuso",
+              "rawName": "fuso",
+              "aliases": [
+                "/timezone",
+                "/tz"
+              ],
+              "examples": [
+                "/fuso",
+                "/fuso America/Sao_Paulo"
+              ],
+              "tips": [
+                "O timezone padrao e America/Sao_Paulo."
+              ],
+              "usage": "/fuso [timezone]",
+              "description": "Mostrar ou definir o timezone usado pelos agendamentos do grupo.",
+              "outputExample": "Confirma a acao de moderacao e registra auditoria interna.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "moderation",
+              "categoryTitle": "Moderacao"
+            },
+            {
+              "name": "/kick",
+              "rawName": "kick",
+              "aliases": [
+                "/remove",
+                "/remover",
+                "/expulsar"
+              ],
+              "examples": [
+                "/kick @usuario Spam repetido",
+                "/remover @usuario Desrespeito as regras"
+              ],
+              "tips": [
+                "Voce pode mencionar o usuario ou responder a mensagem dele."
+              ],
+              "usage": "/kick @usuario [motivo] | /remover @usuario [motivo]",
+              "description": "Remover um membro do grupo",
+              "outputExample": "Confirma a acao de moderacao e registra auditoria interna.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "moderation",
+              "categoryTitle": "Moderacao"
+            },
+            {
+              "name": "/linkgrupo",
+              "rawName": "linkgrupo",
+              "aliases": [
+                "/linkgroup",
+                "/convitegrupo",
+                "/linkgp"
+              ],
+              "examples": [
+                "/linkgrupo",
+                "/linkgroup",
+                "/linkgp"
+              ],
+              "tips": [
+                "O bot precisa ser administrador do grupo para ler o link de convite.",
+                "Use resetlink para revogar o link atual e gerar outro."
+              ],
+              "usage": "/linkgrupo | /linkgroup | /linkgp",
+              "description": "Mostrar o link de convite atual do grupo",
+              "outputExample": "Confirma a acao de moderacao e registra auditoria interna.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "moderation",
+              "categoryTitle": "Moderacao"
+            },
+            {
+              "name": "/listanegra",
+              "rawName": "listanegra",
+              "aliases": [
+                "/blacklist",
+                "/banidos",
+                "/listabanidos"
+              ],
+              "examples": [
+                "/listanegra",
+                "/listanegra 353871234567 Nao permitir entrada",
+                "/listanegra @usuario Spam"
+              ],
+              "tips": [
+                "Sem parametro lista os usuarios na lista negra do grupo.",
+                "Com parametro adiciona o usuario a lista negra."
+              ],
+              "usage": "/listanegra [@usuario|numero|nome] [motivo]",
+              "description": "Listar ou adicionar usuarios a lista negra do grupo.",
+              "outputExample": "Confirma que o usuario foi adicionado a lista negra e que entradas futuras serao bloqueadas.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "moderation",
+              "categoryTitle": "Moderacao"
+            },
+            {
+              "name": "/mute",
+              "rawName": "mute",
+              "aliases": [
+                "/mutar",
+                "/silenciar"
+              ],
+              "examples": [
+                "/mute 30",
+                "/mutar 15"
+              ],
+              "tips": [
+                "Use unmute para reabrir o grupo antes do prazo, se quiser."
+              ],
+              "usage": "/mute [minutos] | /mutar [minutos]",
+              "description": "Colocar o grupo em modo somente administradores",
+              "outputExample": "Confirma a acao de moderacao e registra auditoria interna.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "moderation",
+              "categoryTitle": "Moderacao"
+            },
+            {
+              "name": "/removerdalista",
+              "rawName": "removerdalista",
+              "aliases": [
+                "/tirardalista",
+                "/removerlistanegra",
+                "/unblacklist"
+              ],
+              "examples": [
+                "/removerdalista 353871234567",
+                "/removerdalista @usuario"
+              ],
+              "tips": [
+                "Remove o bloqueio de entrada, mas nao adiciona a pessoa de volta automaticamente."
+              ],
+              "usage": "/removerdalista @usuario|numero|nome",
+              "description": "Remover um usuario da lista negra do grupo.",
+              "outputExample": "Confirma a acao de moderacao e registra auditoria interna.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "moderation",
+              "categoryTitle": "Moderacao"
+            },
+            {
+              "name": "/removerpessoas",
+              "rawName": "removerpessoas",
+              "aliases": [],
+              "examples": [
+                "/removerpessoas 5"
+              ],
+              "tips": [
+                "Remove apenas membros comuns elegiveis."
+              ],
+              "usage": "/removerpessoas <quantidade>",
+              "description": "Remover uma quantidade aleatoria de membros do grupo.",
+              "outputExample": "Confirma a acao de moderacao e registra auditoria interna.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": true,
+              "category": "moderation",
+              "categoryTitle": "Moderacao"
+            },
+            {
+              "name": "/resetlink",
+              "rawName": "resetlink",
+              "aliases": [
+                "/resetgroupinvite",
+                "/revokeinvite"
+              ],
+              "examples": [
+                "/resetlink",
+                "/resetgroupinvite"
+              ],
+              "tips": [
+                "Isso invalida o convite atual imediatamente e cria um novo link."
+              ],
+              "usage": "/resetlink | /resetgroupinvite",
+              "description": "Revogar o link atual do grupo e criar outro",
+              "outputExample": "Confirma a acao de moderacao e registra auditoria interna.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "moderation",
+              "categoryTitle": "Moderacao"
+            },
+            {
+              "name": "/unban",
+              "rawName": "unban",
+              "aliases": [
+                "/desbanir"
+              ],
+              "examples": [
+                "/unban @usuario",
+                "/desbanir @usuario"
+              ],
+              "tips": [
+                "Esse comando remove o banimento do bot, mas nao adiciona a pessoa de volta no grupo automaticamente."
+              ],
+              "usage": "/unban @usuario | /desbanir @usuario",
+              "description": "Remover um membro da lista de banidos do bot",
+              "outputExample": "Confirma a acao de moderacao e registra auditoria interna.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "moderation",
+              "categoryTitle": "Moderacao"
+            },
+            {
+              "name": "/unmute",
+              "rawName": "unmute",
+              "aliases": [
+                "/desmutar"
+              ],
+              "examples": [
+                "/unmute",
+                "/desmutar"
+              ],
+              "tips": [
+                "Bom para reabrir o grupo logo depois de um periodo de controle de spam ou raid."
+              ],
+              "usage": "/unmute | /desmutar",
+              "description": "Desativar o modo somente administradores do grupo",
+              "outputExample": "Confirma a acao de moderacao e registra auditoria interna.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "moderation",
+              "categoryTitle": "Moderacao"
+            },
+            {
+              "name": "/warn",
+              "rawName": "warn",
+              "aliases": [
+                "/advertir"
+              ],
+              "examples": [
+                "/warn @usuario Envio de links fora das regras",
+                "/advertir @usuario Linguagem ofensiva"
+              ],
+              "tips": [
+                "Voce pode mencionar o usuario ou responder a mensagem dele."
+              ],
+              "usage": "/warn @usuario [motivo] | /advertir @usuario [motivo]",
+              "description": "Advertir um membro e aumentar a contagem de avisos",
+              "outputExample": "Confirma a acao de moderacao e registra auditoria interna.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "moderation",
+              "categoryTitle": "Moderacao"
+            },
+            {
+              "name": "/warnings",
+              "rawName": "warnings",
+              "aliases": [
+                "/avisos",
+                "/advertencias"
+              ],
+              "examples": [
+                "/warnings @usuario",
+                "/avisos @usuario"
+              ],
+              "tips": [
+                "Tambem funciona respondendo a mensagem do membro que voce quer consultar."
+              ],
+              "usage": "/warnings @usuario | /avisos @usuario",
+              "description": "Listar os avisos ativos de um membro",
+              "outputExample": "Confirma a acao de moderacao e registra auditoria interna.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "moderation",
+              "categoryTitle": "Moderacao"
+            }
+          ]
+        },
+        {
+          "key": "administration",
+          "title": "Administracao",
+          "commands": [
+            {
+              "name": "/anonimo",
+              "rawName": "anonimo",
+              "aliases": [
+                "/anonymous",
+                "/anon"
+              ],
+              "examples": [
+                "/anonimo Mensagem anonima.",
+                "/anonimo legenda da imagem",
+                "/anonymous hidden text"
+              ],
+              "tips": [
+                "Envie o comando com texto para repostar como mensagem do bot.",
+                "Tambem funciona com a midia do proprio comando ou respondendo a uma midia."
+              ],
+              "usage": "/anonimo <mensagem> | /anonimo (com midia) | /anonimo <legenda> respondendo uma midia",
+              "description": "Repostar uma mensagem como se fosse enviada pelo bot",
+              "outputExample": "Mostra um resumo da acao administrativa executada.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "administration",
+              "categoryTitle": "Administracao"
+            },
+            {
+              "name": "/approve",
+              "rawName": "approve",
+              "aliases": [
+                "/aprovar"
+              ],
+              "examples": [
+                "/approve @usuario",
+                "/aprovar @usuario"
+              ],
+              "tips": [
+                "Use com a mencao do usuario ou respondendo a solicitacao quando fizer sentido."
+              ],
+              "usage": "/approve @usuario | /aprovar @usuario",
+              "description": "Aprovar a solicitacao pendente de um membro para entrada no grupo",
+              "outputExample": "Aprova uma solicitacao pendente ou rejeita se o usuario estiver na lista negra.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "administration",
+              "categoryTitle": "Administracao"
+            },
+            {
+              "name": "/aprovartodos",
+              "rawName": "aprovartodos",
+              "aliases": [
+                "/aprovarpendentes",
+                "/aprovarall",
+                "/aprovarlista",
+                "/aceitartodos"
+              ],
+              "examples": [
+                "/aprovartodos",
+                "/aprovarpendentes",
+                "/aceitartodos"
+              ],
+              "tips": [
+                "Usa a lista de DDIs configurada em ddispermitidos, mesmo com antifake desativado."
+              ],
+              "usage": "/aprovartodos | /aprovarpendentes | /aceitartodos",
+              "description": "Aprovar solicitacoes pendentes e banir DDIs nao permitidos.",
+              "outputExample": "Mostra um resumo com pendentes revisados, aprovados e rejeitados.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "administration",
+              "categoryTitle": "Administracao"
+            },
+            {
+              "name": "/ativos",
+              "rawName": "ativos",
+              "aliases": [
+                "/maisativos",
+                "/atividade",
+                "/topativos"
+              ],
+              "examples": [
+                "/ativos 7",
+                "/maisativos 30"
+              ],
+              "tips": [
+                "O ranking usa mensagens como criterio principal.",
+                "O card mostra mensagens, figurinhas, videos e total.",
+                "Apenas participantes atuais do grupo aparecem no ranking."
+              ],
+              "usage": "/ativos <dias>",
+              "description": "Listar membros mais ativos por periodo",
+              "outputExample": "Mostra um resumo da acao administrativa executada.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "administration",
+              "categoryTitle": "Administracao"
+            },
+            {
+              "name": "/demote",
+              "rawName": "demote",
+              "aliases": [
+                "/rebaixar",
+                "/despromover"
+              ],
+              "examples": [
+                "/demote @usuario",
+                "/rebaixar @usuario"
+              ],
+              "tips": [
+                "Esse comando remove a administracao real do grupo no WhatsApp."
+              ],
+              "usage": "/demote @usuario | /rebaixar @usuario",
+              "description": "Rebaixar um administrador para membro comum",
+              "outputExample": "Mostra um resumo da acao administrativa executada.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "administration",
+              "categoryTitle": "Administracao"
+            },
+            {
+              "name": "/estatisticas",
+              "rawName": "estatisticas",
+              "aliases": [
+                "/stats",
+                "/estatistica"
+              ],
+              "examples": [
+                "/estatisticas",
+                "/estatisticas 200",
+                "/stats 500"
+              ],
+              "tips": [
+                "O limite padrao e 500 mensagens e pode ser ajustado ate 1000.",
+                "Mensagens do bot sao ignoradas automaticamente."
+              ],
+              "usage": "/estatisticas [limite] | /stats [limite]",
+              "description": "Analisar as ultimas mensagens do grupo e gerar estatisticas",
+              "outputExample": "Mostra um resumo da acao administrativa executada.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "administration",
+              "categoryTitle": "Administracao"
+            },
+            {
+              "name": "/inativos",
+              "rawName": "inativos",
+              "aliases": [
+                "/sematividade",
+                "/menosativos"
+              ],
+              "examples": [
+                "/inativos 7 5",
+                "/menosativos 30 2"
+              ],
+              "tips": [
+                "O criterio usa quantidade de mensagens no periodo.",
+                "O card mostra mensagens, figurinhas, videos e total.",
+                "Apenas participantes atuais do grupo aparecem na lista."
+              ],
+              "usage": "/inativos <dias> <maximo>",
+              "description": "Listar membros inativos ou abaixo de um limite",
+              "outputExample": "Mostra um resumo da acao administrativa executada.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "administration",
+              "categoryTitle": "Administracao"
+            },
+            {
+              "name": "/listargringo",
+              "rawName": "listargringo",
+              "aliases": [
+                "/listargringos",
+                "/gringos",
+                "/listarestrangeiros",
+                "/estrangeiros",
+                "/ddibloqueados"
+              ],
+              "examples": [
+                "/listargringo",
+                "/gringos"
+              ],
+              "tips": [
+                "Esse comando apenas lista; remocoes automaticas acontecem quando alguem entra no grupo."
+              ],
+              "usage": "/listargringo | /listargringos",
+              "description": "Listar participantes com DDI fora da lista permitida.",
+              "outputExample": "Mostra um resumo da acao administrativa executada.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "administration",
+              "categoryTitle": "Administracao"
+            },
+            {
+              "name": "/marcar",
+              "rawName": "marcar",
+              "aliases": [
+                "/cita",
+                "/tagall"
+              ],
+              "examples": [
+                "/marcar Bora alinhar isso agora",
+                "/cita Reuniao em 5 minutos",
+                "/tagall respondendo a uma midia"
+              ],
+              "tips": [
+                "Funciona com texto direto ou respondendo a uma midia do grupo.",
+                "A marcacao usa mentions do WhatsApp sem despejar numeros no texto."
+              ],
+              "usage": "/marcar <mensagem> | /cita <mensagem> | /tagall respondendo uma midia",
+              "description": "Marcar todos os membros do grupo",
+              "outputExample": "Mostra um resumo da acao administrativa executada.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "administration",
+              "categoryTitle": "Administracao"
+            },
+            {
+              "name": "/mod",
+              "rawName": "mod",
+              "aliases": [
+                "/addmod",
+                "/moderador"
+              ],
+              "examples": [
+                "/mod @usuario",
+                "/moderador @usuario"
+              ],
+              "tips": [
+                "Moderador do bot nao e a mesma coisa que admin do WhatsApp."
+              ],
+              "usage": "/mod @usuario | /moderador @usuario",
+              "description": "Dar privilegios de moderador do bot a um membro",
+              "outputExample": "Mostra um resumo da acao administrativa executada.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "administration",
+              "categoryTitle": "Administracao"
+            },
+            {
+              "name": "/promote",
+              "rawName": "promote",
+              "aliases": [
+                "/promover"
+              ],
+              "examples": [
+                "/promote @usuario",
+                "/promover @usuario"
+              ],
+              "tips": [
+                "Esse comando altera a administracao real do grupo no WhatsApp."
+              ],
+              "usage": "/promote @usuario | /promover @usuario",
+              "description": "Promover um membro a administrador do grupo",
+              "outputExample": "Mostra um resumo da acao administrativa executada.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "administration",
+              "categoryTitle": "Administracao"
+            },
+            {
+              "name": "/reject",
+              "rawName": "reject",
+              "aliases": [
+                "/rejeitar"
+              ],
+              "examples": [
+                "/reject @usuario",
+                "/rejeitar @usuario"
+              ],
+              "tips": [
+                "Use com a mencao do usuario ou respondendo a solicitacao quando fizer sentido."
+              ],
+              "usage": "/reject @usuario | /rejeitar @usuario",
+              "description": "Rejeitar a solicitacao pendente de um membro para entrada no grupo",
+              "outputExample": "Mostra um resumo da acao administrativa executada.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "administration",
+              "categoryTitle": "Administracao"
+            },
+            {
+              "name": "/resetarcontadores",
+              "rawName": "resetarcontadores",
+              "aliases": [
+                "/resetarinativos",
+                "/resetarativos",
+                "/resetaratividade"
+              ],
+              "examples": [
+                "/resetarcontadores"
+              ],
+              "tips": [
+                "O reset afeta somente o grupo onde o comando foi enviado."
+              ],
+              "usage": "/resetarcontadores",
+              "description": "Resetar contadores de atividade do grupo atual",
+              "outputExample": "Mostra um resumo da acao administrativa executada.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "administration",
+              "categoryTitle": "Administracao"
+            },
+            {
+              "name": "/restart",
+              "rawName": "restart",
+              "aliases": [
+                "/reiniciar",
+                "/reconnect"
+              ],
+              "examples": [
+                "/restart",
+                "/reiniciar",
+                "/reconnect"
+              ],
+              "tips": [
+                "Reinicia apenas a conexao com o WhatsApp, sem matar o processo Node."
+              ],
+              "usage": "/restart | /reiniciar | /reconnect",
+              "description": "Reiniciar a conexao do bot com o WhatsApp",
+              "outputExample": "Mostra um resumo da acao administrativa executada.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "administration",
+              "categoryTitle": "Administracao"
+            },
+            {
+              "name": "/resumo",
+              "rawName": "resumo",
+              "aliases": [
+                "/summary",
+                "/resumir"
+              ],
+              "examples": [
+                "/resumo",
+                "/resumo 100",
+                "/summary 200"
+              ],
+              "tips": [
+                "O limite padrao e 100 mensagens e pode ser ajustado ate 500.",
+                "Mensagens do bot sao ignoradas automaticamente.",
+                "O resumo usa heuristicas locais e evita inventar fatos nao vistos no recorte."
+              ],
+              "usage": "/resumo [limite] | /summary [limite]",
+              "description": "Buscar mensagens recentes e resumir o que aconteceu no grupo",
+              "outputExample": "Mostra um resumo da acao administrativa executada.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "administration",
+              "categoryTitle": "Administracao"
+            },
+            {
+              "name": "/sumidos",
+              "rawName": "sumidos",
+              "aliases": [
+                "/sumido"
+              ],
+              "examples": [
+                "/sumidos",
+                "/sumidos 200"
+              ],
+              "tips": [
+                "O limite padrao e 500 mensagens e pode ser ajustado ate 1000.",
+                "A leitura usa apenas participantes atuais do grupo.",
+                "As frases sao zoeiras leves baseadas na atividade real do recorte."
+              ],
+              "usage": "/sumidos [limite]",
+              "description": "Detectar quem quase nao falou nas ultimas mensagens",
+              "outputExample": "Mostra um resumo da acao administrativa executada.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "administration",
+              "categoryTitle": "Administracao"
+            },
+            {
+              "name": "/unmod",
+              "rawName": "unmod",
+              "aliases": [
+                "/removemod",
+                "/tirarmoderador"
+              ],
+              "examples": [
+                "/unmod @usuario",
+                "/tirarmoderador @usuario"
+              ],
+              "tips": [
+                "Use quando quiser reduzir o acesso de moderacao sem mexer no admin do WhatsApp."
+              ],
+              "usage": "/unmod @usuario | /tirarmoderador @usuario",
+              "description": "Remover privilegios de moderador do bot",
+              "outputExample": "Mostra um resumo da acao administrativa executada.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "administration",
+              "categoryTitle": "Administracao"
+            }
+          ]
+        },
+        {
+          "key": "configuration",
+          "title": "Configuracao",
+          "commands": [
+            {
+              "name": "/acaoautomatica",
+              "rawName": "acaoautomatica",
+              "aliases": [
+                "/policyaction",
+                "/acao",
+                "/policy"
+              ],
+              "examples": [
+                "/acaoautomatica advertencia",
+                "/policyaction remover"
+              ],
+              "tips": [
+                "Use sem valor para ver o valor atual.",
+                "Aceita entradas em portugues e ingles."
+              ],
+              "usage": "/acaoautomatica <warn|aviso|advertencia|kick|remover|excluir|ban|banir>",
+              "description": "Definir a resposta automatica principal da moderacao.",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/anticontato",
+              "rawName": "anticontato",
+              "aliases": [
+                "/anticontact"
+              ],
+              "examples": [
+                "/anticontato on",
+                "/anticontato off"
+              ],
+              "tips": [
+                "Use sem valor para ver o estado atual.",
+                "Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao."
+              ],
+              "usage": "/anticontato <on|off>",
+              "description": "Bloquear envio de contatos por membros comuns.",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/antifake",
+              "rawName": "antifake",
+              "aliases": [
+                "/antinumerofake",
+                "/antifakes",
+                "/anti-fake"
+              ],
+              "examples": [
+                "/antifake on",
+                "/antifake off"
+              ],
+              "tips": [
+                "Use sem valor para ver o estado atual.",
+                "Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao."
+              ],
+              "usage": "/antifake <on|off>",
+              "description": "Bloquear numeros fora dos DDIs permitidos por membros comuns.",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/antiflood",
+              "rawName": "antiflood",
+              "aliases": [
+                "/flood",
+                "/anti-flood",
+                "/antifloodmsg"
+              ],
+              "examples": [
+                "/antiflood on",
+                "/antiflood off"
+              ],
+              "tips": [
+                "Use sem valor para ver o estado atual.",
+                "Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao."
+              ],
+              "usage": "/antiflood <on|off>",
+              "description": "Mutar por 30s membros comuns que enviarem mensagens demais em pouco tempo.",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/antifloodimagem",
+              "rawName": "antifloodimagem",
+              "aliases": [
+                "/floodimagem",
+                "/anti-flood-image",
+                "/antifloodimage"
+              ],
+              "examples": [
+                "/antifloodimagem on",
+                "/antifloodimagem off"
+              ],
+              "tips": [
+                "Use sem valor para ver o estado atual.",
+                "Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao."
+              ],
+              "usage": "/antifloodimagem <on|off>",
+              "description": "Mutar por 30s membros comuns que enviarem imagens demais em pouco tempo.",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/antifloodsticker",
+              "rawName": "antifloodsticker",
+              "aliases": [
+                "/floodsticker",
+                "/anti-flood-sticker",
+                "/antifloodfigurinha"
+              ],
+              "examples": [
+                "/antifloodsticker on",
+                "/antifloodsticker off"
+              ],
+              "tips": [
+                "Use sem valor para ver o estado atual.",
+                "Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao."
+              ],
+              "usage": "/antifloodsticker <on|off>",
+              "description": "Mutar por 30s membros comuns que enviarem figurinhas demais em pouco tempo.",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/antifloodvideo",
+              "rawName": "antifloodvideo",
+              "aliases": [
+                "/floodvideo",
+                "/anti-flood-video"
+              ],
+              "examples": [
+                "/antifloodvideo on",
+                "/antifloodvideo off"
+              ],
+              "tips": [
+                "Use sem valor para ver o estado atual.",
+                "Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao."
+              ],
+              "usage": "/antifloodvideo <on|off>",
+              "description": "Mutar por 30s membros comuns que enviarem videos demais em pouco tempo.",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/antiimagem",
+              "rawName": "antiimagem",
+              "aliases": [
+                "/antiimage"
+              ],
+              "examples": [
+                "/antiimagem on",
+                "/antiimagem off"
+              ],
+              "tips": [
+                "Use sem valor para ver o estado atual.",
+                "Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao."
+              ],
+              "usage": "/antiimagem <on|off>",
+              "description": "Bloquear envio de imagens por membros comuns.",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/antilink",
+              "rawName": "antilink",
+              "aliases": [
+                "/anti-link",
+                "/antilinks",
+                "/linkguard"
+              ],
+              "examples": [
+                "/antilink on",
+                "/antilink off"
+              ],
+              "tips": [
+                "Use sem valor para ver o estado atual.",
+                "Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao."
+              ],
+              "usage": "/antilink <on|off>",
+              "description": "Bloquear links enviados no grupo.",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/antispam",
+              "rawName": "antispam",
+              "aliases": [
+                "/spamguard",
+                "/anti-spam",
+                "/spam"
+              ],
+              "examples": [
+                "/antispam on",
+                "/antispam off"
+              ],
+              "tips": [
+                "Use sem valor para ver o estado atual.",
+                "Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao."
+              ],
+              "usage": "/antispam <on|off>",
+              "description": "Detectar excesso de mensagens repetidas em pouco tempo.",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/antisticker",
+              "rawName": "antisticker",
+              "aliases": [
+                "/antifigurinha"
+              ],
+              "examples": [
+                "/antisticker on",
+                "/antisticker off"
+              ],
+              "tips": [
+                "Use sem valor para ver o estado atual.",
+                "Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao."
+              ],
+              "usage": "/antisticker <on|off>",
+              "description": "Bloquear envio de figurinhas por membros comuns.",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/antivideo",
+              "rawName": "antivideo",
+              "aliases": [
+                "/anti-video"
+              ],
+              "examples": [
+                "/antivideo on",
+                "/antivideo off"
+              ],
+              "tips": [
+                "Use sem valor para ver o estado atual.",
+                "Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao."
+              ],
+              "usage": "/antivideo <on|off>",
+              "description": "Bloquear envio de videos por membros comuns.",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/avisaradmins",
+              "rawName": "avisaradmins",
+              "aliases": [
+                "/notifyadmins",
+                "/notificaradmins",
+                "/alertaradmins"
+              ],
+              "examples": [
+                "/avisaradmins on",
+                "/notifyadmins off"
+              ],
+              "tips": [
+                "Use sem valor para ver o estado atual.",
+                "Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao."
+              ],
+              "usage": "/avisaradmins <on|off>",
+              "description": "Definir se os admins serao avisados nas acoes automaticas.",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/ddispermitidos",
+              "rawName": "ddispermitidos",
+              "aliases": [
+                "/allowedcountrycodes",
+                "/allowedddis",
+                "/ddis",
+                "/paisespermitidos"
+              ],
+              "examples": [
+                "/ddispermitidos 55,353",
+                "/allowedcountrycodes 55,353"
+              ],
+              "tips": [
+                "Use sem valor para ver o valor atual."
+              ],
+              "usage": "/ddispermitidos <55,353,...>",
+              "description": "Definir a lista de DDIs aceitos pelo anti-fake.",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/floodimagemessagelimit",
+              "rawName": "floodimagemessagelimit",
+              "aliases": [
+                "/limitefloodimagem",
+                "/floodimagelimit",
+                "/limiteimagemflood"
+              ],
+              "examples": [
+                "/limitefloodimagem 5",
+                "/floodimagemessagelimit 7"
+              ],
+              "tips": [
+                "Use sem valor para ver o valor atual."
+              ],
+              "usage": "/floodimagemessagelimit <numero>",
+              "description": "Definir quantas imagens disparam o mute do antiflood imagem.",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/floodimagemutems",
+              "rawName": "floodimagemutems",
+              "aliases": [
+                "/mutefloodimagem",
+                "/floodimagemute",
+                "/muteimagemflood"
+              ],
+              "examples": [
+                "/mutefloodimagem 30000",
+                "/floodimagemutems 45000"
+              ],
+              "tips": [
+                "Use sem valor para ver o valor atual."
+              ],
+              "usage": "/floodimagemutems <milissegundos>",
+              "description": "Definir por quanto tempo o antiflood imagem vai mutar.",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/floodimagewindowms",
+              "rawName": "floodimagewindowms",
+              "aliases": [
+                "/janelafloodimagem",
+                "/floodimagewindow",
+                "/janelaimagemflood"
+              ],
+              "examples": [
+                "/janelafloodimagem 10000",
+                "/floodimagewindowms 8000"
+              ],
+              "tips": [
+                "Use sem valor para ver o valor atual."
+              ],
+              "usage": "/floodimagewindowms <milissegundos>",
+              "description": "Definir a janela em ms do antiflood de imagens.",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/floodmessagelimit",
+              "rawName": "floodmessagelimit",
+              "aliases": [
+                "/limiteflood",
+                "/floodlimit",
+                "/limitefloodmensagem"
+              ],
+              "examples": [
+                "/limiteflood 5",
+                "/floodmessagelimit 7"
+              ],
+              "tips": [
+                "Use sem valor para ver o valor atual."
+              ],
+              "usage": "/floodmessagelimit <numero>",
+              "description": "Definir quantas mensagens disparam o mute do antiflood.",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/floodmutems",
+              "rawName": "floodmutems",
+              "aliases": [
+                "/muteflood",
+                "/floodmute",
+                "/mutefloodmsg"
+              ],
+              "examples": [
+                "/muteflood 30000",
+                "/floodmutems 45000"
+              ],
+              "tips": [
+                "Use sem valor para ver o valor atual."
+              ],
+              "usage": "/floodmutems <milissegundos>",
+              "description": "Definir por quanto tempo o antiflood de mensagens vai mutar.",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/floodstickermessagelimit",
+              "rawName": "floodstickermessagelimit",
+              "aliases": [
+                "/limitefloodsticker",
+                "/floodstickerlimit",
+                "/limitefigurinhaflood"
+              ],
+              "examples": [
+                "/limitefloodsticker 5",
+                "/floodstickermessagelimit 7"
+              ],
+              "tips": [
+                "Use sem valor para ver o valor atual."
+              ],
+              "usage": "/floodstickermessagelimit <numero>",
+              "description": "Definir quantas figurinhas disparam o mute do antiflood sticker.",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/floodstickermutems",
+              "rawName": "floodstickermutems",
+              "aliases": [
+                "/mutefloodsticker",
+                "/floodstickermute",
+                "/mutefigurinhaflood"
+              ],
+              "examples": [
+                "/mutefloodsticker 30000",
+                "/floodstickermutems 45000"
+              ],
+              "tips": [
+                "Use sem valor para ver o valor atual."
+              ],
+              "usage": "/floodstickermutems <milissegundos>",
+              "description": "Definir por quanto tempo o antiflood de figurinhas vai mutar.",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/floodstickerwindowms",
+              "rawName": "floodstickerwindowms",
+              "aliases": [
+                "/janelafloodsticker",
+                "/floodstickerwindow",
+                "/janelafigurinhaflood"
+              ],
+              "examples": [
+                "/janelafloodsticker 10000",
+                "/floodstickerwindowms 8000"
+              ],
+              "tips": [
+                "Use sem valor para ver o valor atual."
+              ],
+              "usage": "/floodstickerwindowms <milissegundos>",
+              "description": "Definir a janela em ms do antiflood de figurinhas.",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/floodvideomessagelimit",
+              "rawName": "floodvideomessagelimit",
+              "aliases": [
+                "/limitefloodvideo",
+                "/floodvideolimit",
+                "/limitevideoflood"
+              ],
+              "examples": [
+                "/limitefloodvideo 5",
+                "/floodvideomessagelimit 7"
+              ],
+              "tips": [
+                "Use sem valor para ver o valor atual."
+              ],
+              "usage": "/floodvideomessagelimit <numero>",
+              "description": "Definir quantos videos disparam o mute do antiflood video.",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/floodvideomutems",
+              "rawName": "floodvideomutems",
+              "aliases": [
+                "/mutefloodvideo",
+                "/floodvideomute",
+                "/mutevideoflood"
+              ],
+              "examples": [
+                "/mutefloodvideo 30000",
+                "/floodvideomutems 45000"
+              ],
+              "tips": [
+                "Use sem valor para ver o valor atual."
+              ],
+              "usage": "/floodvideomutems <milissegundos>",
+              "description": "Definir por quanto tempo o antiflood de videos vai mutar.",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/floodvideowindowms",
+              "rawName": "floodvideowindowms",
+              "aliases": [
+                "/janelafloodvideo",
+                "/floodvideowindow",
+                "/janelavideoflood"
+              ],
+              "examples": [
+                "/janelafloodvideo 10000",
+                "/floodvideowindowms 8000"
+              ],
+              "tips": [
+                "Use sem valor para ver o valor atual."
+              ],
+              "usage": "/floodvideowindowms <milissegundos>",
+              "description": "Definir a janela em ms do antiflood de videos.",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/floodwindowms",
+              "rawName": "floodwindowms",
+              "aliases": [
+                "/janelaflood",
+                "/floodwindow",
+                "/janelafloodmsg"
+              ],
+              "examples": [
+                "/janelaflood 10000",
+                "/floodwindowms 8000"
+              ],
+              "tips": [
+                "Use sem valor para ver o valor atual."
+              ],
+              "usage": "/floodwindowms <milissegundos>",
+              "description": "Definir a janela em ms do antiflood de mensagens.",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/limiteavisos",
+              "rawName": "limiteavisos",
+              "aliases": [
+                "/warnthreshold",
+                "/warnlimit",
+                "/limiteaviso"
+              ],
+              "examples": [
+                "/limiteavisos 3",
+                "/warnthreshold 4"
+              ],
+              "tips": [
+                "Use sem valor para ver o valor atual."
+              ],
+              "usage": "/limiteavisos <numero>",
+              "description": "Definir quantos avisos resultam em acao automatica.",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/limitespam",
+              "rawName": "limitespam",
+              "aliases": [
+                "/spammessagelimit",
+                "/spamlimit",
+                "/limiteantispam"
+              ],
+              "examples": [
+                "/limitespam 5",
+                "/spammessagelimit 7"
+              ],
+              "tips": [
+                "Use sem valor para ver o valor atual."
+              ],
+              "usage": "/limitespam <numero>",
+              "description": "Definir quantas mensagens entram na contagem do antispam.",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/modobrincadeira",
+              "rawName": "modobrincadeira",
+              "aliases": [
+                "/modo-brincadeira",
+                "/brincadeira",
+                "/funmode",
+                "/modozoeira",
+                "/zoeira"
+              ],
+              "examples": [
+                "/modobrincadeira on",
+                "/modo-brincadeira off"
+              ],
+              "tips": [
+                "Use sem valor para ver o estado atual.",
+                "Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao."
+              ],
+              "usage": "/modobrincadeira <on|off>",
+              "description": "Ligar ou desligar o modo de diversao leve do grupo, preparado para comandos de entretenimento.",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/palavrasbloqueadas",
+              "rawName": "palavrasbloqueadas",
+              "aliases": [
+                "/blockedwords",
+                "/palavrasbanidas",
+                "/blockwords"
+              ],
+              "examples": [
+                "/palavrasbloqueadas golpe,spam,link",
+                "/blockedwords scam,spam"
+              ],
+              "tips": [
+                "Use sem valor para ver o valor atual."
+              ],
+              "usage": "/palavrasbloqueadas <palavra1,palavra2,...>",
+              "description": "Definir a lista de palavras bloqueadas, separadas por virgula.",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/setprefix",
+              "rawName": "setprefix",
+              "aliases": [
+                "/definirprefixo"
+              ],
+              "examples": [
+                "/setprefix /",
+                "/definirprefixo ."
+              ],
+              "tips": [
+                "O prefixo precisa ter de 1 a 3 caracteres sem espacos."
+              ],
+              "usage": "/setprefix <prefixo> | /definirprefixo <prefixo>",
+              "description": "Alterar o prefixo dos comandos neste grupo",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/setrules",
+              "rawName": "setrules",
+              "aliases": [
+                "/definirregras"
+              ],
+              "examples": [
+                "/setrules Sem spam, sem links suspeitos e sem ofensas.",
+                "/definirregras Respeite os membros e evite flood."
+              ],
+              "tips": [
+                "Depois use o comando de regras para conferir como o texto ficou no grupo."
+              ],
+              "usage": "/setrules <texto> | /definirregras <texto>",
+              "description": "Definir ou substituir o texto das regras do grupo",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/spamwindowms",
+              "rawName": "spamwindowms",
+              "aliases": [
+                "/janelaantispam",
+                "/spammwindow",
+                "/janelaspam"
+              ],
+              "examples": [
+                "/janelaantispam 10000",
+                "/spamwindowms 8000"
+              ],
+              "tips": [
+                "Use sem valor para ver o valor atual."
+              ],
+              "usage": "/spamwindowms <milissegundos>",
+              "description": "Definir a janela em ms usada pelo antispam.",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/tema",
+              "rawName": "tema",
+              "aliases": [
+                "/theme"
+              ],
+              "examples": [
+                "/tema",
+                "/tema alien",
+                "/tema bender",
+                "/tema benderlight"
+              ],
+              "tips": [
+                "Sem parametro, mostra os temas disponiveis.",
+                "A troca afeta menus, listas e o perfil local do bot neste grupo."
+              ],
+              "usage": "/tema [nome] | /theme [name]",
+              "description": "Listar temas ou aplicar um tema visual ao grupo",
+              "outputExample": "Confirma o tema aplicado e usa a identidade visual selecionada.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "owner",
+      "title": "Dono do Bot",
+      "description": "Somente o owner atual do bot.",
+      "categories": [
+        {
+          "key": "utilities",
+          "title": "Utilitarios",
+          "commands": [
+            {
+              "name": "/menudono",
+              "rawName": "menudono",
+              "aliases": [
+                "/ownermenu"
+              ],
+              "examples": [
+                "/menudono",
+                "/ownermenu"
+              ],
+              "tips": [
+                "Os menus usam PT-BR na exibicao e mantem aliases em ingles para consulta rapida."
+              ],
+              "usage": "/menudono | /ownermenu",
+              "description": "Mostrar o menu de configuracao do bot",
+              "outputExample": "Mostra comandos exclusivos do dono do bot, incluindo identidade, bloqueios globais e seguranca.",
+              "requiredRole": "owner",
+              "requiredRoleLabel": "Dono do Bot",
+              "requiredChatType": "any",
+              "requiredChatTypeLabel": "grupo ou privado",
+              "hidden": false,
+              "category": "utilities",
+              "categoryTitle": "Utilitarios"
+            }
+          ]
+        },
+        {
+          "key": "configuration",
+          "title": "Configuracao",
+          "commands": [
+            {
+              "name": "/antiligacao",
+              "rawName": "antiligacao",
+              "aliases": [
+                "/anticall",
+                "/antiligar",
+                "/bloquearligacao"
+              ],
+              "examples": [
+                "/antiligacao on",
+                "/anticall off",
+                "/antiligar ligar"
+              ],
+              "tips": [
+                "Use sem valor para ver o estado atual.",
+                "Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao."
+              ],
+              "usage": "/antiligacao <on|off>",
+              "description": "Bloquear chamadas recebidas no privado",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "owner",
+              "requiredRoleLabel": "Dono do Bot",
+              "requiredChatType": "any",
+              "requiredChatTypeLabel": "grupo ou privado",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/antipv",
+              "rawName": "antipv",
+              "aliases": [
+                "/antiprivado",
+                "/anti-private",
+                "/antidirect"
+              ],
+              "examples": [
+                "/antipv on",
+                "/antiprivado off",
+                "/antidirect sim"
+              ],
+              "tips": [
+                "Use sem valor para ver o estado atual.",
+                "Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao."
+              ],
+              "usage": "/antipv <on|off>",
+              "description": "Bloquear atendimento no privado para nao donos",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "owner",
+              "requiredRoleLabel": "Dono do Bot",
+              "requiredChatType": "any",
+              "requiredChatTypeLabel": "grupo ou privado",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/bloquearcomando",
+              "rawName": "bloquearcomando",
+              "aliases": [
+                "/blockcmd",
+                "/disablecmd",
+                "/desativarcomando"
+              ],
+              "examples": [
+                "/bloquearcomando ping",
+                "/blockcmd sticker"
+              ],
+              "tips": [
+                "O bloqueio vale apenas para o grupo atual.",
+                "Comandos criticos de ajuda e desbloqueio nao podem ser bloqueados."
+              ],
+              "usage": "/bloquearcomando <comando> | /blockcmd <command>",
+              "description": "Bloquear um comando neste grupo",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "owner",
+              "requiredRoleLabel": "Dono do Bot",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/bloquearusuario",
+              "rawName": "bloquearusuario",
+              "aliases": [
+                "/blockuser",
+                "/block",
+                "/bloquear"
+              ],
+              "examples": [
+                "/bloquearusuario @usuario spam no bot",
+                "/blockuser 5511999999999 abusive commands"
+              ],
+              "tips": [
+                "Voce pode mencionar, responder uma mensagem ou informar o numero.",
+                "O dono do bot nao pode ser bloqueado."
+              ],
+              "usage": "/bloquearusuario @usuario [motivo] | /blockuser <numero> [reason]",
+              "description": "Bloquear um usuario de executar comandos",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "owner",
+              "requiredRoleLabel": "Dono do Bot",
+              "requiredChatType": "any",
+              "requiredChatTypeLabel": "grupo ou privado",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/comandosbloqueados",
+              "rawName": "comandosbloqueados",
+              "aliases": [
+                "/blockedcmds",
+                "/listacomandosbloqueados"
+              ],
+              "examples": [
+                "/comandosbloqueados",
+                "/blockedcmds"
+              ],
+              "tips": [
+                "Mostra apenas bloqueios do grupo atual."
+              ],
+              "usage": "/comandosbloqueados | /blockedcmds",
+              "description": "Listar comandos bloqueados neste grupo",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "owner",
+              "requiredRoleLabel": "Dono do Bot",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/desbloquearcomando",
+              "rawName": "desbloquearcomando",
+              "aliases": [
+                "/unblockcmd",
+                "/enablecmd",
+                "/ativarcomando"
+              ],
+              "examples": [
+                "/desbloquearcomando ping",
+                "/unblockcmd sticker"
+              ],
+              "tips": [
+                "O desbloqueio vale apenas para o grupo atual."
+              ],
+              "usage": "/desbloquearcomando <comando> | /unblockcmd <command>",
+              "description": "Desbloquear um comando neste grupo",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "owner",
+              "requiredRoleLabel": "Dono do Bot",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/desbloquearusuario",
+              "rawName": "desbloquearusuario",
+              "aliases": [
+                "/unblockuser",
+                "/unblock",
+                "/desbloquear"
+              ],
+              "examples": [
+                "/desbloquearusuario @usuario",
+                "/unblockuser 5511999999999"
+              ],
+              "tips": [
+                "Use mencao, resposta ou numero para escolher o usuario."
+              ],
+              "usage": "/desbloquearusuario @usuario | /unblockuser <numero>",
+              "description": "Desbloquear um usuario para usar comandos",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "owner",
+              "requiredRoleLabel": "Dono do Bot",
+              "requiredChatType": "any",
+              "requiredChatTypeLabel": "grupo ou privado",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/listabloqueados",
+              "rawName": "listabloqueados",
+              "aliases": [
+                "/blocklist",
+                "/blockedusers",
+                "/usuariosbloqueados",
+                "/bloqueados"
+              ],
+              "examples": [
+                "/listabloqueados",
+                "/blockedusers"
+              ],
+              "tips": [
+                "A lista vale para todos os grupos e conversas do bot."
+              ],
+              "usage": "/listabloqueados | /blocklist",
+              "description": "Listar usuarios bloqueados no bot",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "owner",
+              "requiredRoleLabel": "Dono do Bot",
+              "requiredChatType": "any",
+              "requiredChatTypeLabel": "grupo ou privado",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/novodono",
+              "rawName": "novodono",
+              "aliases": [
+                "/newowner",
+                "/setowner"
+              ],
+              "examples": [
+                "/novodono @usuario",
+                "/setowner"
+              ],
+              "tips": [
+                "Use mencao ou responda a mensagem do novo dono.",
+                "O nome do dono sera salvo sem exibir telefone nas respostas do bot."
+              ],
+              "usage": "/novodono @usuario | /newowner (respondendo a mensagem)",
+              "description": "Transferir a posse do bot para outro usuario",
+              "outputExample": "Confirma a transferencia de dono do bot para o usuario escolhido.",
+              "requiredRole": "owner",
+              "requiredRoleLabel": "Dono do Bot",
+              "requiredChatType": "any",
+              "requiredChatTypeLabel": "grupo ou privado",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/setbotname",
+              "rawName": "setbotname",
+              "aliases": [
+                "/nomebot",
+                "/definirnomebot"
+              ],
+              "examples": [
+                "/setbotname Bender",
+                "/nomebot Bender Moderador"
+              ],
+              "tips": [
+                "Esse e o nome que aparece no perfil e para quem ainda nao salvou o contato."
+              ],
+              "usage": "/setbotname <nome> | /nomebot <nome>",
+              "description": "Alterar o nome exibido do bot",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "owner",
+              "requiredRoleLabel": "Dono do Bot",
+              "requiredChatType": "any",
+              "requiredChatTypeLabel": "grupo ou privado",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/setbotphoto",
+              "rawName": "setbotphoto",
+              "aliases": [
+                "/fotobot",
+                "/definirfotobot"
+              ],
+              "examples": [
+                "/setbotphoto",
+                "/fotobot",
+                "/definirfotobot"
+              ],
+              "tips": [
+                "Envie o comando na legenda de uma imagem ou responda a uma imagem ja enviada.",
+                "Use uma imagem quadrada ou bem centralizada para um resultado mais profissional."
+              ],
+              "usage": "/setbotphoto (envie com foto) | /fotobot (responda uma foto)",
+              "description": "Alterar a foto de perfil do bot",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "owner",
+              "requiredRoleLabel": "Dono do Bot",
+              "requiredChatType": "any",
+              "requiredChatTypeLabel": "grupo ou privado",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/setbotstatus",
+              "rawName": "setbotstatus",
+              "aliases": [
+                "/statusbot",
+                "/biobot",
+                "/definirstatusbot"
+              ],
+              "examples": [
+                "/setbotstatus Moderacao inteligente e atendimento rapido.",
+                "/biobot Online para moderacao e suporte."
+              ],
+              "tips": [
+                "Esse texto aparece como a bio do perfil no WhatsApp."
+              ],
+              "usage": "/setbotstatus <texto> | /statusbot <texto>",
+              "description": "Alterar a bio do bot",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "owner",
+              "requiredRoleLabel": "Dono do Bot",
+              "requiredChatType": "any",
+              "requiredChatTypeLabel": "grupo ou privado",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "/setbotwelcome",
+              "rawName": "setbotwelcome",
+              "aliases": [
+                "/boasvindasbot",
+                "/apresentacaobot"
+              ],
+              "examples": [
+                "/setbotwelcome Eu sou o Bender. Eu modero o grupo para voces nao quebrarem tudo.",
+                "/apresentacaobot Bem-vindo. Use /ajuda para ver meus comandos."
+              ],
+              "tips": [
+                "Esse texto aparece no comando perfilbot para dar uma apresentacao mais profissional ao bot."
+              ],
+              "usage": "/setbotwelcome <texto> | /apresentacaobot <texto>",
+              "description": "Definir o texto de apresentacao do bot",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "requiredRole": "owner",
+              "requiredRoleLabel": "Dono do Bot",
+              "requiredChatType": "any",
+              "requiredChatTypeLabel": "grupo ou privado",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "key": "utilities",
+      "title": "Utilitarios",
+      "count": 10
+    },
+    {
+      "key": "media",
+      "title": "Midia",
+      "count": 4
+    },
+    {
+      "key": "entertainment",
+      "title": "Entretenimento",
+      "count": 35
+    },
+    {
+      "key": "moderation",
+      "title": "Moderacao",
+      "count": 16
+    },
+    {
+      "key": "administration",
+      "title": "Administracao",
+      "count": 17
+    },
+    {
+      "key": "configuration",
+      "title": "Configuracao",
+      "count": 47
+    }
+  ],
+  "roles": [
+    {
+      "key": "member",
+      "title": "Membro",
+      "count": 47
+    },
+    {
+      "key": "group_admin",
+      "title": "Administrador do Grupo",
+      "count": 68
+    },
+    {
+      "key": "owner",
+      "title": "Dono do Bot",
+      "count": 14
+    }
+  ],
+  "commandCount": 129,
+  "themes": [
+    {
+      "key": "bender",
+      "label": "Bender",
+      "displayName": "Bender",
+      "aboutText": "Moderacao robotica com sarcasmo calibrado. Provavelmente.",
+      "presentationText": "Eu sou o Bender. Eu ajudo a moderar o grupo, organizo comandos e finjo que isso nao e trabalho.",
+      "aliases": [
+        "robot",
+        "robo"
+      ],
+      "profileImage": {
+        "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\bender\\profile.png",
+        "relativePath": "assets/themes/bender/profile.png"
+      },
+      "defaultCover": {
+        "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\bender\\covers\\default.png",
+        "relativePath": "assets/themes/bender/covers/default.png"
+      },
+      "covers": [
+        {
+          "fileName": "ativos.png",
+          "surfaceKey": "ativos",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\bender\\covers\\ativos.png",
+          "relativePath": "assets/themes/bender/covers/ativos.png",
+          "commands": [
+            "/ativos"
+          ]
+        },
+        {
+          "fileName": "comandosbloqueados.png",
+          "surfaceKey": "comandosbloqueados",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\bender\\covers\\comandosbloqueados.png",
+          "relativePath": "assets/themes/bender/covers/comandosbloqueados.png",
+          "commands": [
+            "/comandosbloqueados"
+          ]
+        },
+        {
+          "fileName": "default.png",
+          "surfaceKey": "default",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\bender\\covers\\default.png",
+          "relativePath": "assets/themes/bender/covers/default.png",
+          "commands": [
+            "/theme"
+          ]
+        },
+        {
+          "fileName": "help.png",
+          "surfaceKey": "help",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\bender\\covers\\help.png",
+          "relativePath": "assets/themes/bender/covers/help.png",
+          "commands": [
+            "/help"
+          ]
+        },
+        {
+          "fileName": "inativos.png",
+          "surfaceKey": "inativos",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\bender\\covers\\inativos.png",
+          "relativePath": "assets/themes/bender/covers/inativos.png",
+          "commands": [
+            "/inativos",
+            "/sumidos"
+          ]
+        },
+        {
+          "fileName": "infogrupo.png",
+          "surfaceKey": "infogrupo",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\bender\\covers\\infogrupo.png",
+          "relativePath": "assets/themes/bender/covers/infogrupo.png",
+          "commands": [
+            "/infogrupo"
+          ]
+        },
+        {
+          "fileName": "listabloqueados.png",
+          "surfaceKey": "listabloqueados",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\bender\\covers\\listabloqueados.png",
+          "relativePath": "assets/themes/bender/covers/listabloqueados.png",
+          "commands": [
+            "/listabloqueados"
+          ]
+        },
+        {
+          "fileName": "menu.png",
+          "surfaceKey": "menu",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\bender\\covers\\menu.png",
+          "relativePath": "assets/themes/bender/covers/menu.png",
+          "commands": [
+            "/menu"
+          ]
+        },
+        {
+          "fileName": "menuadm.png",
+          "surfaceKey": "menuadm",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\bender\\covers\\menuadm.png",
+          "relativePath": "assets/themes/bender/covers/menuadm.png",
+          "commands": [
+            "/menuadm"
+          ]
+        },
+        {
+          "fileName": "menubrincadeira.png",
+          "surfaceKey": "menubrincadeira",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\bender\\covers\\menubrincadeira.png",
+          "relativePath": "assets/themes/bender/covers/menubrincadeira.png",
+          "commands": [
+            "/menubrincadeira"
+          ]
+        },
+        {
+          "fileName": "menudono.png",
+          "surfaceKey": "menudono",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\bender\\covers\\menudono.png",
+          "relativePath": "assets/themes/bender/covers/menudono.png",
+          "commands": [
+            "/menudono"
+          ]
+        },
+        {
+          "fileName": "perfilbot.png",
+          "surfaceKey": "perfilbot",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\bender\\covers\\perfilbot.png",
+          "relativePath": "assets/themes/bender/covers/perfilbot.png",
+          "commands": [
+            "/botprofile"
+          ]
+        },
+        {
+          "fileName": "regras.png",
+          "surfaceKey": "regras",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\bender\\covers\\regras.png",
+          "relativePath": "assets/themes/bender/covers/regras.png",
+          "commands": [
+            "/rules"
+          ]
+        },
+        {
+          "fileName": "status.png",
+          "surfaceKey": "status",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\bender\\covers\\status.png",
+          "relativePath": "assets/themes/bender/covers/status.png",
+          "commands": [
+            "/status"
+          ]
+        },
+        {
+          "fileName": "warnings.png",
+          "surfaceKey": "warnings",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\bender\\covers\\warnings.png",
+          "relativePath": "assets/themes/bender/covers/warnings.png",
+          "commands": [
+            "/warnings"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "benderlight",
+      "label": "Bender Light",
+      "displayName": "Bender Light",
+      "aboutText": "Moderacao robotica em modo clean, leve e debochada.",
+      "presentationText": "Eu sou o Bender Light. Mantenho o grupo organizado com um visual mais leve, um humor seco e a mesma ma vontade profissional.",
+      "aliases": [
+        "lightbender",
+        "benderclean",
+        "benderlite"
+      ],
+      "profileImage": {
+        "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\benderlight\\profile.png",
+        "relativePath": "assets/themes/benderlight/profile.png"
+      },
+      "defaultCover": {
+        "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\benderlight\\covers\\default.png",
+        "relativePath": "assets/themes/benderlight/covers/default.png"
+      },
+      "covers": [
+        {
+          "fileName": "ativos.png",
+          "surfaceKey": "ativos",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\benderlight\\covers\\ativos.png",
+          "relativePath": "assets/themes/benderlight/covers/ativos.png",
+          "commands": [
+            "/ativos"
+          ]
+        },
+        {
+          "fileName": "comandosbloqueados.png",
+          "surfaceKey": "comandosbloqueados",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\benderlight\\covers\\comandosbloqueados.png",
+          "relativePath": "assets/themes/benderlight/covers/comandosbloqueados.png",
+          "commands": [
+            "/comandosbloqueados"
+          ]
+        },
+        {
+          "fileName": "default.png",
+          "surfaceKey": "default",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\benderlight\\covers\\default.png",
+          "relativePath": "assets/themes/benderlight/covers/default.png",
+          "commands": [
+            "/theme"
+          ]
+        },
+        {
+          "fileName": "help.png",
+          "surfaceKey": "help",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\benderlight\\covers\\help.png",
+          "relativePath": "assets/themes/benderlight/covers/help.png",
+          "commands": [
+            "/help"
+          ]
+        },
+        {
+          "fileName": "inativos.png",
+          "surfaceKey": "inativos",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\benderlight\\covers\\inativos.png",
+          "relativePath": "assets/themes/benderlight/covers/inativos.png",
+          "commands": [
+            "/inativos",
+            "/sumidos"
+          ]
+        },
+        {
+          "fileName": "infogrupo.png",
+          "surfaceKey": "infogrupo",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\benderlight\\covers\\infogrupo.png",
+          "relativePath": "assets/themes/benderlight/covers/infogrupo.png",
+          "commands": [
+            "/infogrupo"
+          ]
+        },
+        {
+          "fileName": "listabloqueados.png",
+          "surfaceKey": "listabloqueados",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\benderlight\\covers\\listabloqueados.png",
+          "relativePath": "assets/themes/benderlight/covers/listabloqueados.png",
+          "commands": [
+            "/listabloqueados"
+          ]
+        },
+        {
+          "fileName": "menu.png",
+          "surfaceKey": "menu",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\benderlight\\covers\\menu.png",
+          "relativePath": "assets/themes/benderlight/covers/menu.png",
+          "commands": [
+            "/menu"
+          ]
+        },
+        {
+          "fileName": "menuadm.png",
+          "surfaceKey": "menuadm",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\benderlight\\covers\\menuadm.png",
+          "relativePath": "assets/themes/benderlight/covers/menuadm.png",
+          "commands": [
+            "/menuadm"
+          ]
+        },
+        {
+          "fileName": "menubrincadeira.png",
+          "surfaceKey": "menubrincadeira",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\benderlight\\covers\\menubrincadeira.png",
+          "relativePath": "assets/themes/benderlight/covers/menubrincadeira.png",
+          "commands": [
+            "/menubrincadeira"
+          ]
+        },
+        {
+          "fileName": "menudono.png",
+          "surfaceKey": "menudono",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\benderlight\\covers\\menudono.png",
+          "relativePath": "assets/themes/benderlight/covers/menudono.png",
+          "commands": [
+            "/menudono"
+          ]
+        },
+        {
+          "fileName": "perfilbot.png",
+          "surfaceKey": "perfilbot",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\benderlight\\covers\\perfilbot.png",
+          "relativePath": "assets/themes/benderlight/covers/perfilbot.png",
+          "commands": [
+            "/botprofile"
+          ]
+        },
+        {
+          "fileName": "regras.png",
+          "surfaceKey": "regras",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\benderlight\\covers\\regras.png",
+          "relativePath": "assets/themes/benderlight/covers/regras.png",
+          "commands": [
+            "/rules"
+          ]
+        },
+        {
+          "fileName": "status.png",
+          "surfaceKey": "status",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\benderlight\\covers\\status.png",
+          "relativePath": "assets/themes/benderlight/covers/status.png",
+          "commands": [
+            "/status"
+          ]
+        },
+        {
+          "fileName": "warnings.png",
+          "surfaceKey": "warnings",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\benderlight\\covers\\warnings.png",
+          "relativePath": "assets/themes/benderlight/covers/warnings.png",
+          "commands": [
+            "/warnings"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "alien",
+      "label": "Alien",
+      "displayName": "Alien",
+      "aboutText": "Moderacao sci-fi em modo orbita. Sem caos, por enquanto.",
+      "presentationText": "Eu sou o Alien. Observo o grupo da orbita, detecto bagunca e mantenho tudo em uma paz levemente cosmica.",
+      "aliases": [
+        "extraterrestre",
+        "space"
+      ],
+      "profileImage": {
+        "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\alien\\profile.png",
+        "relativePath": "assets/themes/alien/profile.png"
+      },
+      "defaultCover": {
+        "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\alien\\covers\\default.png",
+        "relativePath": "assets/themes/alien/covers/default.png"
+      },
+      "covers": [
+        {
+          "fileName": "ativos.png",
+          "surfaceKey": "ativos",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\alien\\covers\\ativos.png",
+          "relativePath": "assets/themes/alien/covers/ativos.png",
+          "commands": [
+            "/ativos"
+          ]
+        },
+        {
+          "fileName": "comandosbloqueados.png",
+          "surfaceKey": "comandosbloqueados",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\alien\\covers\\comandosbloqueados.png",
+          "relativePath": "assets/themes/alien/covers/comandosbloqueados.png",
+          "commands": [
+            "/comandosbloqueados"
+          ]
+        },
+        {
+          "fileName": "default.png",
+          "surfaceKey": "default",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\alien\\covers\\default.png",
+          "relativePath": "assets/themes/alien/covers/default.png",
+          "commands": [
+            "/theme"
+          ]
+        },
+        {
+          "fileName": "help.png",
+          "surfaceKey": "help",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\alien\\covers\\help.png",
+          "relativePath": "assets/themes/alien/covers/help.png",
+          "commands": [
+            "/help"
+          ]
+        },
+        {
+          "fileName": "inativos.png",
+          "surfaceKey": "inativos",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\alien\\covers\\inativos.png",
+          "relativePath": "assets/themes/alien/covers/inativos.png",
+          "commands": [
+            "/inativos",
+            "/sumidos"
+          ]
+        },
+        {
+          "fileName": "infogrupo.png",
+          "surfaceKey": "infogrupo",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\alien\\covers\\infogrupo.png",
+          "relativePath": "assets/themes/alien/covers/infogrupo.png",
+          "commands": [
+            "/infogrupo"
+          ]
+        },
+        {
+          "fileName": "listabloqueados.png",
+          "surfaceKey": "listabloqueados",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\alien\\covers\\listabloqueados.png",
+          "relativePath": "assets/themes/alien/covers/listabloqueados.png",
+          "commands": [
+            "/listabloqueados"
+          ]
+        },
+        {
+          "fileName": "menu.png",
+          "surfaceKey": "menu",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\alien\\covers\\menu.png",
+          "relativePath": "assets/themes/alien/covers/menu.png",
+          "commands": [
+            "/menu"
+          ]
+        },
+        {
+          "fileName": "menuadm.png",
+          "surfaceKey": "menuadm",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\alien\\covers\\menuadm.png",
+          "relativePath": "assets/themes/alien/covers/menuadm.png",
+          "commands": [
+            "/menuadm"
+          ]
+        },
+        {
+          "fileName": "menubrincadeira.png",
+          "surfaceKey": "menubrincadeira",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\alien\\covers\\menubrincadeira.png",
+          "relativePath": "assets/themes/alien/covers/menubrincadeira.png",
+          "commands": [
+            "/menubrincadeira"
+          ]
+        },
+        {
+          "fileName": "menudono.png",
+          "surfaceKey": "menudono",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\alien\\covers\\menudono.png",
+          "relativePath": "assets/themes/alien/covers/menudono.png",
+          "commands": [
+            "/menudono"
+          ]
+        },
+        {
+          "fileName": "perfilbot.png",
+          "surfaceKey": "perfilbot",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\alien\\covers\\perfilbot.png",
+          "relativePath": "assets/themes/alien/covers/perfilbot.png",
+          "commands": [
+            "/botprofile"
+          ]
+        },
+        {
+          "fileName": "regras.png",
+          "surfaceKey": "regras",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\alien\\covers\\regras.png",
+          "relativePath": "assets/themes/alien/covers/regras.png",
+          "commands": [
+            "/rules"
+          ]
+        },
+        {
+          "fileName": "status.png",
+          "surfaceKey": "status",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\alien\\covers\\status.png",
+          "relativePath": "assets/themes/alien/covers/status.png",
+          "commands": [
+            "/status"
+          ]
+        },
+        {
+          "fileName": "warnings.png",
+          "surfaceKey": "warnings",
+          "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\alien\\covers\\warnings.png",
+          "relativePath": "assets/themes/alien/covers/warnings.png",
+          "commands": [
+            "/warnings"
+          ]
+        }
+      ]
+    }
+  ]
+}
