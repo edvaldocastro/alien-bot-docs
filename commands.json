@@ -1187,6 +1187,38 @@
           "title": "Utilitarios",
           "commands": [
             {
+              "name": "/documentacao",
+              "rawName": "documentacao",
+              "aliases": [
+                "/docs",
+                "/doc",
+                "/manual",
+                "/ajudaonline",
+                "/manualbot",
+                "/docbot",
+                "/documentacaobot"
+              ],
+              "examples": [
+                "/documentacao",
+                "/docs",
+                "/manualbot",
+                "/documentacao bot"
+              ],
+              "tips": [
+                "O link e enviado no privado de quem chamou o comando."
+              ],
+              "usage": "/documentacao | /docs | /manualbot | /documentacao bot",
+              "description": "Enviar o link da documentacao do bot no PV.",
+              "outputExample": "Envia o link da documentacao no PV e confirma no grupo.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "utilities",
+              "categoryTitle": "Utilitarios"
+            },
+            {
               "name": "/menuadm",
               "rawName": "menuadm",
               "aliases": [
@@ -1937,6 +1969,32 @@
               "usage": "/reject @usuario | /rejeitar @usuario",
               "description": "Rejeitar a solicitacao pendente de um membro para entrada no grupo",
               "outputExample": "Mostra um resumo da acao administrativa executada.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "administration",
+              "categoryTitle": "Administracao"
+            },
+            {
+              "name": "/rejeitartodos",
+              "rawName": "rejeitartodos",
+              "aliases": [
+                "/recusartodos",
+                "/recusar"
+              ],
+              "examples": [
+                "/rejeitartodos",
+                "/recusartodos",
+                "/recusar todos"
+              ],
+              "tips": [
+                "Rejeita toda a fila pendente sem adicionar ninguem a lista negra."
+              ],
+              "usage": "/rejeitartodos | /recusartodos | /recusar todos",
+              "description": "Recusar todas as solicitacoes pendentes de entrada.",
+              "outputExample": "Mostra um resumo com pendentes revisados, recusados e falhas.",
               "requiredRole": "group_admin",
               "requiredRoleLabel": "Administrador do Grupo",
               "requiredChatType": "group",
@@ -3365,7 +3423,7 @@
     {
       "key": "utilities",
       "title": "Utilitarios",
-      "count": 10
+      "count": 11
     },
     {
       "key": "media",
@@ -3385,7 +3443,7 @@
     {
       "key": "administration",
       "title": "Administracao",
-      "count": 17
+      "count": 18
     },
     {
       "key": "configuration",
@@ -3402,7 +3460,7 @@
     {
       "key": "group_admin",
       "title": "Administrador do Grupo",
-      "count": 68
+      "count": 70
     },
     {
       "key": "owner",
@@ -3410,7 +3468,7 @@
       "count": 14
     }
   ],
-  "commandCount": 129,
+  "commandCount": 131,
   "themes": [
     {
       "key": "bender",

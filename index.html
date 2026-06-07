@@ -12,7 +12,7 @@
         <div class="hero__content">
             <p class="eyebrow">Documentacao publica</p>
             <h1>Comandos do Bot</h1>
-            <p class="hero__lead">Arquivo gerado automaticamente a partir da metadata real dos comandos. Esta versao documenta 129 comandos publicos liberados para consulta geral.</p>
+            <p class="hero__lead">Arquivo gerado automaticamente a partir da metadata real dos comandos. Esta versao documenta 131 comandos publicos liberados para consulta geral.</p>
             <p class="hero__lead">Para atualizar automaticamente, rode <code>npm run generate:commands-docs</code>.</p>
             <div class="search-shell">
                 <label for="command-search">Buscar comandos, aliases, categorias e outputs</label>
@@ -26,13 +26,13 @@
             <nav aria-label="Navegacao da documentacao">
                 <a href="#comandos">Comandos</a>
                 <a href="#temas">Temas do Bot</a>
-                <a href="#categoria-utilities">Utilitarios <span>10</span></a><a href="#categoria-media">Midia <span>4</span></a><a href="#categoria-entertainment">Entretenimento <span>35</span></a><a href="#categoria-moderation">Moderacao <span>16</span></a><a href="#categoria-administration">Administracao <span>17</span></a><a href="#categoria-configuration">Configuracao <span>47</span></a>
+                <a href="#categoria-utilities">Utilitarios <span>11</span></a><a href="#categoria-media">Midia <span>4</span></a><a href="#categoria-entertainment">Entretenimento <span>35</span></a><a href="#categoria-moderation">Moderacao <span>16</span></a><a href="#categoria-administration">Administracao <span>18</span></a><a href="#categoria-configuration">Configuracao <span>47</span></a>
             </nav>
         </aside>
 
         <section class="content">
             <section class="stats-grid" aria-label="Resumo">
-                <article><strong>129</strong><span>comandos publicos</span></article>
+                <article><strong>131</strong><span>comandos publicos</span></article>
                 <article><strong>6</strong><span>categorias visiveis</span></article>
                 <article><strong>3</strong><span>temas documentados</span></article>
             </section>
@@ -47,7 +47,7 @@
                 <div class="section-heading">
                     <p class="eyebrow">Referencia</p>
                     <h2>Comandos publicos</h2>
-                    <p><span id="result-count">129</span> comandos encontrados.</p>
+                    <p><span id="result-count">131</span> comandos encontrados.</p>
                 </div>
                 
         <section class="role-section" data-role-section="member">
@@ -1162,6 +1162,29 @@
                 <h4>Utilitarios</h4>
                 <div class="command-grid">
                     
+        <article class="command-card" data-command-card data-category="utilities" data-role="group_admin" data-search="/documentacao /docs /doc /manual /ajudaonline /manualbot /docbot /documentacaobot enviar o link da documentacao do bot no pv. utilitarios administrador do grupo somente grupos /documentacao | /docs | /manualbot | /documentacao bot /documentacao /docs /manualbot /documentacao bot o link e enviado no privado de quem chamou o comando. envia o link da documentacao no pv e confirma no grupo.">
+            <div class="command-card__top">
+                <h5><code>/documentacao</code></h5>
+                <button class="copy-button" type="button" data-copy="/documentacao | /docs | /manualbot | /documentacao bot">Copiar uso</button>
+            </div>
+            <p>Enviar o link da documentacao do bot no PV.</p>
+            <dl>
+                <div><dt>Aliases</dt><dd><code>/docs</code> <code>/doc</code> <code>/manual</code> <code>/ajudaonline</code> <code>/manualbot</code> <code>/docbot</code> <code>/documentacaobot</code></dd></div>
+                <div><dt>Acesso</dt><dd>Administrador do Grupo</dd></div>
+                <div><dt>Contexto</dt><dd>somente grupos</dd></div>
+                <div><dt>Uso</dt><dd><code>/documentacao | /docs | /manualbot | /documentacao bot</code></dd></div>
+            </dl>
+            <div class="examples">
+                <strong>Exemplos de uso</strong>
+                <ul><li><code>/documentacao</code></li><li><code>/docs</code></li><li><code>/manualbot</code></li><li><code>/documentacao bot</code></li></ul>
+            </div>
+            <div class="output-example">
+                <strong>Exemplo de output</strong>
+                <p>Envia o link da documentacao no PV e confirma no grupo.</p>
+            </div>
+            <div class="tips"><strong>Dicas</strong><ul><li>O link e enviado no privado de quem chamou o comando.</li></ul></div>
+            
+        </article>
         <article class="command-card" data-command-card data-category="utilities" data-role="group_admin" data-search="/menuadm /adminmenu mostrar o menu de administracao do grupo utilitarios administrador do grupo grupo ou privado /menuadm | /adminmenu /menuadm /adminmenu os menus usam pt-br na exibicao e mantem aliases em ingles para consulta rapida. envia o menu administrativo com controles de moderacao, configuracao e gestao do grupo.">
             <div class="command-card__top">
                 <h5><code>/menuadm</code></h5>
@@ -1839,6 +1862,29 @@
                 <p>Mostra um resumo da acao administrativa executada.</p>
             </div>
             <div class="tips"><strong>Dicas</strong><ul><li>Use com a mencao do usuario ou respondendo a solicitacao quando fizer sentido.</li></ul></div>
+            
+        </article>
+        <article class="command-card" data-command-card data-category="administration" data-role="group_admin" data-search="/rejeitartodos /recusartodos /recusar recusar todas as solicitacoes pendentes de entrada. administracao administrador do grupo somente grupos /rejeitartodos | /recusartodos | /recusar todos /rejeitartodos /recusartodos /recusar todos rejeita toda a fila pendente sem adicionar ninguem a lista negra. mostra um resumo com pendentes revisados, recusados e falhas.">
+            <div class="command-card__top">
+                <h5><code>/rejeitartodos</code></h5>
+                <button class="copy-button" type="button" data-copy="/rejeitartodos | /recusartodos | /recusar todos">Copiar uso</button>
+            </div>
+            <p>Recusar todas as solicitacoes pendentes de entrada.</p>
+            <dl>
+                <div><dt>Aliases</dt><dd><code>/recusartodos</code> <code>/recusar</code></dd></div>
+                <div><dt>Acesso</dt><dd>Administrador do Grupo</dd></div>
+                <div><dt>Contexto</dt><dd>somente grupos</dd></div>
+                <div><dt>Uso</dt><dd><code>/rejeitartodos | /recusartodos | /recusar todos</code></dd></div>
+            </dl>
+            <div class="examples">
+                <strong>Exemplos de uso</strong>
+                <ul><li><code>/rejeitartodos</code></li><li><code>/recusartodos</code></li><li><code>/recusar todos</code></li></ul>
+            </div>
+            <div class="output-example">
+                <strong>Exemplo de output</strong>
+                <p>Mostra um resumo com pendentes revisados, recusados e falhas.</p>
+            </div>
+            <div class="tips"><strong>Dicas</strong><ul><li>Rejeita toda a fila pendente sem adicionar ninguem a lista negra.</li></ul></div>
             
         </article>
         <article class="command-card" data-command-card data-category="administration" data-role="group_admin" data-search="/resetarcontadores /resetarinativos /resetarativos /resetaratividade resetar contadores de atividade do grupo atual administracao administrador do grupo somente grupos /resetarcontadores /resetarcontadores o reset afeta somente o grupo onde o comando foi enviado. mostra um resumo da acao administrativa executada.">
