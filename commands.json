@@ -1,12 +1,39 @@
 {
   "title": "Comandos do Bot",
-  "generatedNotice": "Arquivo gerado automaticamente a partir da metadata real dos comandos.",
+  "generatedNotice": "Esta documentacao foi preparada para administradores que querem configurar e usar o bot em seus grupos de WhatsApp. Cada comando abaixo usa o formato {prefixo}comando, porque o prefixo pode mudar de grupo para grupo.",
   "updateCommand": "npm run generate:commands-docs",
   "readingTips": [
-    "Prefixo dos exemplos: `/`.",
-    "O bot respeita o prefixo configurado no grupo em runtime.",
+    "Substitua `{prefixo}` pelo prefixo configurado no seu grupo. Exemplo: se o prefixo for `.`, use `.menuadm`.",
+    "O bot respeita o prefixo configurado no grupo em runtime; o padrao inicial costuma ser `/` ate voce alterar.",
     "Os comandos estao organizados por hierarquia de acesso e, dentro dela, por categoria.",
     "A documentacao publica mostra apenas comandos e imagens liberados para consulta geral."
+  ],
+  "quickStart": [
+    {
+      "title": "1. Confirme se o bot esta respondendo",
+      "command": "{prefixo}ping",
+      "description": "Use este comando para validar que o bot esta online no grupo."
+    },
+    {
+      "title": "2. Abra o menu administrativo",
+      "command": "{prefixo}menuadm",
+      "description": "Administradores usam este menu para ver protecoes, configuracoes e acoes de moderacao."
+    },
+    {
+      "title": "3. Defina o prefixo do grupo",
+      "command": "{prefixo}setprefix .",
+      "description": "Troca o prefixo dos comandos. Depois disso, comandos como {prefixo}menu passam a usar o novo prefixo escolhido."
+    },
+    {
+      "title": "4. Configure regras e protecoes essenciais",
+      "command": "{prefixo}setrules <texto>",
+      "description": "Cadastre regras do grupo e ajuste protecoes como antilink, antispam, antifake e DDIs permitidos."
+    },
+    {
+      "title": "5. Confira o estado final",
+      "command": "{prefixo}status",
+      "description": "Mostra protecoes ativas, configuracoes do grupo e controles globais relevantes."
+    }
   ],
   "hierarchy": [
     "`member`: qualquer usuario",
@@ -25,21 +52,21 @@
           "title": "Utilitarios",
           "commands": [
             {
-              "name": "/botprofile",
+              "name": "{prefixo}botprofile",
               "rawName": "botprofile",
               "aliases": [
-                "/perfilbot",
-                "/sobremim"
+                "{prefixo}perfilbot",
+                "{prefixo}sobremim"
               ],
               "examples": [
-                "/botprofile",
-                "/perfilbot",
-                "/sobremim"
+                "{prefixo}botprofile",
+                "{prefixo}perfilbot",
+                "{prefixo}sobremim"
               ],
               "tips": [
                 "Bom para conferir rapidamente como o bot esta se apresentando para o grupo."
               ],
-              "usage": "/botprofile | /perfilbot",
+              "usage": "{prefixo}botprofile | {prefixo}perfilbot",
               "description": "Mostrar um resumo do perfil e da apresentacao do bot",
               "outputExample": "Envia um card com a identidade visual atual do bot, nome, status e tema.",
               "outputPreview": "🤖 **ALIEN**\nStatus: online\nTema atual: Alien\nDono: Edvaldo",
@@ -52,23 +79,23 @@
               "categoryTitle": "Utilitarios"
             },
             {
-              "name": "/help",
+              "name": "{prefixo}help",
               "rawName": "help",
               "aliases": [
-                "/ajuda"
+                "{prefixo}ajuda"
               ],
               "examples": [
-                "/help",
-                "/ajuda banir",
-                "/help antilink"
+                "{prefixo}help",
+                "{prefixo}ajuda banir",
+                "{prefixo}help antilink"
               ],
               "tips": [
                 "Voce pode pedir ajuda usando o nome principal ou qualquer atalho do comando."
               ],
-              "usage": "/help [comando] | /ajuda [comando]",
+              "usage": "{prefixo}help [comando] | {prefixo}ajuda [comando]",
               "description": "Mostrar os comandos disponiveis do bot",
               "outputExample": "Exibe uma lista organizada de comandos disponiveis ou a ajuda detalhada de um comando especifico.",
-              "outputPreview": "📚 **Ajuda do Bot**\nUse /menu para ver os comandos principais.\nUse /ajuda ban para detalhes de um comando.",
+              "outputPreview": "📚 **Ajuda do Bot**\nUse {prefixo}menu para ver os comandos principais.\nUse {prefixo}ajuda ban para detalhes de um comando.",
               "requiredRole": "member",
               "requiredRoleLabel": "Membro",
               "requiredChatType": "any",
@@ -78,21 +105,21 @@
               "categoryTitle": "Utilitarios"
             },
             {
-              "name": "/hora",
+              "name": "{prefixo}hora",
               "rawName": "hora",
               "aliases": [
-                "/horaatual",
-                "/horaagora"
+                "{prefixo}horaatual",
+                "{prefixo}horaagora"
               ],
               "examples": [
-                "/hora",
-                "/horaatual",
-                "/horaagora"
+                "{prefixo}hora",
+                "{prefixo}horaatual",
+                "{prefixo}horaagora"
               ],
               "tips": [
                 "Mostra a hora local do servidor/processo do bot, nao necessariamente o fuso do grupo."
               ],
-              "usage": "/hora | /horaatual | /horaagora",
+              "usage": "{prefixo}hora | {prefixo}horaatual | {prefixo}horaagora",
               "description": "Mostrar o horario atual do ambiente onde o bot esta operando.",
               "outputExample": "Responde com informacoes sobre Mostrar o horario atual do ambiente onde o bot esta operando..",
               "outputPreview": "🕒 **Hora atual do Bot**\nHorario: segunda-feira, 8 de junho de 2026 às 12:34:56 UTC\nTimezone: UTC",
@@ -105,22 +132,22 @@
               "categoryTitle": "Utilitarios"
             },
             {
-              "name": "/infogrupo",
+              "name": "{prefixo}infogrupo",
               "rawName": "infogrupo",
               "aliases": [
-                "/grupo",
-                "/groupinfo",
-                "/infogroup"
+                "{prefixo}grupo",
+                "{prefixo}groupinfo",
+                "{prefixo}infogroup"
               ],
               "examples": [
-                "/infogrupo",
-                "/grupo",
-                "/groupinfo"
+                "{prefixo}infogrupo",
+                "{prefixo}grupo",
+                "{prefixo}groupinfo"
               ],
               "tips": [
                 "Qualquer membro pode consultar dados basicos, admins e bloqueios visiveis."
               ],
-              "usage": "/infogrupo | /grupo | /groupinfo",
+              "usage": "{prefixo}infogrupo | {prefixo}grupo | {prefixo}groupinfo",
               "description": "Mostrar informacoes completas do grupo",
               "outputExample": "Envia um resumo do grupo com participantes, admins, regras e configuracoes ativas.",
               "outputPreview": "ℹ️ **Info do Grupo**\nNome: Eu e o Bot\nParticipantes: 42\nAdministradores: 3\nPrefixo: /",
@@ -133,22 +160,22 @@
               "categoryTitle": "Utilitarios"
             },
             {
-              "name": "/menu",
+              "name": "{prefixo}menu",
               "rawName": "menu",
               "aliases": [
-                "/cardapio"
+                "{prefixo}cardapio"
               ],
               "examples": [
-                "/menu",
-                "/cardapio"
+                "{prefixo}menu",
+                "{prefixo}cardapio"
               ],
               "tips": [
                 "Os menus usam PT-BR na exibicao e mantem aliases em ingles para consulta rapida."
               ],
-              "usage": "/menu | /cardapio",
+              "usage": "{prefixo}menu | {prefixo}cardapio",
               "description": "Mostrar o menu para usuarios comuns",
               "outputExample": "Envia o menu principal do bot com uma imagem do tema atual e os atalhos principais.",
-              "outputPreview": "🌟 **Menu de Usuario**\nCentral de Comandos\n\n/menu - Abrir o menu principal.\n/regras - Ler as regras do grupo.\n/hora - Mostrar o horario atual do bot.",
+              "outputPreview": "🌟 **Menu de Usuario**\nCentral de Comandos\n\n{prefixo}menu - Abrir o menu principal.\n{prefixo}regras - Ler as regras do grupo.\n{prefixo}hora - Mostrar o horario atual do bot.",
               "requiredRole": "member",
               "requiredRoleLabel": "Membro",
               "requiredChatType": "any",
@@ -158,22 +185,22 @@
               "categoryTitle": "Utilitarios"
             },
             {
-              "name": "/menumembro",
+              "name": "{prefixo}menumembro",
               "rawName": "menumembro",
               "aliases": [
-                "/membermenu"
+                "{prefixo}membermenu"
               ],
               "examples": [
-                "/menumembro",
-                "/membermenu"
+                "{prefixo}menumembro",
+                "{prefixo}membermenu"
               ],
               "tips": [
                 "Os menus usam PT-BR na exibicao e mantem aliases em ingles para consulta rapida."
               ],
-              "usage": "/menumembro | /membermenu",
+              "usage": "{prefixo}menumembro | {prefixo}membermenu",
               "description": "Mostrar o menu para membros comuns",
               "outputExample": "Mostra o menu para membros comuns, com comandos de utilidade, midia e brincadeiras.",
-              "outputPreview": "🌟 **Menu de Usuario**\nComandos essenciais do dia a dia.\n\n/regras\n/ping\n/play\n/menubrincadeira",
+              "outputPreview": "🌟 **Menu de Usuario**\nComandos essenciais do dia a dia.\n\n{prefixo}regras\n{prefixo}ping\n{prefixo}play\n{prefixo}menubrincadeira",
               "requiredRole": "member",
               "requiredRoleLabel": "Membro",
               "requiredChatType": "any",
@@ -183,19 +210,19 @@
               "categoryTitle": "Utilitarios"
             },
             {
-              "name": "/ping",
+              "name": "{prefixo}ping",
               "rawName": "ping",
               "aliases": [
-                "/teste"
+                "{prefixo}teste"
               ],
               "examples": [
-                "/ping",
-                "/teste"
+                "{prefixo}ping",
+                "{prefixo}teste"
               ],
               "tips": [
                 "Bom para confirmar rapido se o bot esta respondendo no grupo ou no privado."
               ],
-              "usage": "/ping | /teste",
+              "usage": "{prefixo}ping | {prefixo}teste",
               "description": "Verificar se o bot esta online",
               "outputExample": "Pong! O bot responde confirmando que esta online.",
               "outputPreview": "⚡ **Ping**\npong",
@@ -208,19 +235,19 @@
               "categoryTitle": "Utilitarios"
             },
             {
-              "name": "/rules",
+              "name": "{prefixo}rules",
               "rawName": "rules",
               "aliases": [
-                "/regras"
+                "{prefixo}regras"
               ],
               "examples": [
-                "/rules",
-                "/regras"
+                "{prefixo}rules",
+                "{prefixo}regras"
               ],
               "tips": [
                 "Use depois de atualizar as regras para lembrar o grupo do texto atual."
               ],
-              "usage": "/rules | /regras",
+              "usage": "{prefixo}rules | {prefixo}regras",
               "description": "Mostrar as regras atuais do grupo",
               "outputExample": "Mostra as regras atuais do grupo.",
               "outputPreview": "📜 **Regras do Grupo**\n1. Respeite todos os membros.\n2. Evite spam.\n3. Siga as orientacoes dos administradores.",
@@ -233,23 +260,23 @@
               "categoryTitle": "Utilitarios"
             },
             {
-              "name": "/status",
+              "name": "{prefixo}status",
               "rawName": "status",
               "aliases": [
-                "/statusgrupo",
-                "/statusgeral",
-                "/groupstatus"
+                "{prefixo}statusgrupo",
+                "{prefixo}statusgeral",
+                "{prefixo}groupstatus"
               ],
               "examples": [
-                "/status",
-                "/statusgrupo",
-                "/groupstatus"
+                "{prefixo}status",
+                "{prefixo}statusgrupo",
+                "{prefixo}groupstatus"
               ],
               "tips": [
                 "Mostra as protecoes do grupo atual e os controles globais do dono.",
                 "Use os comandos do menuadm e menudono para ligar ou desligar cada recurso."
               ],
-              "usage": "/status | /statusgrupo | /groupstatus",
+              "usage": "{prefixo}status | {prefixo}statusgrupo | {prefixo}groupstatus",
               "description": "Mostrar o status das protecoes e configuracoes do grupo",
               "outputExample": "Mostra o status geral do grupo e das protecoes ativas.",
               "outputPreview": "📊 **Status do Grupo**\nProtecoes e configuracoes\n\nAnti-link: Ativado\nAnti-spam: Ativado\nAnti-video: Desativado",
@@ -268,21 +295,21 @@
           "title": "Midia",
           "commands": [
             {
-              "name": "/gif",
+              "name": "{prefixo}gif",
               "rawName": "gif",
               "aliases": [
-                "/togif",
-                "/gifvideo"
+                "{prefixo}togif",
+                "{prefixo}gifvideo"
               ],
               "examples": [
-                "/gif respondendo a uma figurinha animada",
-                "/gif em um video curto"
+                "{prefixo}gif respondendo a uma figurinha animada",
+                "{prefixo}gif em um video curto"
               ],
               "tips": [
                 "Use em video curto ou figurinha animada.",
                 "Imagens estaticas nao sao aceitas nesse comando."
               ],
-              "usage": "/gif",
+              "usage": "{prefixo}gif",
               "description": "Transformar sticker animada ou video curto em midia animada",
               "outputExample": "Envia a midia convertida em GIF ou video animado.",
               "outputPreview": "🎞️ **GIF**\nMidia convertida e enviada como animacao.",
@@ -295,23 +322,23 @@
               "categoryTitle": "Midia"
             },
             {
-              "name": "/menumidia",
+              "name": "{prefixo}menumidia",
               "rawName": "menumidia",
               "aliases": [
-                "/mediamenu",
-                "/midia"
+                "{prefixo}mediamenu",
+                "{prefixo}midia"
               ],
               "examples": [
-                "/menumidia",
-                "/midia"
+                "{prefixo}menumidia",
+                "{prefixo}midia"
               ],
               "tips": [
                 "Use esses comandos respondendo a uma midia ou na legenda da midia."
               ],
-              "usage": "/menumidia | /midia",
+              "usage": "{prefixo}menumidia | {prefixo}midia",
               "description": "Mostrar apenas os comandos de midia",
               "outputExample": "Exibe comandos de midia como figurinha, conversao de sticker e GIF.",
-              "outputPreview": "🎬 **Menu de Midia**\n/sticker - Criar figurinha.\n/toimg - Converter sticker em imagem.\n/gif - Converter midia animada.",
+              "outputPreview": "🎬 **Menu de Midia**\n{prefixo}sticker - Criar figurinha.\n{prefixo}toimg - Converter sticker em imagem.\n{prefixo}gif - Converter midia animada.",
               "requiredRole": "member",
               "requiredRoleLabel": "Membro",
               "requiredChatType": "any",
@@ -321,23 +348,23 @@
               "categoryTitle": "Midia"
             },
             {
-              "name": "/sticker",
+              "name": "{prefixo}sticker",
               "rawName": "sticker",
               "aliases": [
-                "/s",
-                "/figurinha",
-                "/f"
+                "{prefixo}s",
+                "{prefixo}figurinha",
+                "{prefixo}f"
               ],
               "examples": [
-                "/sticker",
-                "/s",
-                "/figurinha respondendo a uma imagem"
+                "{prefixo}sticker",
+                "{prefixo}s",
+                "{prefixo}figurinha respondendo a uma imagem"
               ],
               "tips": [
                 "Envie o comando na legenda da imagem ou responda a uma imagem/video curto.",
                 "Videos longos sao recusados para manter a conversao rapida."
               ],
-              "usage": "/sticker | /s | /figurinha | /f",
+              "usage": "{prefixo}sticker | {prefixo}s | {prefixo}figurinha | {prefixo}f",
               "description": "Transformar imagem ou video curto em sticker",
               "outputExample": "Envia uma figurinha criada a partir da imagem, video curto ou midia respondida.",
               "outputPreview": "✅ Figurinha criada com sucesso.",
@@ -350,19 +377,19 @@
               "categoryTitle": "Midia"
             },
             {
-              "name": "/toimg",
+              "name": "{prefixo}toimg",
               "rawName": "toimg",
               "aliases": [
-                "/toimage",
-                "/stickertoimg"
+                "{prefixo}toimage",
+                "{prefixo}stickertoimg"
               ],
               "examples": [
-                "/toimg respondendo a uma figurinha"
+                "{prefixo}toimg respondendo a uma figurinha"
               ],
               "tips": [
                 "Esse comando aceita apenas figurinha estatica."
               ],
-              "usage": "/toimg",
+              "usage": "{prefixo}toimg",
               "description": "Transformar sticker estatica em imagem",
               "outputExample": "Converte uma figurinha estatica em imagem.",
               "outputPreview": "🖼️ Sticker convertido em imagem.",
@@ -381,20 +408,20 @@
           "title": "Entretenimento",
           "commands": [
             {
-              "name": "/8ball",
+              "name": "{prefixo}8ball",
               "rawName": "8ball",
               "aliases": [
-                "/bolamagica",
-                "/bola8",
-                "/oraculo"
+                "{prefixo}bolamagica",
+                "{prefixo}bola8",
+                "{prefixo}oraculo"
               ],
               "examples": [
-                "/8ball vou ganhar hoje?"
+                "{prefixo}8ball vou ganhar hoje?"
               ],
               "tips": [
                 "Funciona quando o modo brincadeira esta ativado no grupo."
               ],
-              "usage": "/8ball <pergunta> | /bolamagica <pergunta>",
+              "usage": "{prefixo}8ball <pergunta> | {prefixo}bolamagica <pergunta>",
               "description": "Responder uma pergunta como bola magica",
               "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
               "outputPreview": "🎱 **Bola 8**\nPergunta: vou ganhar hoje?\nResposta: sinais apontam que sim.",
@@ -407,21 +434,21 @@
               "categoryTitle": "Entretenimento"
             },
             {
-              "name": "/adivinhar",
+              "name": "{prefixo}adivinhar",
               "rawName": "adivinhar",
               "aliases": [
-                "/guess",
-                "/numero",
-                "/chutar"
+                "{prefixo}guess",
+                "{prefixo}numero",
+                "{prefixo}chutar"
               ],
               "examples": [
-                "/adivinhar 7",
-                "/guess 3"
+                "{prefixo}adivinhar 7",
+                "{prefixo}guess 3"
               ],
               "tips": [
                 "Funciona quando o modo brincadeira esta ativado no grupo."
               ],
-              "usage": "/adivinhar <1-10> | /guess <1-10>",
+              "usage": "{prefixo}adivinhar <1-10> | {prefixo}guess <1-10>",
               "description": "Tentar adivinhar um numero de 1 a 10",
               "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
               "outputPreview": "🔢 **Adivinhar**\nSeu palpite: 7\nNumero sorteado: 7\nResultado: voce acertou.",
@@ -434,19 +461,19 @@
               "categoryTitle": "Entretenimento"
             },
             {
-              "name": "/casal",
+              "name": "{prefixo}casal",
               "rawName": "casal",
               "aliases": [
-                "/parromantico",
-                "/amoreterno"
+                "{prefixo}parromantico",
+                "{prefixo}amoreterno"
               ],
               "examples": [
-                "/casal"
+                "{prefixo}casal"
               ],
               "tips": [
                 "Funciona quando o modo brincadeira esta ativado no grupo."
               ],
-              "usage": "/casal",
+              "usage": "{prefixo}casal",
               "description": "Sortear um casal aleatorio com imagem romantica",
               "outputExample": "Envia uma imagem romantica sorteando duas pessoas do grupo.",
               "outputPreview": "💞 **Casal do Grupo**\nAna + Bruno\nCompatibilidade: 87%",
@@ -459,22 +486,22 @@
               "categoryTitle": "Entretenimento"
             },
             {
-              "name": "/chance",
+              "name": "{prefixo}chance",
               "rawName": "chance",
               "aliases": [
-                "/probabilidade",
-                "/odds",
-                "/possibilidade"
+                "{prefixo}probabilidade",
+                "{prefixo}odds",
+                "{prefixo}possibilidade"
               ],
               "examples": [
-                "/chance de chover hoje?",
-                "/probabilidade do grupo ganhar na loteria?"
+                "{prefixo}chance de chover hoje?",
+                "{prefixo}probabilidade do grupo ganhar na loteria?"
               ],
               "tips": [
                 "Funciona quando o modo brincadeira esta ativado no grupo.",
                 "E uma brincadeira: o resultado e aleatorio, nao uma previsao real."
               ],
-              "usage": "/chance <pergunta> | /probabilidade <pergunta>",
+              "usage": "{prefixo}chance <pergunta> | {prefixo}probabilidade <pergunta>",
               "description": "Calcular uma chance aleatoria para uma pergunta do grupo",
               "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
               "outputPreview": "🎲 **Chance**\nPergunta: vou viajar?\nChance: 64%",
@@ -487,22 +514,22 @@
               "categoryTitle": "Entretenimento"
             },
             {
-              "name": "/dado",
+              "name": "{prefixo}dado",
               "rawName": "dado",
               "aliases": [
-                "/dice",
-                "/roll",
-                "/rolar"
+                "{prefixo}dice",
+                "{prefixo}roll",
+                "{prefixo}rolar"
               ],
               "examples": [
-                "/dado",
-                "/dado d20",
-                "/roll 12"
+                "{prefixo}dado",
+                "{prefixo}dado d20",
+                "{prefixo}roll 12"
               ],
               "tips": [
                 "Funciona quando o modo brincadeira esta ativado no grupo."
               ],
-              "usage": "/dado [d6|d20|numero]",
+              "usage": "{prefixo}dado [d6|d20|numero]",
               "description": "Rolar um dado comum ou personalizado",
               "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
               "outputPreview": "🎲 **Dado**\nResultado: 14",
@@ -515,18 +542,18 @@
               "categoryTitle": "Entretenimento"
             },
             {
-              "name": "/desafio",
+              "name": "{prefixo}desafio",
               "rawName": "desafio",
               "aliases": [
-                "/dare"
+                "{prefixo}dare"
               ],
               "examples": [
-                "/desafio"
+                "{prefixo}desafio"
               ],
               "tips": [
                 "Funciona quando o modo brincadeira esta ativado no grupo."
               ],
-              "usage": "/desafio | /dare",
+              "usage": "{prefixo}desafio | {prefixo}dare",
               "description": "Sortear um desafio leve para o grupo",
               "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
               "outputPreview": "🔥 **Desafio**\nEnvie uma mensagem elogiando alguem do grupo.",
@@ -539,19 +566,19 @@
               "categoryTitle": "Entretenimento"
             },
             {
-              "name": "/frase",
+              "name": "{prefixo}frase",
               "rawName": "frase",
               "aliases": [
-                "/quote",
-                "/mensagem"
+                "{prefixo}quote",
+                "{prefixo}mensagem"
               ],
               "examples": [
-                "/frase"
+                "{prefixo}frase"
               ],
               "tips": [
                 "Funciona quando o modo brincadeira esta ativado no grupo."
               ],
-              "usage": "/frase | /quote",
+              "usage": "{prefixo}frase | {prefixo}quote",
               "description": "Enviar uma frase aleatoria",
               "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
               "outputPreview": "💭 **Frase**\nA vida não exige perfeição, exige presença.",
@@ -564,21 +591,21 @@
               "categoryTitle": "Entretenimento"
             },
             {
-              "name": "/jokenpo",
+              "name": "{prefixo}jokenpo",
               "rawName": "jokenpo",
               "aliases": [
-                "/ppt",
-                "/pedrapapeltesoura",
-                "/rps"
+                "{prefixo}ppt",
+                "{prefixo}pedrapapeltesoura",
+                "{prefixo}rps"
               ],
               "examples": [
-                "/jokenpo pedra",
-                "/ppt tesoura"
+                "{prefixo}jokenpo pedra",
+                "{prefixo}ppt tesoura"
               ],
               "tips": [
                 "Funciona quando o modo brincadeira esta ativado no grupo."
               ],
-              "usage": "/jokenpo <pedra|papel|tesoura>",
+              "usage": "{prefixo}jokenpo <pedra|papel|tesoura>",
               "description": "Jogar pedra, papel e tesoura com o bot",
               "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
               "outputPreview": "✊ **Jokenpo**\nVoce jogou: pedra\nBot jogou: tesoura\nResultado: voce venceu.",
@@ -591,25 +618,25 @@
               "categoryTitle": "Entretenimento"
             },
             {
-              "name": "/menubrincadeira",
+              "name": "{prefixo}menubrincadeira",
               "rawName": "menubrincadeira",
               "aliases": [
-                "/menufun",
-                "/menujogos",
-                "/brincadeiras",
-                "/funmenu"
+                "{prefixo}menufun",
+                "{prefixo}menujogos",
+                "{prefixo}brincadeiras",
+                "{prefixo}funmenu"
               ],
               "examples": [
-                "/menubrincadeira",
-                "/brincadeiras"
+                "{prefixo}menubrincadeira",
+                "{prefixo}brincadeiras"
               ],
               "tips": [
                 "Admins ativam ou desativam esses comandos com modobrincadeira."
               ],
-              "usage": "/menubrincadeira | /brincadeiras",
+              "usage": "{prefixo}menubrincadeira | {prefixo}brincadeiras",
               "description": "Mostrar apenas os comandos de entretenimento",
               "outputExample": "Mostra comandos de jogos e brincadeiras disponiveis para o grupo.",
-              "outputPreview": "🎮 **Menu Brincadeira**\n/piada\n/frase\n/chance\n/rank",
+              "outputPreview": "🎮 **Menu Brincadeira**\n{prefixo}piada\n{prefixo}frase\n{prefixo}chance\n{prefixo}rank",
               "requiredRole": "member",
               "requiredRoleLabel": "Membro",
               "requiredChatType": "group",
@@ -619,20 +646,20 @@
               "categoryTitle": "Entretenimento"
             },
             {
-              "name": "/moeda",
+              "name": "{prefixo}moeda",
               "rawName": "moeda",
               "aliases": [
-                "/coin",
-                "/coinflip",
-                "/caraoucoroa"
+                "{prefixo}coin",
+                "{prefixo}coinflip",
+                "{prefixo}caraoucoroa"
               ],
               "examples": [
-                "/moeda"
+                "{prefixo}moeda"
               ],
               "tips": [
                 "Funciona quando o modo brincadeira esta ativado no grupo."
               ],
-              "usage": "/moeda | /caraoucoroa",
+              "usage": "{prefixo}moeda | {prefixo}caraoucoroa",
               "description": "Jogar cara ou coroa",
               "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
               "outputPreview": "🪙 **Moeda**\nResultado: cara",
@@ -645,22 +672,22 @@
               "categoryTitle": "Entretenimento"
             },
             {
-              "name": "/perfil",
+              "name": "{prefixo}perfil",
               "rawName": "perfil",
               "aliases": [
-                "/profilefun",
-                "/meuperfil"
+                "{prefixo}profilefun",
+                "{prefixo}meuperfil"
               ],
               "examples": [
-                "/perfil",
-                "/perfil @usuario",
-                "/meuperfil"
+                "{prefixo}perfil",
+                "{prefixo}perfil @usuario",
+                "{prefixo}meuperfil"
               ],
               "tips": [
                 "Funciona quando o modo brincadeira esta ativado no grupo.",
                 "Voce pode usar mencao ou responder a mensagem da pessoa."
               ],
-              "usage": "/perfil [@pessoa] | /perfil respondendo uma mensagem | /meuperfil",
+              "usage": "{prefixo}perfil [@pessoa] | {prefixo}perfil respondendo uma mensagem | {prefixo}meuperfil",
               "description": "Gerar um card divertido com foto e bio de alguem do grupo",
               "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
               "outputPreview": "👤 **Perfil**\nMembro: Ana\nMensagens recentes: 128\nCargo: membro",
@@ -673,18 +700,18 @@
               "categoryTitle": "Entretenimento"
             },
             {
-              "name": "/piada",
+              "name": "{prefixo}piada",
               "rawName": "piada",
               "aliases": [
-                "/joke"
+                "{prefixo}joke"
               ],
               "examples": [
-                "/piada"
+                "{prefixo}piada"
               ],
               "tips": [
                 "Funciona quando o modo brincadeira esta ativado no grupo."
               ],
-              "usage": "/piada | /joke",
+              "usage": "{prefixo}piada | {prefixo}joke",
               "description": "Enviar uma piada leve",
               "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
               "outputPreview": "😂 **Piada**\nPor que o livro foi ao medico?\nPorque ele tinha muitas paginas em branco.",
@@ -697,21 +724,21 @@
               "categoryTitle": "Entretenimento"
             },
             {
-              "name": "/play",
+              "name": "{prefixo}play",
               "rawName": "play",
               "aliases": [
-                "/tocar"
+                "{prefixo}tocar"
               ],
               "examples": [
-                "/play Legiao Urbana Faroeste Caboclo",
-                "/tocar Djavan Oceano"
+                "{prefixo}play Legiao Urbana Faroeste Caboclo",
+                "{prefixo}tocar Djavan Oceano"
               ],
               "tips": [
                 "O bot baixa apenas um audio por vez em cada chat.",
                 "Playlists inteiras e arquivos grandes demais sao recusados.",
                 "Esse recurso depende de yt-dlp e ffmpeg no ambiente do bot."
               ],
-              "usage": "/play <musica> | /tocar <musica>",
+              "usage": "{prefixo}play <musica> | {prefixo}tocar <musica>",
               "description": "Buscar uma musica e enviar o audio",
               "outputExample": "Envia o audio encontrado para a busca informada.",
               "outputPreview": "🎵 **Play**\nBuscando e preparando o audio...\n\n🎵 Chitãozinho & Xororó - Evidências",
@@ -724,19 +751,19 @@
               "categoryTitle": "Entretenimento"
             },
             {
-              "name": "/quiz",
+              "name": "{prefixo}quiz",
               "rawName": "quiz",
               "aliases": [
-                "/pergunta",
-                "/trivia"
+                "{prefixo}pergunta",
+                "{prefixo}trivia"
               ],
               "examples": [
-                "/quiz"
+                "{prefixo}quiz"
               ],
               "tips": [
                 "Funciona quando o modo brincadeira esta ativado no grupo."
               ],
-              "usage": "/quiz | /trivia",
+              "usage": "{prefixo}quiz | {prefixo}trivia",
               "description": "Sortear uma pergunta de quiz com resposta",
               "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
               "outputPreview": "🧠 **Quiz**\nPergunta: Qual e a capital do Brasil?\nResposta correta: Brasilia",
@@ -749,17 +776,17 @@
               "categoryTitle": "Entretenimento"
             },
             {
-              "name": "/rankapaixonado",
+              "name": "{prefixo}rankapaixonado",
               "rawName": "rankapaixonado",
               "aliases": [],
               "examples": [
-                "/rankapaixonado"
+                "{prefixo}rankapaixonado"
               ],
               "tips": [
                 "Funciona apenas em grupos com o modo brincadeira ativado.",
                 "O ranking muda a cada execucao e menciona os participantes sorteados."
               ],
-              "usage": "/rankapaixonado",
+              "usage": "{prefixo}rankapaixonado",
               "description": "Sortear o rank dos emocionados do grupo",
               "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
               "outputPreview": "🏆 **RANKAPAIXONADO**\n1. Ana - 98%\n2. Bruno - 87%\n3. Carla - 76%\n4. Diego - 65%\n5. Eva - 54%\n\nMenção honrosa: Felipe - 42%",
@@ -772,17 +799,17 @@
               "categoryTitle": "Entretenimento"
             },
             {
-              "name": "/rankbebado",
+              "name": "{prefixo}rankbebado",
               "rawName": "rankbebado",
               "aliases": [],
               "examples": [
-                "/rankbebado"
+                "{prefixo}rankbebado"
               ],
               "tips": [
                 "Funciona apenas em grupos com o modo brincadeira ativado.",
                 "O ranking muda a cada execucao e menciona os participantes sorteados."
               ],
-              "usage": "/rankbebado",
+              "usage": "{prefixo}rankbebado",
               "description": "Sortear o rank dos bebuns do grupo",
               "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
               "outputPreview": "🏆 **RANKBEBADO**\n1. Ana - 98%\n2. Bruno - 87%\n3. Carla - 76%\n4. Diego - 65%\n5. Eva - 54%\n\nMenção honrosa: Felipe - 42%",
@@ -795,17 +822,17 @@
               "categoryTitle": "Entretenimento"
             },
             {
-              "name": "/rankcaloteiro",
+              "name": "{prefixo}rankcaloteiro",
               "rawName": "rankcaloteiro",
               "aliases": [],
               "examples": [
-                "/rankcaloteiro"
+                "{prefixo}rankcaloteiro"
               ],
               "tips": [
                 "Funciona apenas em grupos com o modo brincadeira ativado.",
                 "O ranking muda a cada execucao e menciona os participantes sorteados."
               ],
-              "usage": "/rankcaloteiro",
+              "usage": "{prefixo}rankcaloteiro",
               "description": "Sortear o rank dos caloteiros do grupo",
               "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
               "outputPreview": "🏆 **RANKCALOTEIRO**\n1. Ana - 98%\n2. Bruno - 87%\n3. Carla - 76%\n4. Diego - 65%\n5. Eva - 54%\n\nMenção honrosa: Felipe - 42%",
@@ -818,17 +845,17 @@
               "categoryTitle": "Entretenimento"
             },
             {
-              "name": "/rankchurrasqueiro",
+              "name": "{prefixo}rankchurrasqueiro",
               "rawName": "rankchurrasqueiro",
               "aliases": [],
               "examples": [
-                "/rankchurrasqueiro"
+                "{prefixo}rankchurrasqueiro"
               ],
               "tips": [
                 "Funciona apenas em grupos com o modo brincadeira ativado.",
                 "O ranking muda a cada execucao e menciona os participantes sorteados."
               ],
-              "usage": "/rankchurrasqueiro",
+              "usage": "{prefixo}rankchurrasqueiro",
               "description": "Sortear o rank dos churrasqueiros do grupo",
               "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
               "outputPreview": "🏆 **RANKCHURRASQUEIRO**\n1. Ana - 98%\n2. Bruno - 87%\n3. Carla - 76%\n4. Diego - 65%\n5. Eva - 54%\n\nMenção honrosa: Felipe - 42%",
@@ -841,17 +868,17 @@
               "categoryTitle": "Entretenimento"
             },
             {
-              "name": "/rankcorno",
+              "name": "{prefixo}rankcorno",
               "rawName": "rankcorno",
               "aliases": [],
               "examples": [
-                "/rankcorno"
+                "{prefixo}rankcorno"
               ],
               "tips": [
                 "Funciona apenas em grupos com o modo brincadeira ativado.",
                 "O ranking muda a cada execucao e menciona os participantes sorteados."
               ],
-              "usage": "/rankcorno",
+              "usage": "{prefixo}rankcorno",
               "description": "Sortear o rank dos cornos do grupo",
               "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
               "outputPreview": "🏆 **RANKCORNO**\n1. Ana - 98%\n2. Bruno - 87%\n3. Carla - 76%\n4. Diego - 65%\n5. Eva - 54%\n\nMenção honrosa: Felipe - 42%",
@@ -864,17 +891,17 @@
               "categoryTitle": "Entretenimento"
             },
             {
-              "name": "/rankdevendo",
+              "name": "{prefixo}rankdevendo",
               "rawName": "rankdevendo",
               "aliases": [],
               "examples": [
-                "/rankdevendo"
+                "{prefixo}rankdevendo"
               ],
               "tips": [
                 "Funciona apenas em grupos com o modo brincadeira ativado.",
                 "O ranking muda a cada execucao e menciona os participantes sorteados."
               ],
-              "usage": "/rankdevendo",
+              "usage": "{prefixo}rankdevendo",
               "description": "Sortear o rank de quem esta devendo pix",
               "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
               "outputPreview": "🏆 **RANKDEVENDO**\n1. Ana - 98%\n2. Bruno - 87%\n3. Carla - 76%\n4. Diego - 65%\n5. Eva - 54%\n\nMenção honrosa: Felipe - 42%",
@@ -887,17 +914,17 @@
               "categoryTitle": "Entretenimento"
             },
             {
-              "name": "/rankfofoqueiro",
+              "name": "{prefixo}rankfofoqueiro",
               "rawName": "rankfofoqueiro",
               "aliases": [],
               "examples": [
-                "/rankfofoqueiro"
+                "{prefixo}rankfofoqueiro"
               ],
               "tips": [
                 "Funciona apenas em grupos com o modo brincadeira ativado.",
                 "O ranking muda a cada execucao e menciona os participantes sorteados."
               ],
-              "usage": "/rankfofoqueiro",
+              "usage": "{prefixo}rankfofoqueiro",
               "description": "Sortear o rank dos fofoqueiros do grupo",
               "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
               "outputPreview": "🏆 **RANKFOFOQUEIRO**\n1. Ana - 98%\n2. Bruno - 87%\n3. Carla - 76%\n4. Diego - 65%\n5. Eva - 54%\n\nMenção honrosa: Felipe - 42%",
@@ -910,17 +937,17 @@
               "categoryTitle": "Entretenimento"
             },
             {
-              "name": "/rankfurao",
+              "name": "{prefixo}rankfurao",
               "rawName": "rankfurao",
               "aliases": [],
               "examples": [
-                "/rankfurao"
+                "{prefixo}rankfurao"
               ],
               "tips": [
                 "Funciona apenas em grupos com o modo brincadeira ativado.",
                 "O ranking muda a cada execucao e menciona os participantes sorteados."
               ],
-              "usage": "/rankfurao",
+              "usage": "{prefixo}rankfurao",
               "description": "Sortear o rank dos furoes do role",
               "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
               "outputPreview": "🏆 **RANKFURAO**\n1. Ana - 98%\n2. Bruno - 87%\n3. Carla - 76%\n4. Diego - 65%\n5. Eva - 54%\n\nMenção honrosa: Felipe - 42%",
@@ -933,17 +960,17 @@
               "categoryTitle": "Entretenimento"
             },
             {
-              "name": "/rankgay",
+              "name": "{prefixo}rankgay",
               "rawName": "rankgay",
               "aliases": [],
               "examples": [
-                "/rankgay"
+                "{prefixo}rankgay"
               ],
               "tips": [
                 "Funciona apenas em grupos com o modo brincadeira ativado.",
                 "O ranking muda a cada execucao e menciona os participantes sorteados."
               ],
-              "usage": "/rankgay",
+              "usage": "{prefixo}rankgay",
               "description": "Sortear o rank mais colorido do grupo",
               "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
               "outputPreview": "🏆 **RANKGAY**\n1. Ana - 98%\n2. Bruno - 87%\n3. Carla - 76%\n4. Diego - 65%\n5. Eva - 54%\n\nMenção honrosa: Felipe - 42%",
@@ -956,22 +983,22 @@
               "categoryTitle": "Entretenimento"
             },
             {
-              "name": "/rankhelp",
+              "name": "{prefixo}rankhelp",
               "rawName": "rankhelp",
               "aliases": [
-                "/rank"
+                "{prefixo}rank"
               ],
               "examples": [
-                "/rank",
-                "/rankhelp"
+                "{prefixo}rank",
+                "{prefixo}rankhelp"
               ],
               "tips": [
                 "Os ranks funcionam apenas em grupos com o modo brincadeira ativado."
               ],
-              "usage": "/rank | /rankhelp",
+              "usage": "{prefixo}rank | {prefixo}rankhelp",
               "description": "Listar os ranks aleatorios disponiveis",
               "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
-              "outputPreview": "🏆 **Ranks disponiveis**\n/rankcorno\n/rankrico\n/rankfofoqueiro",
+              "outputPreview": "🏆 **Ranks disponiveis**\n{prefixo}rankcorno\n{prefixo}rankrico\n{prefixo}rankfofoqueiro",
               "requiredRole": "member",
               "requiredRoleLabel": "Membro",
               "requiredChatType": "group",
@@ -981,17 +1008,17 @@
               "categoryTitle": "Entretenimento"
             },
             {
-              "name": "/rankpegador",
+              "name": "{prefixo}rankpegador",
               "rawName": "rankpegador",
               "aliases": [],
               "examples": [
-                "/rankpegador"
+                "{prefixo}rankpegador"
               ],
               "tips": [
                 "Funciona apenas em grupos com o modo brincadeira ativado.",
                 "O ranking muda a cada execucao e menciona os participantes sorteados."
               ],
-              "usage": "/rankpegador",
+              "usage": "{prefixo}rankpegador",
               "description": "Sortear o rank dos pegadores do grupo",
               "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
               "outputPreview": "🏆 **RANKPEGADOR**\n1. Ana - 98%\n2. Bruno - 87%\n3. Carla - 76%\n4. Diego - 65%\n5. Eva - 54%\n\nMenção honrosa: Felipe - 42%",
@@ -1004,17 +1031,17 @@
               "categoryTitle": "Entretenimento"
             },
             {
-              "name": "/rankpobre",
+              "name": "{prefixo}rankpobre",
               "rawName": "rankpobre",
               "aliases": [],
               "examples": [
-                "/rankpobre"
+                "{prefixo}rankpobre"
               ],
               "tips": [
                 "Funciona apenas em grupos com o modo brincadeira ativado.",
                 "O ranking muda a cada execucao e menciona os participantes sorteados."
               ],
-              "usage": "/rankpobre",
+              "usage": "{prefixo}rankpobre",
               "description": "Sortear o rank dos lisos do grupo",
               "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
               "outputPreview": "🏆 **RANKPOBRE**\n1. Ana - 98%\n2. Bruno - 87%\n3. Carla - 76%\n4. Diego - 65%\n5. Eva - 54%\n\nMenção honrosa: Felipe - 42%",
@@ -1027,17 +1054,17 @@
               "categoryTitle": "Entretenimento"
             },
             {
-              "name": "/rankpreguicoso",
+              "name": "{prefixo}rankpreguicoso",
               "rawName": "rankpreguicoso",
               "aliases": [],
               "examples": [
-                "/rankpreguicoso"
+                "{prefixo}rankpreguicoso"
               ],
               "tips": [
                 "Funciona apenas em grupos com o modo brincadeira ativado.",
                 "O ranking muda a cada execucao e menciona os participantes sorteados."
               ],
-              "usage": "/rankpreguicoso",
+              "usage": "{prefixo}rankpreguicoso",
               "description": "Sortear o rank dos preguicosos do grupo",
               "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
               "outputPreview": "🏆 **RANKPREGUICOSO**\n1. Ana - 98%\n2. Bruno - 87%\n3. Carla - 76%\n4. Diego - 65%\n5. Eva - 54%\n\nMenção honrosa: Felipe - 42%",
@@ -1050,17 +1077,17 @@
               "categoryTitle": "Entretenimento"
             },
             {
-              "name": "/rankputa",
+              "name": "{prefixo}rankputa",
               "rawName": "rankputa",
               "aliases": [],
               "examples": [
-                "/rankputa"
+                "{prefixo}rankputa"
               ],
               "tips": [
                 "Funciona apenas em grupos com o modo brincadeira ativado.",
                 "O ranking muda a cada execucao e menciona os participantes sorteados."
               ],
-              "usage": "/rankputa",
+              "usage": "{prefixo}rankputa",
               "description": "Sortear o rank mais safado do grupo",
               "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
               "outputPreview": "🏆 **RANKPUTA**\n1. Ana - 98%\n2. Bruno - 87%\n3. Carla - 76%\n4. Diego - 65%\n5. Eva - 54%\n\nMenção honrosa: Felipe - 42%",
@@ -1073,17 +1100,17 @@
               "categoryTitle": "Entretenimento"
             },
             {
-              "name": "/rankrico",
+              "name": "{prefixo}rankrico",
               "rawName": "rankrico",
               "aliases": [],
               "examples": [
-                "/rankrico"
+                "{prefixo}rankrico"
               ],
               "tips": [
                 "Funciona apenas em grupos com o modo brincadeira ativado.",
                 "O ranking muda a cada execucao e menciona os participantes sorteados."
               ],
-              "usage": "/rankrico",
+              "usage": "{prefixo}rankrico",
               "description": "Sortear o rank dos milionarios do grupo",
               "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
               "outputPreview": "🏆 **RANKRICO**\n1. Ana - 98%\n2. Bruno - 87%\n3. Carla - 76%\n4. Diego - 65%\n5. Eva - 54%\n\nMenção honrosa: Felipe - 42%",
@@ -1096,17 +1123,17 @@
               "categoryTitle": "Entretenimento"
             },
             {
-              "name": "/ranksumido",
+              "name": "{prefixo}ranksumido",
               "rawName": "ranksumido",
               "aliases": [],
               "examples": [
-                "/ranksumido"
+                "{prefixo}ranksumido"
               ],
               "tips": [
                 "Funciona apenas em grupos com o modo brincadeira ativado.",
                 "O ranking muda a cada execucao e menciona os participantes sorteados."
               ],
-              "usage": "/ranksumido",
+              "usage": "{prefixo}ranksumido",
               "description": "Sortear o rank dos sumidos do grupo",
               "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
               "outputPreview": "🏆 **RANKSUMIDO**\n1. Ana - 98%\n2. Bruno - 87%\n3. Carla - 76%\n4. Diego - 65%\n5. Eva - 54%\n\nMenção honrosa: Felipe - 42%",
@@ -1119,20 +1146,20 @@
               "categoryTitle": "Entretenimento"
             },
             {
-              "name": "/roleta",
+              "name": "{prefixo}roleta",
               "rawName": "roleta",
               "aliases": [
-                "/roulette",
-                "/sortear",
-                "/escolher"
+                "{prefixo}roulette",
+                "{prefixo}sortear",
+                "{prefixo}escolher"
               ],
               "examples": [
-                "/roleta pizza sushi hamburguer"
+                "{prefixo}roleta pizza sushi hamburguer"
               ],
               "tips": [
                 "Funciona quando o modo brincadeira esta ativado no grupo."
               ],
-              "usage": "/roleta opcao1 opcao2 opcao3",
+              "usage": "{prefixo}roleta opcao1 opcao2 opcao3",
               "description": "Sortear uma opcao de uma lista",
               "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
               "outputPreview": "🎯 **Roleta**\nParticipante sorteado: Bruno",
@@ -1145,20 +1172,20 @@
               "categoryTitle": "Entretenimento"
             },
             {
-              "name": "/ship",
+              "name": "{prefixo}ship",
               "rawName": "ship",
               "aliases": [
-                "/shippar",
-                "/compatibilidade"
+                "{prefixo}shippar",
+                "{prefixo}compatibilidade"
               ],
               "examples": [
-                "/ship @ana @bia",
-                "/ship Lua + Sol"
+                "{prefixo}ship @ana @bia",
+                "{prefixo}ship Lua + Sol"
               ],
               "tips": [
                 "Funciona quando o modo brincadeira esta ativado no grupo."
               ],
-              "usage": "/ship @pessoa1 @pessoa2 | /ship Lua + Sol",
+              "usage": "{prefixo}ship @pessoa1 @pessoa2 | {prefixo}ship Lua + Sol",
               "description": "Medir a compatibilidade divertida entre duas pessoas",
               "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
               "outputPreview": "🚀 **Ship**\nAna + Bia\nCompatibilidade: 91%",
@@ -1171,20 +1198,20 @@
               "categoryTitle": "Entretenimento"
             },
             {
-              "name": "/slot",
+              "name": "{prefixo}slot",
               "rawName": "slot",
               "aliases": [
-                "/cassino",
-                "/slots",
-                "/caca-niquel"
+                "{prefixo}cassino",
+                "{prefixo}slots",
+                "{prefixo}caca-niquel"
               ],
               "examples": [
-                "/slot"
+                "{prefixo}slot"
               ],
               "tips": [
                 "Funciona quando o modo brincadeira esta ativado no grupo."
               ],
-              "usage": "/slot | /cassino",
+              "usage": "{prefixo}slot | {prefixo}cassino",
               "description": "Girar um caca-niquel simples",
               "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
               "outputPreview": "🎰 **Slot**\n🍒 🍒 🍒\nResultado: jackpot.",
@@ -1197,21 +1224,21 @@
               "categoryTitle": "Entretenimento"
             },
             {
-              "name": "/top5",
+              "name": "{prefixo}top5",
               "rawName": "top5",
               "aliases": [
-                "/ranking",
-                "/top",
-                "/topcinco"
+                "{prefixo}ranking",
+                "{prefixo}top",
+                "{prefixo}topcinco"
               ],
               "examples": [
-                "/top5 mais sumidos",
-                "/ranking reis do grupo"
+                "{prefixo}top5 mais sumidos",
+                "{prefixo}ranking reis do grupo"
               ],
               "tips": [
                 "Funciona quando o modo brincadeira esta ativado no grupo."
               ],
-              "usage": "/top5 <tema> | /ranking <tema>",
+              "usage": "{prefixo}top5 <tema> | {prefixo}ranking <tema>",
               "description": "Sortear um top 5 divertido com membros do grupo",
               "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
               "outputPreview": "🏆 **Top 5**\n1. Ana\n2. Bruno\n3. Carla\n4. Diego\n5. Eva",
@@ -1224,18 +1251,18 @@
               "categoryTitle": "Entretenimento"
             },
             {
-              "name": "/verdade",
+              "name": "{prefixo}verdade",
               "rawName": "verdade",
               "aliases": [
-                "/truth"
+                "{prefixo}truth"
               ],
               "examples": [
-                "/verdade"
+                "{prefixo}verdade"
               ],
               "tips": [
                 "Funciona quando o modo brincadeira esta ativado no grupo."
               ],
-              "usage": "/verdade | /truth",
+              "usage": "{prefixo}verdade | {prefixo}truth",
               "description": "Sortear uma pergunta leve de verdade",
               "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
               "outputPreview": "🗣️ **Verdade**\nQual foi a ultima coisa que te fez rir muito?",
@@ -1261,27 +1288,28 @@
           "title": "Utilitarios",
           "commands": [
             {
-              "name": "/documentacao",
+              "name": "{prefixo}documentacao",
               "rawName": "documentacao",
               "aliases": [
-                "/docs",
-                "/doc",
-                "/manual",
-                "/ajudaonline",
-                "/manualbot",
-                "/docbot",
-                "/documentacaobot"
+                "{prefixo}docs",
+                "{prefixo}doc",
+                "{prefixo}manual",
+                "{prefixo}ajudaonline",
+                "{prefixo}manualbot",
+                "{prefixo}docbot",
+                "{prefixo}documentação",
+                "{prefixo}documentacaobot"
               ],
               "examples": [
-                "/documentacao",
-                "/docs",
-                "/manualbot",
-                "/documentacao bot"
+                "{prefixo}documentacao",
+                "{prefixo}docs",
+                "{prefixo}manualbot",
+                "{prefixo}documentacao bot"
               ],
               "tips": [
                 "O link e enviado no privado de quem chamou o comando."
               ],
-              "usage": "/documentacao | /docs | /manualbot | /documentacao bot",
+              "usage": "{prefixo}documentacao | {prefixo}docs | {prefixo}manualbot | {prefixo}documentacao bot",
               "description": "Enviar o link da documentacao do bot no PV.",
               "outputExample": "Envia o link da documentacao no PV e confirma no grupo.",
               "outputPreview": "📚 Documentação enviada no seu PV. Confira a conversa privada com o bot.",
@@ -1294,22 +1322,22 @@
               "categoryTitle": "Utilitarios"
             },
             {
-              "name": "/menuadm",
+              "name": "{prefixo}menuadm",
               "rawName": "menuadm",
               "aliases": [
-                "/adminmenu"
+                "{prefixo}adminmenu"
               ],
               "examples": [
-                "/menuadm",
-                "/adminmenu"
+                "{prefixo}menuadm",
+                "{prefixo}adminmenu"
               ],
               "tips": [
                 "Os menus usam PT-BR na exibicao e mantem aliases em ingles para consulta rapida."
               ],
-              "usage": "/menuadm | /adminmenu",
+              "usage": "{prefixo}menuadm | {prefixo}adminmenu",
               "description": "Mostrar o menu de administracao do grupo",
               "outputExample": "Envia o menu administrativo com controles de moderacao, configuracao e gestao do grupo.",
-              "outputPreview": "🛡️ **Menu de Administracao**\nProtecoes e Regras\n\n/antilink\n/antispam\n/listanegra\n/agendamentos",
+              "outputPreview": "🛡️ **Menu de Administracao**\nProtecoes e Regras\n\n{prefixo}antilink\n{prefixo}antispam\n{prefixo}listanegra\n{prefixo}agendamentos",
               "requiredRole": "group_admin",
               "requiredRoleLabel": "Administrador do Grupo",
               "requiredChatType": "any",
@@ -1325,23 +1353,23 @@
           "title": "Moderacao",
           "commands": [
             {
-              "name": "/abrirgrupo",
+              "name": "{prefixo}abrirgrupo",
               "rawName": "abrirgrupo",
               "aliases": [
-                "/opengroup",
-                "/abrigrupo"
+                "{prefixo}opengroup",
+                "{prefixo}abrigrupo"
               ],
               "examples": [
-                "/abrirgrupo",
-                "/abrirgrupo 05:00",
-                "/abrirgrupo 05:00 America/Sao_Paulo",
-                "/abrirgrupo off"
+                "{prefixo}abrirgrupo",
+                "{prefixo}abrirgrupo 05:00",
+                "{prefixo}abrirgrupo 05:00 America/Sao_Paulo",
+                "{prefixo}abrirgrupo off"
               ],
               "tips": [
                 "Use !fechargrupo para configurar a acao oposta.",
                 "Sem horario, a acao acontece imediatamente."
               ],
-              "usage": "/abrirgrupo [HH:mm] [timezone] | /abrirgrupo off",
+              "usage": "{prefixo}abrirgrupo [HH:mm] [timezone] | {prefixo}abrirgrupo off",
               "description": "Abrir grupo imediatamente ou agendar a acao diaria do grupo.",
               "outputExample": "Confirma a acao de moderacao e registra auditoria interna.",
               "outputPreview": "🔓 **Abrir Grupo**\nResultado: o grupo foi aberto para todos enviarem mensagens.",
@@ -1354,20 +1382,20 @@
               "categoryTitle": "Moderacao"
             },
             {
-              "name": "/agendamentos",
+              "name": "{prefixo}agendamentos",
               "rawName": "agendamentos",
               "aliases": [
-                "/agendamento",
-                "/agenda"
+                "{prefixo}agendamento",
+                "{prefixo}agenda"
               ],
               "examples": [
-                "/agendamentos",
-                "/agenda"
+                "{prefixo}agendamentos",
+                "{prefixo}agenda"
               ],
               "tips": [
                 "Apenas exibe os agendamentos atuais; use abrirgrupo e fechargrupo para alterar."
               ],
-              "usage": "/agendamentos | /agenda",
+              "usage": "{prefixo}agendamentos | {prefixo}agenda",
               "description": "Mostrar os agendamentos de abertura e fechamento do grupo.",
               "outputExample": "Mostra os horarios agendados para abrir e fechar o grupo.",
               "outputPreview": "📅 **Agendamentos do Grupo**\nAbertura: 05:00 (America/Sao_Paulo)\nFechamento: 01:00 (Europe/Dublin)\nFrequencia: todos os dias",
@@ -1380,21 +1408,21 @@
               "categoryTitle": "Moderacao"
             },
             {
-              "name": "/ban",
+              "name": "{prefixo}ban",
               "rawName": "ban",
               "aliases": [
-                "/banir",
-                "/abduzir"
+                "{prefixo}banir",
+                "{prefixo}abduzir"
               ],
               "examples": [
-                "/ban @usuario Golpe, spam e desrespeito as regras",
-                "/banir @usuario Tentativa de fraude",
-                "/abduzir @usuario Sumiu com as regras da nave"
+                "{prefixo}ban @usuario Golpe, spam e desrespeito as regras",
+                "{prefixo}banir @usuario Tentativa de fraude",
+                "{prefixo}abduzir @usuario Sumiu com as regras da nave"
               ],
               "tips": [
                 "Voce pode mencionar, responder uma mensagem ou informar um numero."
               ],
-              "usage": "/ban @usuario [motivo] | /banir @usuario [motivo] | /abduzir @usuario [motivo]",
+              "usage": "{prefixo}ban @usuario [motivo] | {prefixo}banir @usuario [motivo] | {prefixo}abduzir @usuario [motivo]",
               "description": "Banir um membro: remove do grupo e adiciona a lista negra do grupo.",
               "outputExample": "Confirma a acao de moderacao e registra auditoria interna.",
               "outputPreview": "🚫 **Ban**\nMembro: Ana\nResultado: removido do grupo e adicionado a lista negra.",
@@ -1407,21 +1435,21 @@
               "categoryTitle": "Moderacao"
             },
             {
-              "name": "/clearwarnings",
+              "name": "{prefixo}clearwarnings",
               "rawName": "clearwarnings",
               "aliases": [
-                "/clearwarns",
-                "/limparavisos",
-                "/limparadvertencias"
+                "{prefixo}clearwarns",
+                "{prefixo}limparavisos",
+                "{prefixo}limparadvertencias"
               ],
               "examples": [
-                "/clearwarnings @usuario",
-                "/limparavisos @usuario"
+                "{prefixo}clearwarnings @usuario",
+                "{prefixo}limparavisos @usuario"
               ],
               "tips": [
                 "Use apos um reset de conduta ou quando a moderacao decidir zerar o historico."
               ],
-              "usage": "/clearwarnings @usuario | /limparavisos @usuario",
+              "usage": "{prefixo}clearwarnings @usuario | {prefixo}limparavisos @usuario",
               "description": "Limpar todos os avisos ativos de um membro",
               "outputExample": "Confirma a acao de moderacao e registra auditoria interna.",
               "outputPreview": "🫧 **Limpar Avisos**\nMembro: Ana\nResultado: todos os avisos ativos foram removidos.",
@@ -1434,23 +1462,23 @@
               "categoryTitle": "Moderacao"
             },
             {
-              "name": "/fechargrupo",
+              "name": "{prefixo}fechargrupo",
               "rawName": "fechargrupo",
               "aliases": [
-                "/closegroup",
-                "/fechar"
+                "{prefixo}closegroup",
+                "{prefixo}fechar"
               ],
               "examples": [
-                "/fechargrupo",
-                "/fechargrupo 05:00",
-                "/fechargrupo 05:00 America/Sao_Paulo",
-                "/fechargrupo off"
+                "{prefixo}fechargrupo",
+                "{prefixo}fechargrupo 05:00",
+                "{prefixo}fechargrupo 05:00 America/Sao_Paulo",
+                "{prefixo}fechargrupo off"
               ],
               "tips": [
                 "Use !abrirgrupo para configurar a acao oposta.",
                 "Sem horario, a acao acontece imediatamente."
               ],
-              "usage": "/fechargrupo [HH:mm] [timezone] | /fechargrupo off",
+              "usage": "{prefixo}fechargrupo [HH:mm] [timezone] | {prefixo}fechargrupo off",
               "description": "Fechar grupo imediatamente ou agendar a acao diaria do grupo.",
               "outputExample": "Confirma a acao de moderacao e registra auditoria interna.",
               "outputPreview": "🔒 **Fechar Grupo**\nResultado: o grupo ficou em modo somente administradores.",
@@ -1463,20 +1491,20 @@
               "categoryTitle": "Moderacao"
             },
             {
-              "name": "/fuso",
+              "name": "{prefixo}fuso",
               "rawName": "fuso",
               "aliases": [
-                "/timezone",
-                "/tz"
+                "{prefixo}timezone",
+                "{prefixo}tz"
               ],
               "examples": [
-                "/fuso",
-                "/fuso America/Sao_Paulo"
+                "{prefixo}fuso",
+                "{prefixo}fuso America/Sao_Paulo"
               ],
               "tips": [
                 "O timezone padrao e America/Sao_Paulo."
               ],
-              "usage": "/fuso [timezone]",
+              "usage": "{prefixo}fuso [timezone]",
               "description": "Mostrar ou definir o timezone usado pelos agendamentos do grupo.",
               "outputExample": "Confirma a acao de moderacao e registra auditoria interna.",
               "outputPreview": "🌎 **Fuso do Grupo**\nTimezone atual: America/Sao_Paulo",
@@ -1489,21 +1517,21 @@
               "categoryTitle": "Moderacao"
             },
             {
-              "name": "/kick",
+              "name": "{prefixo}kick",
               "rawName": "kick",
               "aliases": [
-                "/remove",
-                "/remover",
-                "/expulsar"
+                "{prefixo}remove",
+                "{prefixo}remover",
+                "{prefixo}expulsar"
               ],
               "examples": [
-                "/kick @usuario Spam repetido",
-                "/remover @usuario Desrespeito as regras"
+                "{prefixo}kick @usuario Spam repetido",
+                "{prefixo}remover @usuario Desrespeito as regras"
               ],
               "tips": [
                 "Voce pode mencionar o usuario ou responder a mensagem dele."
               ],
-              "usage": "/kick @usuario [motivo] | /remover @usuario [motivo]",
+              "usage": "{prefixo}kick @usuario [motivo] | {prefixo}remover @usuario [motivo]",
               "description": "Remover um membro do grupo",
               "outputExample": "Confirma a acao de moderacao e registra auditoria interna.",
               "outputPreview": "🚪 **Remocao**\nMembro: Ana\nMotivo: spam\nResultado: removido do grupo.",
@@ -1516,23 +1544,23 @@
               "categoryTitle": "Moderacao"
             },
             {
-              "name": "/linkgrupo",
+              "name": "{prefixo}linkgrupo",
               "rawName": "linkgrupo",
               "aliases": [
-                "/linkgroup",
-                "/convitegrupo",
-                "/linkgp"
+                "{prefixo}linkgroup",
+                "{prefixo}convitegrupo",
+                "{prefixo}linkgp"
               ],
               "examples": [
-                "/linkgrupo",
-                "/linkgroup",
-                "/linkgp"
+                "{prefixo}linkgrupo",
+                "{prefixo}linkgroup",
+                "{prefixo}linkgp"
               ],
               "tips": [
                 "O bot precisa ser administrador do grupo para ler o link de convite.",
                 "Use resetlink para revogar o link atual e gerar outro."
               ],
-              "usage": "/linkgrupo | /linkgroup | /linkgp",
+              "usage": "{prefixo}linkgrupo | {prefixo}linkgroup | {prefixo}linkgp",
               "description": "Mostrar o link de convite atual do grupo",
               "outputExample": "Confirma a acao de moderacao e registra auditoria interna.",
               "outputPreview": "🔗 **Link do Grupo**\nhttps://chat.whatsapp.com/ExemploDeConvite",
@@ -1545,23 +1573,23 @@
               "categoryTitle": "Moderacao"
             },
             {
-              "name": "/listanegra",
+              "name": "{prefixo}listanegra",
               "rawName": "listanegra",
               "aliases": [
-                "/blacklist",
-                "/banidos",
-                "/listabanidos"
+                "{prefixo}blacklist",
+                "{prefixo}banidos",
+                "{prefixo}listabanidos"
               ],
               "examples": [
-                "/listanegra",
-                "/listanegra 353871234567 Nao permitir entrada",
-                "/listanegra @usuario Spam"
+                "{prefixo}listanegra",
+                "{prefixo}listanegra 353871234567 Nao permitir entrada",
+                "{prefixo}listanegra @usuario Spam"
               ],
               "tips": [
                 "Sem parametro lista os usuarios na lista negra do grupo.",
                 "Com parametro adiciona o usuario a lista negra."
               ],
-              "usage": "/listanegra [@usuario|numero|nome] [motivo]",
+              "usage": "{prefixo}listanegra [@usuario|numero|nome] [motivo]",
               "description": "Listar ou adicionar usuarios a lista negra do grupo.",
               "outputExample": "Confirma que o usuario foi adicionado a lista negra e que entradas futuras serao bloqueadas.",
               "outputPreview": "🧾 **Lista Negra**\nTotal: 1\n\n1. Nome: Golpista\nTelefone: +353871234567\nID(s): 353871234567@c.us",
@@ -1574,20 +1602,20 @@
               "categoryTitle": "Moderacao"
             },
             {
-              "name": "/mute",
+              "name": "{prefixo}mute",
               "rawName": "mute",
               "aliases": [
-                "/mutar",
-                "/silenciar"
+                "{prefixo}mutar",
+                "{prefixo}silenciar"
               ],
               "examples": [
-                "/mute 30",
-                "/mutar 15"
+                "{prefixo}mute 30",
+                "{prefixo}mutar 15"
               ],
               "tips": [
                 "Use unmute para reabrir o grupo antes do prazo, se quiser."
               ],
-              "usage": "/mute [minutos] | /mutar [minutos]",
+              "usage": "{prefixo}mute [minutos] | {prefixo}mutar [minutos]",
               "description": "Colocar o grupo em modo somente administradores",
               "outputExample": "Confirma a acao de moderacao e registra auditoria interna.",
               "outputPreview": "🤫 **Mutar**\nDuracao: 10 minuto(s)\nResultado: o grupo ficou em modo somente administradores.",
@@ -1600,21 +1628,21 @@
               "categoryTitle": "Moderacao"
             },
             {
-              "name": "/removerdalista",
+              "name": "{prefixo}removerdalista",
               "rawName": "removerdalista",
               "aliases": [
-                "/tirardalista",
-                "/removerlistanegra",
-                "/unblacklist"
+                "{prefixo}tirardalista",
+                "{prefixo}removerlistanegra",
+                "{prefixo}unblacklist"
               ],
               "examples": [
-                "/removerdalista 353871234567",
-                "/removerdalista @usuario"
+                "{prefixo}removerdalista 353871234567",
+                "{prefixo}removerdalista @usuario"
               ],
               "tips": [
                 "Remove o bloqueio de entrada, mas nao adiciona a pessoa de volta automaticamente."
               ],
-              "usage": "/removerdalista @usuario|numero|nome",
+              "usage": "{prefixo}removerdalista @usuario|numero|nome",
               "description": "Remover um usuario da lista negra do grupo.",
               "outputExample": "Confirma a acao de moderacao e registra auditoria interna.",
               "outputPreview": "✅ **Remover da Lista**\nUsuario removido da lista negra do grupo.",
@@ -1627,16 +1655,16 @@
               "categoryTitle": "Moderacao"
             },
             {
-              "name": "/removerpessoas",
+              "name": "{prefixo}removerpessoas",
               "rawName": "removerpessoas",
               "aliases": [],
               "examples": [
-                "/removerpessoas 5"
+                "{prefixo}removerpessoas 5"
               ],
               "tips": [
                 "Remove apenas membros comuns elegiveis."
               ],
-              "usage": "/removerpessoas <quantidade>",
+              "usage": "{prefixo}removerpessoas <quantidade>",
               "description": "Remover uma quantidade aleatoria de membros do grupo.",
               "outputExample": "Confirma a acao de moderacao e registra auditoria interna.",
               "outputPreview": "🧹 **Remover pessoas**\nRemovidos: 2\nMotivo: limpeza manual da administracao.",
@@ -1649,20 +1677,20 @@
               "categoryTitle": "Moderacao"
             },
             {
-              "name": "/resetlink",
+              "name": "{prefixo}resetlink",
               "rawName": "resetlink",
               "aliases": [
-                "/resetgroupinvite",
-                "/revokeinvite"
+                "{prefixo}resetgroupinvite",
+                "{prefixo}revokeinvite"
               ],
               "examples": [
-                "/resetlink",
-                "/resetgroupinvite"
+                "{prefixo}resetlink",
+                "{prefixo}resetgroupinvite"
               ],
               "tips": [
                 "Isso invalida o convite atual imediatamente e cria um novo link."
               ],
-              "usage": "/resetlink | /resetgroupinvite",
+              "usage": "{prefixo}resetlink | {prefixo}resetgroupinvite",
               "description": "Revogar o link atual do grupo e criar outro",
               "outputExample": "Confirma a acao de moderacao e registra auditoria interna.",
               "outputPreview": "🔁 **Reset Link**\nLink antigo revogado.\nNovo link gerado com sucesso.",
@@ -1675,19 +1703,19 @@
               "categoryTitle": "Moderacao"
             },
             {
-              "name": "/unban",
+              "name": "{prefixo}unban",
               "rawName": "unban",
               "aliases": [
-                "/desbanir"
+                "{prefixo}desbanir"
               ],
               "examples": [
-                "/unban @usuario",
-                "/desbanir @usuario"
+                "{prefixo}unban @usuario",
+                "{prefixo}desbanir @usuario"
               ],
               "tips": [
                 "Esse comando remove o banimento do bot, mas nao adiciona a pessoa de volta no grupo automaticamente."
               ],
-              "usage": "/unban @usuario | /desbanir @usuario",
+              "usage": "{prefixo}unban @usuario | {prefixo}desbanir @usuario",
               "description": "Remover um membro da lista de banidos do bot",
               "outputExample": "Confirma a acao de moderacao e registra auditoria interna.",
               "outputPreview": "✅ **Unban**\nUsuario removido da lista de banidos.",
@@ -1700,19 +1728,19 @@
               "categoryTitle": "Moderacao"
             },
             {
-              "name": "/unmute",
+              "name": "{prefixo}unmute",
               "rawName": "unmute",
               "aliases": [
-                "/desmutar"
+                "{prefixo}desmutar"
               ],
               "examples": [
-                "/unmute",
-                "/desmutar"
+                "{prefixo}unmute",
+                "{prefixo}desmutar"
               ],
               "tips": [
                 "Bom para reabrir o grupo logo depois de um periodo de controle de spam ou raid."
               ],
-              "usage": "/unmute | /desmutar",
+              "usage": "{prefixo}unmute | {prefixo}desmutar",
               "description": "Desativar o modo somente administradores do grupo",
               "outputExample": "Confirma a acao de moderacao e registra auditoria interna.",
               "outputPreview": "🔊 **Desmutar**\nResultado: o grupo voltou a permitir mensagens dos membros.",
@@ -1725,19 +1753,19 @@
               "categoryTitle": "Moderacao"
             },
             {
-              "name": "/warn",
+              "name": "{prefixo}warn",
               "rawName": "warn",
               "aliases": [
-                "/advertir"
+                "{prefixo}advertir"
               ],
               "examples": [
-                "/warn @usuario Envio de links fora das regras",
-                "/advertir @usuario Linguagem ofensiva"
+                "{prefixo}warn @usuario Envio de links fora das regras",
+                "{prefixo}advertir @usuario Linguagem ofensiva"
               ],
               "tips": [
                 "Voce pode mencionar o usuario ou responder a mensagem dele."
               ],
-              "usage": "/warn @usuario [motivo] | /advertir @usuario [motivo]",
+              "usage": "{prefixo}warn @usuario [motivo] | {prefixo}advertir @usuario [motivo]",
               "description": "Advertir um membro e aumentar a contagem de avisos",
               "outputExample": "Confirma a acao de moderacao e registra auditoria interna.",
               "outputPreview": "⚠️ **Aviso registrado**\nMembro: Ana\nTotal de avisos: 2/3",
@@ -1750,20 +1778,20 @@
               "categoryTitle": "Moderacao"
             },
             {
-              "name": "/warnings",
+              "name": "{prefixo}warnings",
               "rawName": "warnings",
               "aliases": [
-                "/avisos",
-                "/advertencias"
+                "{prefixo}avisos",
+                "{prefixo}advertencias"
               ],
               "examples": [
-                "/warnings @usuario",
-                "/avisos @usuario"
+                "{prefixo}warnings @usuario",
+                "{prefixo}avisos @usuario"
               ],
               "tips": [
                 "Tambem funciona respondendo a mensagem do membro que voce quer consultar."
               ],
-              "usage": "/warnings @usuario | /avisos @usuario",
+              "usage": "{prefixo}warnings @usuario | {prefixo}avisos @usuario",
               "description": "Listar os avisos ativos de um membro",
               "outputExample": "Confirma a acao de moderacao e registra auditoria interna.",
               "outputPreview": "🟡 **Avisos de Ana**\n1. Link fora das regras\n2. Spam",
@@ -1782,22 +1810,22 @@
           "title": "Administracao",
           "commands": [
             {
-              "name": "/anonimo",
+              "name": "{prefixo}anonimo",
               "rawName": "anonimo",
               "aliases": [
-                "/anonymous",
-                "/anon"
+                "{prefixo}anonymous",
+                "{prefixo}anon"
               ],
               "examples": [
-                "/anonimo Mensagem anonima.",
-                "/anonimo legenda da imagem",
-                "/anonymous hidden text"
+                "{prefixo}anonimo Mensagem anonima.",
+                "{prefixo}anonimo legenda da imagem",
+                "{prefixo}anonymous hidden text"
               ],
               "tips": [
                 "Envie o comando com texto para repostar como mensagem do bot.",
                 "Tambem funciona com a midia do proprio comando ou respondendo a uma midia."
               ],
-              "usage": "/anonimo <mensagem> | /anonimo (com midia) | /anonimo <legenda> respondendo uma midia",
+              "usage": "{prefixo}anonimo <mensagem> | {prefixo}anonimo (com midia) | {prefixo}anonimo <legenda> respondendo uma midia",
               "description": "Repostar uma mensagem como se fosse enviada pelo bot",
               "outputExample": "Mostra um resumo da acao administrativa executada.",
               "outputPreview": "Mensagem reenviada pelo bot, sem mostrar quem solicitou.",
@@ -1810,19 +1838,19 @@
               "categoryTitle": "Administracao"
             },
             {
-              "name": "/approve",
+              "name": "{prefixo}approve",
               "rawName": "approve",
               "aliases": [
-                "/aprovar"
+                "{prefixo}aprovar"
               ],
               "examples": [
-                "/approve @usuario",
-                "/aprovar @usuario"
+                "{prefixo}approve @usuario",
+                "{prefixo}aprovar @usuario"
               ],
               "tips": [
                 "Use com a mencao do usuario ou respondendo a solicitacao quando fizer sentido."
               ],
-              "usage": "/approve @usuario | /aprovar @usuario",
+              "usage": "{prefixo}approve @usuario | {prefixo}aprovar @usuario",
               "description": "Aprovar a solicitacao pendente de um membro para entrada no grupo",
               "outputExample": "Aprova uma solicitacao pendente ou rejeita se o usuario estiver na lista negra.",
               "outputPreview": "✅ **Aprovar**\nSolicitacao aprovada para 5511999999999@c.us.",
@@ -1835,23 +1863,23 @@
               "categoryTitle": "Administracao"
             },
             {
-              "name": "/aprovartodos",
+              "name": "{prefixo}aprovartodos",
               "rawName": "aprovartodos",
               "aliases": [
-                "/aprovarpendentes",
-                "/aprovarall",
-                "/aprovarlista",
-                "/aceitartodos"
+                "{prefixo}aprovarpendentes",
+                "{prefixo}aprovarall",
+                "{prefixo}aprovarlista",
+                "{prefixo}aceitartodos"
               ],
               "examples": [
-                "/aprovartodos",
-                "/aprovarpendentes",
-                "/aceitartodos"
+                "{prefixo}aprovartodos",
+                "{prefixo}aprovarpendentes",
+                "{prefixo}aceitartodos"
               ],
               "tips": [
                 "Usa a lista de DDIs configurada em ddispermitidos, mesmo com antifake desativado."
               ],
-              "usage": "/aprovartodos | /aprovarpendentes | /aceitartodos",
+              "usage": "{prefixo}aprovartodos | {prefixo}aprovarpendentes | {prefixo}aceitartodos",
               "description": "Aprovar solicitacoes pendentes e banir DDIs nao permitidos.",
               "outputExample": "Mostra um resumo com pendentes revisados, aprovados e rejeitados.",
               "outputPreview": "✅ **Aprovar todos**\nPendentes: 5\nAprovados: 3\nRejeitados/banidos: 2\nFalhas: 0",
@@ -1864,23 +1892,23 @@
               "categoryTitle": "Administracao"
             },
             {
-              "name": "/ativos",
+              "name": "{prefixo}ativos",
               "rawName": "ativos",
               "aliases": [
-                "/maisativos",
-                "/atividade",
-                "/topativos"
+                "{prefixo}maisativos",
+                "{prefixo}atividade",
+                "{prefixo}topativos"
               ],
               "examples": [
-                "/ativos 7",
-                "/maisativos 30"
+                "{prefixo}ativos 7",
+                "{prefixo}maisativos 30"
               ],
               "tips": [
                 "O ranking usa mensagens como criterio principal.",
                 "O card mostra mensagens, figurinhas, videos e total.",
                 "Apenas participantes atuais do grupo aparecem no ranking."
               ],
-              "usage": "/ativos <dias>",
+              "usage": "{prefixo}ativos <dias>",
               "description": "Listar membros mais ativos por periodo",
               "outputExample": "Mostra um resumo da acao administrativa executada.",
               "outputPreview": "📈 **Mais ativos**\n1. Ana - 120 mensagens\n2. Bruno - 98 mensagens",
@@ -1893,23 +1921,23 @@
               "categoryTitle": "Administracao"
             },
             {
-              "name": "/aviso",
+              "name": "{prefixo}aviso",
               "rawName": "aviso",
               "aliases": [
-                "/avisar",
-                "/comunicado",
-                "/comunicar"
+                "{prefixo}avisar",
+                "{prefixo}comunicado",
+                "{prefixo}comunicar"
               ],
               "examples": [
-                "/aviso Leiam as regras fixadas.",
-                "/avisar respondendo uma mensagem",
-                "/comunicado respondendo uma midia"
+                "{prefixo}aviso Leiam as regras fixadas.",
+                "{prefixo}avisar respondendo uma mensagem",
+                "{prefixo}comunicado respondendo uma midia"
               ],
               "tips": [
                 "Funciona com texto direto ou respondendo a uma mensagem ou midia.",
                 "Marca todos silenciosamente sem listar os membros no texto."
               ],
-              "usage": "/aviso <mensagem> | /comunicado <mensagem>",
+              "usage": "{prefixo}aviso <mensagem> | {prefixo}comunicado <mensagem>",
               "description": "Enviar um aviso no grupo marcando todos silenciosamente.",
               "outputExample": "Mostra um resumo da acao administrativa executada.",
               "outputPreview": "📢 **Aviso**\nLeiam as regras fixadas.",
@@ -1922,20 +1950,20 @@
               "categoryTitle": "Administracao"
             },
             {
-              "name": "/demote",
+              "name": "{prefixo}demote",
               "rawName": "demote",
               "aliases": [
-                "/rebaixar",
-                "/despromover"
+                "{prefixo}rebaixar",
+                "{prefixo}despromover"
               ],
               "examples": [
-                "/demote @usuario",
-                "/rebaixar @usuario"
+                "{prefixo}demote @usuario",
+                "{prefixo}rebaixar @usuario"
               ],
               "tips": [
                 "Esse comando remove a administracao real do grupo no WhatsApp."
               ],
-              "usage": "/demote @usuario | /rebaixar @usuario",
+              "usage": "{prefixo}demote @usuario | {prefixo}rebaixar @usuario",
               "description": "Rebaixar um administrador para membro comum",
               "outputExample": "Mostra um resumo da acao administrativa executada.",
               "outputPreview": "⬇️ **Rebaixar**\nMembro: Ana\nResultado: admin removido.",
@@ -1948,22 +1976,22 @@
               "categoryTitle": "Administracao"
             },
             {
-              "name": "/estatisticas",
+              "name": "{prefixo}estatisticas",
               "rawName": "estatisticas",
               "aliases": [
-                "/stats",
-                "/estatistica"
+                "{prefixo}stats",
+                "{prefixo}estatistica"
               ],
               "examples": [
-                "/estatisticas",
-                "/estatisticas 200",
-                "/stats 500"
+                "{prefixo}estatisticas",
+                "{prefixo}estatisticas 200",
+                "{prefixo}stats 500"
               ],
               "tips": [
                 "O limite padrao e 500 mensagens e pode ser ajustado ate 1000.",
                 "Mensagens do bot sao ignoradas automaticamente."
               ],
-              "usage": "/estatisticas [limite] | /stats [limite]",
+              "usage": "{prefixo}estatisticas [limite] | {prefixo}stats [limite]",
               "description": "Analisar as ultimas mensagens do grupo e gerar estatisticas",
               "outputExample": "Mostra um resumo da acao administrativa executada.",
               "outputPreview": "📊 **Estatisticas**\nMensagens analisadas: 200\nMembros ativos: 18",
@@ -1976,22 +2004,22 @@
               "categoryTitle": "Administracao"
             },
             {
-              "name": "/inativos",
+              "name": "{prefixo}inativos",
               "rawName": "inativos",
               "aliases": [
-                "/sematividade",
-                "/menosativos"
+                "{prefixo}sematividade",
+                "{prefixo}menosativos"
               ],
               "examples": [
-                "/inativos 7 5",
-                "/menosativos 30 2"
+                "{prefixo}inativos 7 5",
+                "{prefixo}menosativos 30 2"
               ],
               "tips": [
                 "O criterio usa quantidade de mensagens no periodo.",
                 "O card mostra mensagens, figurinhas, videos e total.",
                 "Apenas participantes atuais do grupo aparecem na lista."
               ],
-              "usage": "/inativos <dias> <maximo>",
+              "usage": "{prefixo}inativos <dias> <maximo>",
               "description": "Listar membros inativos ou abaixo de um limite",
               "outputExample": "Mostra um resumo da acao administrativa executada.",
               "outputPreview": "📉 **Inativos**\n1. Carla - 0 mensagens\n2. Diego - 1 mensagem",
@@ -2004,16 +2032,16 @@
               "categoryTitle": "Administracao"
             },
             {
-              "name": "/listamembros",
+              "name": "{prefixo}listamembros",
               "rawName": "listamembros",
               "aliases": [],
               "examples": [
-                "/listamembros"
+                "{prefixo}listamembros"
               ],
               "tips": [
                 "Lista membros sem marcar ou notificar participantes."
               ],
-              "usage": "/listamembros",
+              "usage": "{prefixo}listamembros",
               "description": "Listar os membros atuais do grupo.",
               "outputExample": "Mostra um resumo da acao administrativa executada.",
               "outputPreview": "👥 **Lista de membros**\nTotal: 3\n\n1. Ana - admin - 5511999999999@c.us\n2. Bruno - membro - 5511888888888@c.us",
@@ -2026,23 +2054,23 @@
               "categoryTitle": "Administracao"
             },
             {
-              "name": "/listargringo",
+              "name": "{prefixo}listargringo",
               "rawName": "listargringo",
               "aliases": [
-                "/listargringos",
-                "/gringos",
-                "/listarestrangeiros",
-                "/estrangeiros",
-                "/ddibloqueados"
+                "{prefixo}listargringos",
+                "{prefixo}gringos",
+                "{prefixo}listarestrangeiros",
+                "{prefixo}estrangeiros",
+                "{prefixo}ddibloqueados"
               ],
               "examples": [
-                "/listargringo",
-                "/gringos"
+                "{prefixo}listargringo",
+                "{prefixo}gringos"
               ],
               "tips": [
                 "Esse comando apenas lista; remocoes automaticas acontecem quando alguem entra no grupo."
               ],
-              "usage": "/listargringo | /listargringos",
+              "usage": "{prefixo}listargringo | {prefixo}listargringos",
               "description": "Listar participantes com DDI fora da lista permitida.",
               "outputExample": "Mostra um resumo da acao administrativa executada.",
               "outputPreview": "🌍 **Estrangeiros no Grupo**\n1. Visitante\nPais: Irlanda (+353)\nID: 353871234567@c.us",
@@ -2055,20 +2083,20 @@
               "categoryTitle": "Administracao"
             },
             {
-              "name": "/marcar",
+              "name": "{prefixo}marcar",
               "rawName": "marcar",
               "aliases": [
-                "/tagall"
+                "{prefixo}tagall"
               ],
               "examples": [
-                "/marcar Bora alinhar isso agora",
-                "/tagall respondendo a uma midia"
+                "{prefixo}marcar Bora alinhar isso agora",
+                "{prefixo}tagall respondendo a uma midia"
               ],
               "tips": [
                 "Funciona com texto direto ou respondendo a uma mensagem ou midia do grupo.",
                 "Exibe as marcacoes no texto para todos verem quem foi chamado."
               ],
-              "usage": "/marcar <mensagem> | /tagall respondendo uma midia",
+              "usage": "{prefixo}marcar <mensagem> | {prefixo}tagall respondendo uma midia",
               "description": "Marcar todos os membros do grupo exibindo as marcacoes",
               "outputExample": "Mostra um resumo da acao administrativa executada.",
               "outputPreview": "Reuniao em 5 minutos\n\nAna Bruno Carla",
@@ -2081,20 +2109,20 @@
               "categoryTitle": "Administracao"
             },
             {
-              "name": "/mod",
+              "name": "{prefixo}mod",
               "rawName": "mod",
               "aliases": [
-                "/addmod",
-                "/moderador"
+                "{prefixo}addmod",
+                "{prefixo}moderador"
               ],
               "examples": [
-                "/mod @usuario",
-                "/moderador @usuario"
+                "{prefixo}mod @usuario",
+                "{prefixo}moderador @usuario"
               ],
               "tips": [
                 "Moderador do bot nao e a mesma coisa que admin do WhatsApp."
               ],
-              "usage": "/mod @usuario | /moderador @usuario",
+              "usage": "{prefixo}mod @usuario | {prefixo}moderador @usuario",
               "description": "Dar privilegios de moderador do bot a um membro",
               "outputExample": "Mostra um resumo da acao administrativa executada.",
               "outputPreview": "🛡️ **Moderador**\nUsuario adicionado como moderador interno.",
@@ -2107,19 +2135,19 @@
               "categoryTitle": "Administracao"
             },
             {
-              "name": "/promote",
+              "name": "{prefixo}promote",
               "rawName": "promote",
               "aliases": [
-                "/promover"
+                "{prefixo}promover"
               ],
               "examples": [
-                "/promote @usuario",
-                "/promover @usuario"
+                "{prefixo}promote @usuario",
+                "{prefixo}promover @usuario"
               ],
               "tips": [
                 "Esse comando altera a administracao real do grupo no WhatsApp."
               ],
-              "usage": "/promote @usuario | /promover @usuario",
+              "usage": "{prefixo}promote @usuario | {prefixo}promover @usuario",
               "description": "Promover um membro a administrador do grupo",
               "outputExample": "Mostra um resumo da acao administrativa executada.",
               "outputPreview": "⬆️ **Promover**\nMembro: Ana\nResultado: admin concedido.",
@@ -2132,19 +2160,19 @@
               "categoryTitle": "Administracao"
             },
             {
-              "name": "/reject",
+              "name": "{prefixo}reject",
               "rawName": "reject",
               "aliases": [
-                "/rejeitar"
+                "{prefixo}rejeitar"
               ],
               "examples": [
-                "/reject @usuario",
-                "/rejeitar @usuario"
+                "{prefixo}reject @usuario",
+                "{prefixo}rejeitar @usuario"
               ],
               "tips": [
                 "Use com a mencao do usuario ou respondendo a solicitacao quando fizer sentido."
               ],
-              "usage": "/reject @usuario | /rejeitar @usuario",
+              "usage": "{prefixo}reject @usuario | {prefixo}rejeitar @usuario",
               "description": "Rejeitar a solicitacao pendente de um membro para entrada no grupo",
               "outputExample": "Mostra um resumo da acao administrativa executada.",
               "outputPreview": "❌ **Rejeitar**\nSolicitacao recusada para 353871234567@c.us.",
@@ -2157,21 +2185,21 @@
               "categoryTitle": "Administracao"
             },
             {
-              "name": "/rejeitartodos",
+              "name": "{prefixo}rejeitartodos",
               "rawName": "rejeitartodos",
               "aliases": [
-                "/recusartodos",
-                "/recusar"
+                "{prefixo}recusartodos",
+                "{prefixo}recusar"
               ],
               "examples": [
-                "/rejeitartodos",
-                "/recusartodos",
-                "/recusar todos"
+                "{prefixo}rejeitartodos",
+                "{prefixo}recusartodos",
+                "{prefixo}recusar todos"
               ],
               "tips": [
                 "Rejeita toda a fila pendente sem adicionar ninguem a lista negra."
               ],
-              "usage": "/rejeitartodos | /recusartodos | /recusar todos",
+              "usage": "{prefixo}rejeitartodos | {prefixo}recusartodos | {prefixo}recusar todos",
               "description": "Recusar todas as solicitacoes pendentes de entrada.",
               "outputExample": "Mostra um resumo com pendentes revisados, recusados e falhas.",
               "outputPreview": "❌ **Rejeitar todos**\nPendentes: 4\nRecusados: 4\nFalhas: 0",
@@ -2184,20 +2212,20 @@
               "categoryTitle": "Administracao"
             },
             {
-              "name": "/resetarcontadores",
+              "name": "{prefixo}resetarcontadores",
               "rawName": "resetarcontadores",
               "aliases": [
-                "/resetarinativos",
-                "/resetarativos",
-                "/resetaratividade"
+                "{prefixo}resetarinativos",
+                "{prefixo}resetarativos",
+                "{prefixo}resetaratividade"
               ],
               "examples": [
-                "/resetarcontadores"
+                "{prefixo}resetarcontadores"
               ],
               "tips": [
                 "O reset afeta somente o grupo onde o comando foi enviado."
               ],
-              "usage": "/resetarcontadores",
+              "usage": "{prefixo}resetarcontadores",
               "description": "Resetar contadores de atividade do grupo atual",
               "outputExample": "Mostra um resumo da acao administrativa executada.",
               "outputPreview": "🔄 **Resetar contadores**\nContadores de atividade do grupo foram zerados.",
@@ -2210,21 +2238,21 @@
               "categoryTitle": "Administracao"
             },
             {
-              "name": "/restart",
+              "name": "{prefixo}restart",
               "rawName": "restart",
               "aliases": [
-                "/reiniciar",
-                "/reconnect"
+                "{prefixo}reiniciar",
+                "{prefixo}reconnect"
               ],
               "examples": [
-                "/restart",
-                "/reiniciar",
-                "/reconnect"
+                "{prefixo}restart",
+                "{prefixo}reiniciar",
+                "{prefixo}reconnect"
               ],
               "tips": [
                 "Reinicia apenas a conexao com o WhatsApp, sem matar o processo Node."
               ],
-              "usage": "/restart | /reiniciar | /reconnect",
+              "usage": "{prefixo}restart | {prefixo}reiniciar | {prefixo}reconnect",
               "description": "Reiniciar a conexao do bot com o WhatsApp",
               "outputExample": "Mostra um resumo da acao administrativa executada.",
               "outputPreview": "🔄 **Restart**\nReiniciando a conexao do bot com o WhatsApp...",
@@ -2237,23 +2265,23 @@
               "categoryTitle": "Administracao"
             },
             {
-              "name": "/resumo",
+              "name": "{prefixo}resumo",
               "rawName": "resumo",
               "aliases": [
-                "/summary",
-                "/resumir"
+                "{prefixo}summary",
+                "{prefixo}resumir"
               ],
               "examples": [
-                "/resumo",
-                "/resumo 100",
-                "/summary 200"
+                "{prefixo}resumo",
+                "{prefixo}resumo 100",
+                "{prefixo}summary 200"
               ],
               "tips": [
                 "O limite padrao e 100 mensagens e pode ser ajustado ate 500.",
                 "Mensagens do bot sao ignoradas automaticamente.",
                 "O resumo usa heuristicas locais e evita inventar fatos nao vistos no recorte."
               ],
-              "usage": "/resumo [limite] | /summary [limite]",
+              "usage": "{prefixo}resumo [limite] | {prefixo}summary [limite]",
               "description": "Buscar mensagens recentes e resumir o que aconteceu no grupo",
               "outputExample": "Mostra um resumo da acao administrativa executada.",
               "outputPreview": "🧾 **Resumo do Grupo**\nForam analisadas 100 mensagens.\nAssuntos principais: regras, evento e musica.",
@@ -2266,21 +2294,21 @@
               "categoryTitle": "Administracao"
             },
             {
-              "name": "/sumidos",
+              "name": "{prefixo}sumidos",
               "rawName": "sumidos",
               "aliases": [
-                "/sumido"
+                "{prefixo}sumido"
               ],
               "examples": [
-                "/sumidos",
-                "/sumidos 200"
+                "{prefixo}sumidos",
+                "{prefixo}sumidos 200"
               ],
               "tips": [
                 "O limite padrao e 500 mensagens e pode ser ajustado ate 1000.",
                 "A leitura usa apenas participantes atuais do grupo.",
                 "As frases sao zoeiras leves baseadas na atividade real do recorte."
               ],
-              "usage": "/sumidos [limite]",
+              "usage": "{prefixo}sumidos [limite]",
               "description": "Detectar quem quase nao falou nas ultimas mensagens",
               "outputExample": "Mostra um resumo da acao administrativa executada.",
               "outputPreview": "👻 **Sumidos**\n1. Carla\n2. Diego",
@@ -2293,19 +2321,19 @@
               "categoryTitle": "Administracao"
             },
             {
-              "name": "/tagadmins",
+              "name": "{prefixo}tagadmins",
               "rawName": "tagadmins",
               "aliases": [],
               "examples": [
-                "/tagadmins Preciso de apoio aqui",
-                "/tagadmins respondendo uma mensagem",
-                "/tagadmins respondendo uma midia"
+                "{prefixo}tagadmins Preciso de apoio aqui",
+                "{prefixo}tagadmins respondendo uma mensagem",
+                "{prefixo}tagadmins respondendo uma midia"
               ],
               "tips": [
                 "Funciona com texto direto ou respondendo a uma mensagem ou midia.",
                 "Marca apenas admins e super admins atuais do grupo."
               ],
-              "usage": "/tagadmins <mensagem>",
+              "usage": "{prefixo}tagadmins <mensagem>",
               "description": "Marcar somente os administradores do grupo com mencoes invisiveis.",
               "outputExample": "Mostra um resumo da acao administrativa executada.",
               "outputPreview": "Preciso de apoio aqui.",
@@ -2318,23 +2346,23 @@
               "categoryTitle": "Administracao"
             },
             {
-              "name": "/totag",
+              "name": "{prefixo}totag",
               "rawName": "totag",
               "aliases": [
-                "/cita",
-                "/citar",
-                "/mencionar"
+                "{prefixo}cita",
+                "{prefixo}citar",
+                "{prefixo}mencionar"
               ],
               "examples": [
-                "/totag Reuniao em 5 minutos",
-                "/citar respondendo uma mensagem",
-                "/mencionar respondendo uma midia"
+                "{prefixo}totag Reuniao em 5 minutos",
+                "{prefixo}citar respondendo uma mensagem",
+                "{prefixo}mencionar respondendo uma midia"
               ],
               "tips": [
                 "Funciona com texto direto ou respondendo a uma mensagem ou midia.",
                 "Usa mencoes invisiveis: notifica sem listar os membros no texto."
               ],
-              "usage": "/totag <mensagem> | /cita <mensagem>",
+              "usage": "{prefixo}totag <mensagem> | {prefixo}cita <mensagem>",
               "description": "Marcar todos os membros do grupo com mencoes invisiveis.",
               "outputExample": "Mostra um resumo da acao administrativa executada.",
               "outputPreview": "Reuniao em 5 minutos.",
@@ -2347,20 +2375,20 @@
               "categoryTitle": "Administracao"
             },
             {
-              "name": "/unmod",
+              "name": "{prefixo}unmod",
               "rawName": "unmod",
               "aliases": [
-                "/removemod",
-                "/tirarmoderador"
+                "{prefixo}removemod",
+                "{prefixo}tirarmoderador"
               ],
               "examples": [
-                "/unmod @usuario",
-                "/tirarmoderador @usuario"
+                "{prefixo}unmod @usuario",
+                "{prefixo}tirarmoderador @usuario"
               ],
               "tips": [
                 "Use quando quiser reduzir o acesso de moderacao sem mexer no admin do WhatsApp."
               ],
-              "usage": "/unmod @usuario | /tirarmoderador @usuario",
+              "usage": "{prefixo}unmod @usuario | {prefixo}tirarmoderador @usuario",
               "description": "Remover privilegios de moderador do bot",
               "outputExample": "Mostra um resumo da acao administrativa executada.",
               "outputPreview": "🛡️ **Moderador**\nUsuario removido dos moderadores internos.",
@@ -2379,22 +2407,22 @@
           "title": "Configuracao",
           "commands": [
             {
-              "name": "/acaoautomatica",
+              "name": "{prefixo}acaoautomatica",
               "rawName": "acaoautomatica",
               "aliases": [
-                "/policyaction",
-                "/acao",
-                "/policy"
+                "{prefixo}policyaction",
+                "{prefixo}acao",
+                "{prefixo}policy"
               ],
               "examples": [
-                "/acaoautomatica advertencia",
-                "/policyaction remover"
+                "{prefixo}acaoautomatica advertencia",
+                "{prefixo}policyaction remover"
               ],
               "tips": [
                 "Use sem valor para ver o valor atual.",
                 "Aceita entradas em portugues e ingles."
               ],
-              "usage": "/acaoautomatica <warn|aviso|advertencia|kick|remover|excluir|ban|banir>",
+              "usage": "{prefixo}acaoautomatica <warn|aviso|advertencia|kick|remover|excluir|ban|banir>",
               "description": "Definir a resposta automatica principal da moderacao.",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "⚙️ **Acao automatica**\nValor atualizado: Remover",
@@ -2407,20 +2435,20 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/anticontato",
+              "name": "{prefixo}anticontato",
               "rawName": "anticontato",
               "aliases": [
-                "/anticontact"
+                "{prefixo}anticontact"
               ],
               "examples": [
-                "/anticontato on",
-                "/anticontato off"
+                "{prefixo}anticontato on",
+                "{prefixo}anticontato off"
               ],
               "tips": [
                 "Use sem valor para ver o estado atual.",
                 "Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao."
               ],
-              "usage": "/anticontato <on|off>",
+              "usage": "{prefixo}anticontato <on|off>",
               "description": "Bloquear envio de contatos por membros comuns.",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "🛡️ **Anticontato**\nValor atualizado: Ativado",
@@ -2433,22 +2461,22 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/antifake",
+              "name": "{prefixo}antifake",
               "rawName": "antifake",
               "aliases": [
-                "/antinumerofake",
-                "/antifakes",
-                "/anti-fake"
+                "{prefixo}antinumerofake",
+                "{prefixo}antifakes",
+                "{prefixo}anti-fake"
               ],
               "examples": [
-                "/antifake on",
-                "/antifake off"
+                "{prefixo}antifake on",
+                "{prefixo}antifake off"
               ],
               "tips": [
                 "Use sem valor para ver o estado atual.",
                 "Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao."
               ],
-              "usage": "/antifake <on|off>",
+              "usage": "{prefixo}antifake <on|off>",
               "description": "Bloquear numeros fora dos DDIs permitidos por membros comuns.",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "🛡️ **Antifake**\nValor atualizado: Ativado",
@@ -2461,22 +2489,22 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/antiflood",
+              "name": "{prefixo}antiflood",
               "rawName": "antiflood",
               "aliases": [
-                "/flood",
-                "/anti-flood",
-                "/antifloodmsg"
+                "{prefixo}flood",
+                "{prefixo}anti-flood",
+                "{prefixo}antifloodmsg"
               ],
               "examples": [
-                "/antiflood on",
-                "/antiflood off"
+                "{prefixo}antiflood on",
+                "{prefixo}antiflood off"
               ],
               "tips": [
                 "Use sem valor para ver o estado atual.",
                 "Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao."
               ],
-              "usage": "/antiflood <on|off>",
+              "usage": "{prefixo}antiflood <on|off>",
               "description": "Mutar por 30s membros comuns que enviarem mensagens demais em pouco tempo.",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "🛡️ **Antiflood**\nValor atualizado: Ativado",
@@ -2489,22 +2517,22 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/antifloodimagem",
+              "name": "{prefixo}antifloodimagem",
               "rawName": "antifloodimagem",
               "aliases": [
-                "/floodimagem",
-                "/anti-flood-image",
-                "/antifloodimage"
+                "{prefixo}floodimagem",
+                "{prefixo}anti-flood-image",
+                "{prefixo}antifloodimage"
               ],
               "examples": [
-                "/antifloodimagem on",
-                "/antifloodimagem off"
+                "{prefixo}antifloodimagem on",
+                "{prefixo}antifloodimagem off"
               ],
               "tips": [
                 "Use sem valor para ver o estado atual.",
                 "Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao."
               ],
-              "usage": "/antifloodimagem <on|off>",
+              "usage": "{prefixo}antifloodimagem <on|off>",
               "description": "Mutar por 30s membros comuns que enviarem imagens demais em pouco tempo.",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "🛡️ **Antifloodimagem**\nValor atualizado: Ativado",
@@ -2517,22 +2545,22 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/antifloodsticker",
+              "name": "{prefixo}antifloodsticker",
               "rawName": "antifloodsticker",
               "aliases": [
-                "/floodsticker",
-                "/anti-flood-sticker",
-                "/antifloodfigurinha"
+                "{prefixo}floodsticker",
+                "{prefixo}anti-flood-sticker",
+                "{prefixo}antifloodfigurinha"
               ],
               "examples": [
-                "/antifloodsticker on",
-                "/antifloodsticker off"
+                "{prefixo}antifloodsticker on",
+                "{prefixo}antifloodsticker off"
               ],
               "tips": [
                 "Use sem valor para ver o estado atual.",
                 "Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao."
               ],
-              "usage": "/antifloodsticker <on|off>",
+              "usage": "{prefixo}antifloodsticker <on|off>",
               "description": "Mutar por 30s membros comuns que enviarem figurinhas demais em pouco tempo.",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "🛡️ **Antifloodsticker**\nValor atualizado: Ativado",
@@ -2545,21 +2573,21 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/antifloodvideo",
+              "name": "{prefixo}antifloodvideo",
               "rawName": "antifloodvideo",
               "aliases": [
-                "/floodvideo",
-                "/anti-flood-video"
+                "{prefixo}floodvideo",
+                "{prefixo}anti-flood-video"
               ],
               "examples": [
-                "/antifloodvideo on",
-                "/antifloodvideo off"
+                "{prefixo}antifloodvideo on",
+                "{prefixo}antifloodvideo off"
               ],
               "tips": [
                 "Use sem valor para ver o estado atual.",
                 "Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao."
               ],
-              "usage": "/antifloodvideo <on|off>",
+              "usage": "{prefixo}antifloodvideo <on|off>",
               "description": "Mutar por 30s membros comuns que enviarem videos demais em pouco tempo.",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "🛡️ **Antifloodvideo**\nValor atualizado: Ativado",
@@ -2572,20 +2600,20 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/antiimagem",
+              "name": "{prefixo}antiimagem",
               "rawName": "antiimagem",
               "aliases": [
-                "/antiimage"
+                "{prefixo}antiimage"
               ],
               "examples": [
-                "/antiimagem on",
-                "/antiimagem off"
+                "{prefixo}antiimagem on",
+                "{prefixo}antiimagem off"
               ],
               "tips": [
                 "Use sem valor para ver o estado atual.",
                 "Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao."
               ],
-              "usage": "/antiimagem <on|off>",
+              "usage": "{prefixo}antiimagem <on|off>",
               "description": "Bloquear envio de imagens por membros comuns.",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "🛡️ **Antiimagem**\nValor atualizado: Ativado",
@@ -2598,22 +2626,22 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/antilink",
+              "name": "{prefixo}antilink",
               "rawName": "antilink",
               "aliases": [
-                "/anti-link",
-                "/antilinks",
-                "/linkguard"
+                "{prefixo}anti-link",
+                "{prefixo}antilinks",
+                "{prefixo}linkguard"
               ],
               "examples": [
-                "/antilink on",
-                "/antilink off"
+                "{prefixo}antilink on",
+                "{prefixo}antilink off"
               ],
               "tips": [
                 "Use sem valor para ver o estado atual.",
                 "Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao."
               ],
-              "usage": "/antilink <on|off>",
+              "usage": "{prefixo}antilink <on|off>",
               "description": "Bloquear links enviados no grupo.",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "🛡️ **Antilink**\nValor atualizado: Ativado",
@@ -2626,22 +2654,22 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/antispam",
+              "name": "{prefixo}antispam",
               "rawName": "antispam",
               "aliases": [
-                "/spamguard",
-                "/anti-spam",
-                "/spam"
+                "{prefixo}spamguard",
+                "{prefixo}anti-spam",
+                "{prefixo}spam"
               ],
               "examples": [
-                "/antispam on",
-                "/antispam off"
+                "{prefixo}antispam on",
+                "{prefixo}antispam off"
               ],
               "tips": [
                 "Use sem valor para ver o estado atual.",
                 "Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao."
               ],
-              "usage": "/antispam <on|off>",
+              "usage": "{prefixo}antispam <on|off>",
               "description": "Detectar excesso de mensagens repetidas em pouco tempo.",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "🛡️ **Antispam**\nValor atualizado: Ativado",
@@ -2654,20 +2682,20 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/antisticker",
+              "name": "{prefixo}antisticker",
               "rawName": "antisticker",
               "aliases": [
-                "/antifigurinha"
+                "{prefixo}antifigurinha"
               ],
               "examples": [
-                "/antisticker on",
-                "/antisticker off"
+                "{prefixo}antisticker on",
+                "{prefixo}antisticker off"
               ],
               "tips": [
                 "Use sem valor para ver o estado atual.",
                 "Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao."
               ],
-              "usage": "/antisticker <on|off>",
+              "usage": "{prefixo}antisticker <on|off>",
               "description": "Bloquear envio de figurinhas por membros comuns.",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "🛡️ **Antisticker**\nValor atualizado: Ativado",
@@ -2680,20 +2708,20 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/antivideo",
+              "name": "{prefixo}antivideo",
               "rawName": "antivideo",
               "aliases": [
-                "/anti-video"
+                "{prefixo}anti-video"
               ],
               "examples": [
-                "/antivideo on",
-                "/antivideo off"
+                "{prefixo}antivideo on",
+                "{prefixo}antivideo off"
               ],
               "tips": [
                 "Use sem valor para ver o estado atual.",
                 "Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao."
               ],
-              "usage": "/antivideo <on|off>",
+              "usage": "{prefixo}antivideo <on|off>",
               "description": "Bloquear envio de videos por membros comuns.",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "🛡️ **Antivideo**\nValor atualizado: Ativado",
@@ -2706,22 +2734,22 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/avisaradmins",
+              "name": "{prefixo}avisaradmins",
               "rawName": "avisaradmins",
               "aliases": [
-                "/notifyadmins",
-                "/notificaradmins",
-                "/alertaradmins"
+                "{prefixo}notifyadmins",
+                "{prefixo}notificaradmins",
+                "{prefixo}alertaradmins"
               ],
               "examples": [
-                "/avisaradmins on",
-                "/notifyadmins off"
+                "{prefixo}avisaradmins on",
+                "{prefixo}notifyadmins off"
               ],
               "tips": [
                 "Use sem valor para ver o estado atual.",
                 "Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao."
               ],
-              "usage": "/avisaradmins <on|off>",
+              "usage": "{prefixo}avisaradmins <on|off>",
               "description": "Definir se os admins serao avisados nas acoes automaticas.",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "⚙️ **Avisaradmins**\nConfiguracao atualizada com sucesso.",
@@ -2734,22 +2762,22 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/ddispermitidos",
+              "name": "{prefixo}ddispermitidos",
               "rawName": "ddispermitidos",
               "aliases": [
-                "/allowedcountrycodes",
-                "/allowedddis",
-                "/ddis",
-                "/paisespermitidos"
+                "{prefixo}allowedcountrycodes",
+                "{prefixo}allowedddis",
+                "{prefixo}ddis",
+                "{prefixo}paisespermitidos"
               ],
               "examples": [
-                "/ddispermitidos 55,353",
-                "/allowedcountrycodes 55,353"
+                "{prefixo}ddispermitidos 55,353",
+                "{prefixo}allowedcountrycodes 55,353"
               ],
               "tips": [
                 "Use sem valor para ver o valor atual."
               ],
-              "usage": "/ddispermitidos <55,353,...>",
+              "usage": "{prefixo}ddispermitidos <55,353,...>",
               "description": "Definir a lista de DDIs aceitos pelo anti-fake.",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "🌎 **DDIs permitidos**\nDDIs atuais: 55, 353",
@@ -2762,21 +2790,21 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/floodimagemessagelimit",
+              "name": "{prefixo}floodimagemessagelimit",
               "rawName": "floodimagemessagelimit",
               "aliases": [
-                "/limitefloodimagem",
-                "/floodimagelimit",
-                "/limiteimagemflood"
+                "{prefixo}limitefloodimagem",
+                "{prefixo}floodimagelimit",
+                "{prefixo}limiteimagemflood"
               ],
               "examples": [
-                "/limitefloodimagem 5",
-                "/floodimagemessagelimit 7"
+                "{prefixo}limitefloodimagem 5",
+                "{prefixo}floodimagemessagelimit 7"
               ],
               "tips": [
                 "Use sem valor para ver o valor atual."
               ],
-              "usage": "/floodimagemessagelimit <numero>",
+              "usage": "{prefixo}floodimagemessagelimit <numero>",
               "description": "Definir quantas imagens disparam o mute do antiflood imagem.",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "⚙️ **Floodimagemessagelimit**\nValor atualizado: 10",
@@ -2789,21 +2817,21 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/floodimagemutems",
+              "name": "{prefixo}floodimagemutems",
               "rawName": "floodimagemutems",
               "aliases": [
-                "/mutefloodimagem",
-                "/floodimagemute",
-                "/muteimagemflood"
+                "{prefixo}mutefloodimagem",
+                "{prefixo}floodimagemute",
+                "{prefixo}muteimagemflood"
               ],
               "examples": [
-                "/mutefloodimagem 30000",
-                "/floodimagemutems 45000"
+                "{prefixo}mutefloodimagem 30000",
+                "{prefixo}floodimagemutems 45000"
               ],
               "tips": [
                 "Use sem valor para ver o valor atual."
               ],
-              "usage": "/floodimagemutems <milissegundos>",
+              "usage": "{prefixo}floodimagemutems <milissegundos>",
               "description": "Definir por quanto tempo o antiflood imagem vai mutar.",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "⚙️ **Floodimagemutems**\nValor atualizado: 10",
@@ -2816,21 +2844,21 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/floodimagewindowms",
+              "name": "{prefixo}floodimagewindowms",
               "rawName": "floodimagewindowms",
               "aliases": [
-                "/janelafloodimagem",
-                "/floodimagewindow",
-                "/janelaimagemflood"
+                "{prefixo}janelafloodimagem",
+                "{prefixo}floodimagewindow",
+                "{prefixo}janelaimagemflood"
               ],
               "examples": [
-                "/janelafloodimagem 10000",
-                "/floodimagewindowms 8000"
+                "{prefixo}janelafloodimagem 10000",
+                "{prefixo}floodimagewindowms 8000"
               ],
               "tips": [
                 "Use sem valor para ver o valor atual."
               ],
-              "usage": "/floodimagewindowms <milissegundos>",
+              "usage": "{prefixo}floodimagewindowms <milissegundos>",
               "description": "Definir a janela em ms do antiflood de imagens.",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "⚙️ **Floodimagewindowms**\nValor atualizado: 10",
@@ -2843,21 +2871,21 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/floodmessagelimit",
+              "name": "{prefixo}floodmessagelimit",
               "rawName": "floodmessagelimit",
               "aliases": [
-                "/limiteflood",
-                "/floodlimit",
-                "/limitefloodmensagem"
+                "{prefixo}limiteflood",
+                "{prefixo}floodlimit",
+                "{prefixo}limitefloodmensagem"
               ],
               "examples": [
-                "/limiteflood 5",
-                "/floodmessagelimit 7"
+                "{prefixo}limiteflood 5",
+                "{prefixo}floodmessagelimit 7"
               ],
               "tips": [
                 "Use sem valor para ver o valor atual."
               ],
-              "usage": "/floodmessagelimit <numero>",
+              "usage": "{prefixo}floodmessagelimit <numero>",
               "description": "Definir quantas mensagens disparam o mute do antiflood.",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "⚙️ **Floodmessagelimit**\nValor atualizado: 10",
@@ -2870,21 +2898,21 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/floodmutems",
+              "name": "{prefixo}floodmutems",
               "rawName": "floodmutems",
               "aliases": [
-                "/muteflood",
-                "/floodmute",
-                "/mutefloodmsg"
+                "{prefixo}muteflood",
+                "{prefixo}floodmute",
+                "{prefixo}mutefloodmsg"
               ],
               "examples": [
-                "/muteflood 30000",
-                "/floodmutems 45000"
+                "{prefixo}muteflood 30000",
+                "{prefixo}floodmutems 45000"
               ],
               "tips": [
                 "Use sem valor para ver o valor atual."
               ],
-              "usage": "/floodmutems <milissegundos>",
+              "usage": "{prefixo}floodmutems <milissegundos>",
               "description": "Definir por quanto tempo o antiflood de mensagens vai mutar.",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "⚙️ **Floodmutems**\nValor atualizado: 10",
@@ -2897,21 +2925,21 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/floodstickermessagelimit",
+              "name": "{prefixo}floodstickermessagelimit",
               "rawName": "floodstickermessagelimit",
               "aliases": [
-                "/limitefloodsticker",
-                "/floodstickerlimit",
-                "/limitefigurinhaflood"
+                "{prefixo}limitefloodsticker",
+                "{prefixo}floodstickerlimit",
+                "{prefixo}limitefigurinhaflood"
               ],
               "examples": [
-                "/limitefloodsticker 5",
-                "/floodstickermessagelimit 7"
+                "{prefixo}limitefloodsticker 5",
+                "{prefixo}floodstickermessagelimit 7"
               ],
               "tips": [
                 "Use sem valor para ver o valor atual."
               ],
-              "usage": "/floodstickermessagelimit <numero>",
+              "usage": "{prefixo}floodstickermessagelimit <numero>",
               "description": "Definir quantas figurinhas disparam o mute do antiflood sticker.",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "⚙️ **Floodstickermessagelimit**\nValor atualizado: 10",
@@ -2924,21 +2952,21 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/floodstickermutems",
+              "name": "{prefixo}floodstickermutems",
               "rawName": "floodstickermutems",
               "aliases": [
-                "/mutefloodsticker",
-                "/floodstickermute",
-                "/mutefigurinhaflood"
+                "{prefixo}mutefloodsticker",
+                "{prefixo}floodstickermute",
+                "{prefixo}mutefigurinhaflood"
               ],
               "examples": [
-                "/mutefloodsticker 30000",
-                "/floodstickermutems 45000"
+                "{prefixo}mutefloodsticker 30000",
+                "{prefixo}floodstickermutems 45000"
               ],
               "tips": [
                 "Use sem valor para ver o valor atual."
               ],
-              "usage": "/floodstickermutems <milissegundos>",
+              "usage": "{prefixo}floodstickermutems <milissegundos>",
               "description": "Definir por quanto tempo o antiflood de figurinhas vai mutar.",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "⚙️ **Floodstickermutems**\nValor atualizado: 10",
@@ -2951,21 +2979,21 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/floodstickerwindowms",
+              "name": "{prefixo}floodstickerwindowms",
               "rawName": "floodstickerwindowms",
               "aliases": [
-                "/janelafloodsticker",
-                "/floodstickerwindow",
-                "/janelafigurinhaflood"
+                "{prefixo}janelafloodsticker",
+                "{prefixo}floodstickerwindow",
+                "{prefixo}janelafigurinhaflood"
               ],
               "examples": [
-                "/janelafloodsticker 10000",
-                "/floodstickerwindowms 8000"
+                "{prefixo}janelafloodsticker 10000",
+                "{prefixo}floodstickerwindowms 8000"
               ],
               "tips": [
                 "Use sem valor para ver o valor atual."
               ],
-              "usage": "/floodstickerwindowms <milissegundos>",
+              "usage": "{prefixo}floodstickerwindowms <milissegundos>",
               "description": "Definir a janela em ms do antiflood de figurinhas.",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "⚙️ **Floodstickerwindowms**\nValor atualizado: 10",
@@ -2978,21 +3006,21 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/floodvideomessagelimit",
+              "name": "{prefixo}floodvideomessagelimit",
               "rawName": "floodvideomessagelimit",
               "aliases": [
-                "/limitefloodvideo",
-                "/floodvideolimit",
-                "/limitevideoflood"
+                "{prefixo}limitefloodvideo",
+                "{prefixo}floodvideolimit",
+                "{prefixo}limitevideoflood"
               ],
               "examples": [
-                "/limitefloodvideo 5",
-                "/floodvideomessagelimit 7"
+                "{prefixo}limitefloodvideo 5",
+                "{prefixo}floodvideomessagelimit 7"
               ],
               "tips": [
                 "Use sem valor para ver o valor atual."
               ],
-              "usage": "/floodvideomessagelimit <numero>",
+              "usage": "{prefixo}floodvideomessagelimit <numero>",
               "description": "Definir quantos videos disparam o mute do antiflood video.",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "⚙️ **Floodvideomessagelimit**\nValor atualizado: 10",
@@ -3005,21 +3033,21 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/floodvideomutems",
+              "name": "{prefixo}floodvideomutems",
               "rawName": "floodvideomutems",
               "aliases": [
-                "/mutefloodvideo",
-                "/floodvideomute",
-                "/mutevideoflood"
+                "{prefixo}mutefloodvideo",
+                "{prefixo}floodvideomute",
+                "{prefixo}mutevideoflood"
               ],
               "examples": [
-                "/mutefloodvideo 30000",
-                "/floodvideomutems 45000"
+                "{prefixo}mutefloodvideo 30000",
+                "{prefixo}floodvideomutems 45000"
               ],
               "tips": [
                 "Use sem valor para ver o valor atual."
               ],
-              "usage": "/floodvideomutems <milissegundos>",
+              "usage": "{prefixo}floodvideomutems <milissegundos>",
               "description": "Definir por quanto tempo o antiflood de videos vai mutar.",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "⚙️ **Floodvideomutems**\nValor atualizado: 10",
@@ -3032,21 +3060,21 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/floodvideowindowms",
+              "name": "{prefixo}floodvideowindowms",
               "rawName": "floodvideowindowms",
               "aliases": [
-                "/janelafloodvideo",
-                "/floodvideowindow",
-                "/janelavideoflood"
+                "{prefixo}janelafloodvideo",
+                "{prefixo}floodvideowindow",
+                "{prefixo}janelavideoflood"
               ],
               "examples": [
-                "/janelafloodvideo 10000",
-                "/floodvideowindowms 8000"
+                "{prefixo}janelafloodvideo 10000",
+                "{prefixo}floodvideowindowms 8000"
               ],
               "tips": [
                 "Use sem valor para ver o valor atual."
               ],
-              "usage": "/floodvideowindowms <milissegundos>",
+              "usage": "{prefixo}floodvideowindowms <milissegundos>",
               "description": "Definir a janela em ms do antiflood de videos.",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "⚙️ **Floodvideowindowms**\nValor atualizado: 10",
@@ -3059,21 +3087,21 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/floodwindowms",
+              "name": "{prefixo}floodwindowms",
               "rawName": "floodwindowms",
               "aliases": [
-                "/janelaflood",
-                "/floodwindow",
-                "/janelafloodmsg"
+                "{prefixo}janelaflood",
+                "{prefixo}floodwindow",
+                "{prefixo}janelafloodmsg"
               ],
               "examples": [
-                "/janelaflood 10000",
-                "/floodwindowms 8000"
+                "{prefixo}janelaflood 10000",
+                "{prefixo}floodwindowms 8000"
               ],
               "tips": [
                 "Use sem valor para ver o valor atual."
               ],
-              "usage": "/floodwindowms <milissegundos>",
+              "usage": "{prefixo}floodwindowms <milissegundos>",
               "description": "Definir a janela em ms do antiflood de mensagens.",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "⚙️ **Floodwindowms**\nValor atualizado: 10",
@@ -3086,21 +3114,21 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/limiteavisos",
+              "name": "{prefixo}limiteavisos",
               "rawName": "limiteavisos",
               "aliases": [
-                "/warnthreshold",
-                "/warnlimit",
-                "/limiteaviso"
+                "{prefixo}warnthreshold",
+                "{prefixo}warnlimit",
+                "{prefixo}limiteaviso"
               ],
               "examples": [
-                "/limiteavisos 3",
-                "/warnthreshold 4"
+                "{prefixo}limiteavisos 3",
+                "{prefixo}warnthreshold 4"
               ],
               "tips": [
                 "Use sem valor para ver o valor atual."
               ],
-              "usage": "/limiteavisos <numero>",
+              "usage": "{prefixo}limiteavisos <numero>",
               "description": "Definir quantos avisos resultam em acao automatica.",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "⚠️ **Limite de avisos**\nValor atualizado: 3",
@@ -3113,21 +3141,21 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/limitespam",
+              "name": "{prefixo}limitespam",
               "rawName": "limitespam",
               "aliases": [
-                "/spammessagelimit",
-                "/spamlimit",
-                "/limiteantispam"
+                "{prefixo}spammessagelimit",
+                "{prefixo}spamlimit",
+                "{prefixo}limiteantispam"
               ],
               "examples": [
-                "/limitespam 5",
-                "/spammessagelimit 7"
+                "{prefixo}limitespam 5",
+                "{prefixo}spammessagelimit 7"
               ],
               "tips": [
                 "Use sem valor para ver o valor atual."
               ],
-              "usage": "/limitespam <numero>",
+              "usage": "{prefixo}limitespam <numero>",
               "description": "Definir quantas mensagens entram na contagem do antispam.",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "🧯 **Limite anti-spam**\nValor atualizado: 5 mensagens.",
@@ -3140,24 +3168,24 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/modobrincadeira",
+              "name": "{prefixo}modobrincadeira",
               "rawName": "modobrincadeira",
               "aliases": [
-                "/modo-brincadeira",
-                "/brincadeira",
-                "/funmode",
-                "/modozoeira",
-                "/zoeira"
+                "{prefixo}modo-brincadeira",
+                "{prefixo}brincadeira",
+                "{prefixo}funmode",
+                "{prefixo}modozoeira",
+                "{prefixo}zoeira"
               ],
               "examples": [
-                "/modobrincadeira on",
-                "/modo-brincadeira off"
+                "{prefixo}modobrincadeira on",
+                "{prefixo}modo-brincadeira off"
               ],
               "tips": [
                 "Use sem valor para ver o estado atual.",
                 "Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao."
               ],
-              "usage": "/modobrincadeira <on|off>",
+              "usage": "{prefixo}modobrincadeira <on|off>",
               "description": "Ligar ou desligar o modo de diversao leve do grupo, preparado para comandos de entretenimento.",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "🎮 **Modo brincadeira**\nValor atualizado: Ativado",
@@ -3170,21 +3198,21 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/palavrasbloqueadas",
+              "name": "{prefixo}palavrasbloqueadas",
               "rawName": "palavrasbloqueadas",
               "aliases": [
-                "/blockedwords",
-                "/palavrasbanidas",
-                "/blockwords"
+                "{prefixo}blockedwords",
+                "{prefixo}palavrasbanidas",
+                "{prefixo}blockwords"
               ],
               "examples": [
-                "/palavrasbloqueadas golpe,spam,link",
-                "/blockedwords scam,spam"
+                "{prefixo}palavrasbloqueadas golpe,spam,link",
+                "{prefixo}blockedwords scam,spam"
               ],
               "tips": [
                 "Use sem valor para ver o valor atual."
               ],
-              "usage": "/palavrasbloqueadas <palavra1,palavra2,...>",
+              "usage": "{prefixo}palavrasbloqueadas <palavra1,palavra2,...>",
               "description": "Definir a lista de palavras bloqueadas, separadas por virgula.",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "🚫 **Palavras bloqueadas**\nPalavras atuais: golpe, spam",
@@ -3197,19 +3225,19 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/setprefix",
+              "name": "{prefixo}setprefix",
               "rawName": "setprefix",
               "aliases": [
-                "/definirprefixo"
+                "{prefixo}definirprefixo"
               ],
               "examples": [
-                "/setprefix /",
-                "/definirprefixo ."
+                "{prefixo}setprefix /",
+                "{prefixo}definirprefixo ."
               ],
               "tips": [
                 "O prefixo precisa ter de 1 a 3 caracteres sem espacos."
               ],
-              "usage": "/setprefix <prefixo> | /definirprefixo <prefixo>",
+              "usage": "{prefixo}setprefix <prefixo> | {prefixo}definirprefixo <prefixo>",
               "description": "Alterar o prefixo dos comandos neste grupo",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "✅ **Prefixo**\nPrefixo atualizado para: .",
@@ -3222,19 +3250,19 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/setrules",
+              "name": "{prefixo}setrules",
               "rawName": "setrules",
               "aliases": [
-                "/definirregras"
+                "{prefixo}definirregras"
               ],
               "examples": [
-                "/setrules Sem spam, sem links suspeitos e sem ofensas.",
-                "/definirregras Respeite os membros e evite flood."
+                "{prefixo}setrules Sem spam, sem links suspeitos e sem ofensas.",
+                "{prefixo}definirregras Respeite os membros e evite flood."
               ],
               "tips": [
                 "Depois use o comando de regras para conferir como o texto ficou no grupo."
               ],
-              "usage": "/setrules <texto> | /definirregras <texto>",
+              "usage": "{prefixo}setrules <texto> | {prefixo}definirregras <texto>",
               "description": "Definir ou substituir o texto das regras do grupo",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "📜 **Regras**\nRegras do grupo atualizadas com sucesso.",
@@ -3247,21 +3275,21 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/spamwindowms",
+              "name": "{prefixo}spamwindowms",
               "rawName": "spamwindowms",
               "aliases": [
-                "/janelaantispam",
-                "/spammwindow",
-                "/janelaspam"
+                "{prefixo}janelaantispam",
+                "{prefixo}spammwindow",
+                "{prefixo}janelaspam"
               ],
               "examples": [
-                "/janelaantispam 10000",
-                "/spamwindowms 8000"
+                "{prefixo}janelaantispam 10000",
+                "{prefixo}spamwindowms 8000"
               ],
               "tips": [
                 "Use sem valor para ver o valor atual."
               ],
-              "usage": "/spamwindowms <milissegundos>",
+              "usage": "{prefixo}spamwindowms <milissegundos>",
               "description": "Definir a janela em ms usada pelo antispam.",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "⚙️ **Spamwindowms**\nValor atualizado: 10",
@@ -3274,22 +3302,22 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/tema",
+              "name": "{prefixo}tema",
               "rawName": "tema",
               "aliases": [
-                "/theme"
+                "{prefixo}theme"
               ],
               "examples": [
-                "/tema",
-                "/tema alien",
-                "/tema bender",
-                "/tema benderlight"
+                "{prefixo}tema",
+                "{prefixo}tema alien",
+                "{prefixo}tema bender",
+                "{prefixo}tema benderlight"
               ],
               "tips": [
                 "Sem parametro, mostra os temas disponiveis.",
                 "A troca afeta menus, listas e o perfil local do bot neste grupo."
               ],
-              "usage": "/tema [nome] | /theme [name]",
+              "usage": "{prefixo}tema [nome] | {prefixo}theme [name]",
               "description": "Listar temas ou aplicar um tema visual ao grupo",
               "outputExample": "Confirma o tema aplicado e usa a identidade visual selecionada.",
               "outputPreview": "🎨 **Tema**\nTema aplicado: Alien",
@@ -3315,22 +3343,22 @@
           "title": "Utilitarios",
           "commands": [
             {
-              "name": "/menudono",
+              "name": "{prefixo}menudono",
               "rawName": "menudono",
               "aliases": [
-                "/ownermenu"
+                "{prefixo}ownermenu"
               ],
               "examples": [
-                "/menudono",
-                "/ownermenu"
+                "{prefixo}menudono",
+                "{prefixo}ownermenu"
               ],
               "tips": [
                 "Os menus usam PT-BR na exibicao e mantem aliases em ingles para consulta rapida."
               ],
-              "usage": "/menudono | /ownermenu",
+              "usage": "{prefixo}menudono | {prefixo}ownermenu",
               "description": "Mostrar o menu de configuracao do bot",
               "outputExample": "Mostra comandos exclusivos do dono do bot, incluindo identidade, bloqueios globais e seguranca.",
-              "outputPreview": "💎 **Menu do Dono**\nIdentidade do Bot\n\n/nomedobot\n/fotobot\n/antipv",
+              "outputPreview": "💎 **Menu do Dono**\nIdentidade do Bot\n\n{prefixo}nomedobot\n{prefixo}fotobot\n{prefixo}antipv",
               "requiredRole": "owner",
               "requiredRoleLabel": "Dono do Bot",
               "requiredChatType": "any",
@@ -3346,23 +3374,23 @@
           "title": "Configuracao",
           "commands": [
             {
-              "name": "/antiligacao",
+              "name": "{prefixo}antiligacao",
               "rawName": "antiligacao",
               "aliases": [
-                "/anticall",
-                "/antiligar",
-                "/bloquearligacao"
+                "{prefixo}anticall",
+                "{prefixo}antiligar",
+                "{prefixo}bloquearligacao"
               ],
               "examples": [
-                "/antiligacao on",
-                "/anticall off",
-                "/antiligar ligar"
+                "{prefixo}antiligacao on",
+                "{prefixo}anticall off",
+                "{prefixo}antiligar ligar"
               ],
               "tips": [
                 "Use sem valor para ver o estado atual.",
                 "Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao."
               ],
-              "usage": "/antiligacao <on|off>",
+              "usage": "{prefixo}antiligacao <on|off>",
               "description": "Bloquear chamadas recebidas no privado",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "☎️ **Anti-ligacao**\nValor atualizado: Ativado",
@@ -3375,23 +3403,23 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/antipv",
+              "name": "{prefixo}antipv",
               "rawName": "antipv",
               "aliases": [
-                "/antiprivado",
-                "/anti-private",
-                "/antidirect"
+                "{prefixo}antiprivado",
+                "{prefixo}anti-private",
+                "{prefixo}antidirect"
               ],
               "examples": [
-                "/antipv on",
-                "/antiprivado off",
-                "/antidirect sim"
+                "{prefixo}antipv on",
+                "{prefixo}antiprivado off",
+                "{prefixo}antidirect sim"
               ],
               "tips": [
                 "Use sem valor para ver o estado atual.",
                 "Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao."
               ],
-              "usage": "/antipv <on|off>",
+              "usage": "{prefixo}antipv <on|off>",
               "description": "Bloquear atendimento no privado para nao donos",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "🚪 **Anti-PV**\nValor atualizado: Ativado",
@@ -3404,22 +3432,22 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/bloquearcomando",
+              "name": "{prefixo}bloquearcomando",
               "rawName": "bloquearcomando",
               "aliases": [
-                "/blockcmd",
-                "/disablecmd",
-                "/desativarcomando"
+                "{prefixo}blockcmd",
+                "{prefixo}disablecmd",
+                "{prefixo}desativarcomando"
               ],
               "examples": [
-                "/bloquearcomando ping",
-                "/blockcmd sticker"
+                "{prefixo}bloquearcomando ping",
+                "{prefixo}blockcmd sticker"
               ],
               "tips": [
                 "O bloqueio vale apenas para o grupo atual.",
                 "Comandos criticos de ajuda e desbloqueio nao podem ser bloqueados."
               ],
-              "usage": "/bloquearcomando <comando> | /blockcmd <command>",
+              "usage": "{prefixo}bloquearcomando <comando> | {prefixo}blockcmd <command>",
               "description": "Bloquear um comando neste grupo",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "🔒 **Comando bloqueado**\nComando: ping\nResultado: bloqueado neste grupo.",
@@ -3432,22 +3460,22 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/bloquearusuario",
+              "name": "{prefixo}bloquearusuario",
               "rawName": "bloquearusuario",
               "aliases": [
-                "/blockuser",
-                "/block",
-                "/bloquear"
+                "{prefixo}blockuser",
+                "{prefixo}block",
+                "{prefixo}bloquear"
               ],
               "examples": [
-                "/bloquearusuario @usuario spam no bot",
-                "/blockuser 5511999999999 abusive commands"
+                "{prefixo}bloquearusuario @usuario spam no bot",
+                "{prefixo}blockuser 5511999999999 abusive commands"
               ],
               "tips": [
                 "Voce pode mencionar, responder uma mensagem ou informar o numero.",
                 "O dono do bot nao pode ser bloqueado."
               ],
-              "usage": "/bloquearusuario @usuario [motivo] | /blockuser <numero> [reason]",
+              "usage": "{prefixo}bloquearusuario @usuario [motivo] | {prefixo}blockuser <numero> [reason]",
               "description": "Bloquear um usuario de executar comandos",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "🚫 **Usuario bloqueado**\nUsuario: 5511999999999@c.us\nResultado: bloqueado de usar comandos.",
@@ -3460,20 +3488,20 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/comandosbloqueados",
+              "name": "{prefixo}comandosbloqueados",
               "rawName": "comandosbloqueados",
               "aliases": [
-                "/blockedcmds",
-                "/listacomandosbloqueados"
+                "{prefixo}blockedcmds",
+                "{prefixo}listacomandosbloqueados"
               ],
               "examples": [
-                "/comandosbloqueados",
-                "/blockedcmds"
+                "{prefixo}comandosbloqueados",
+                "{prefixo}blockedcmds"
               ],
               "tips": [
                 "Mostra apenas bloqueios do grupo atual."
               ],
-              "usage": "/comandosbloqueados | /blockedcmds",
+              "usage": "{prefixo}comandosbloqueados | {prefixo}blockedcmds",
               "description": "Listar comandos bloqueados neste grupo",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "🔒 **Comandos bloqueados**\nComandos: ping, sticker",
@@ -3486,21 +3514,21 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/desbloquearcomando",
+              "name": "{prefixo}desbloquearcomando",
               "rawName": "desbloquearcomando",
               "aliases": [
-                "/unblockcmd",
-                "/enablecmd",
-                "/ativarcomando"
+                "{prefixo}unblockcmd",
+                "{prefixo}enablecmd",
+                "{prefixo}ativarcomando"
               ],
               "examples": [
-                "/desbloquearcomando ping",
-                "/unblockcmd sticker"
+                "{prefixo}desbloquearcomando ping",
+                "{prefixo}unblockcmd sticker"
               ],
               "tips": [
                 "O desbloqueio vale apenas para o grupo atual."
               ],
-              "usage": "/desbloquearcomando <comando> | /unblockcmd <command>",
+              "usage": "{prefixo}desbloquearcomando <comando> | {prefixo}unblockcmd <command>",
               "description": "Desbloquear um comando neste grupo",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "🔓 **Comando desbloqueado**\nComando: ping\nResultado: liberado neste grupo.",
@@ -3513,21 +3541,21 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/desbloquearusuario",
+              "name": "{prefixo}desbloquearusuario",
               "rawName": "desbloquearusuario",
               "aliases": [
-                "/unblockuser",
-                "/unblock",
-                "/desbloquear"
+                "{prefixo}unblockuser",
+                "{prefixo}unblock",
+                "{prefixo}desbloquear"
               ],
               "examples": [
-                "/desbloquearusuario @usuario",
-                "/unblockuser 5511999999999"
+                "{prefixo}desbloquearusuario @usuario",
+                "{prefixo}unblockuser 5511999999999"
               ],
               "tips": [
                 "Use mencao, resposta ou numero para escolher o usuario."
               ],
-              "usage": "/desbloquearusuario @usuario | /unblockuser <numero>",
+              "usage": "{prefixo}desbloquearusuario @usuario | {prefixo}unblockuser <numero>",
               "description": "Desbloquear um usuario para usar comandos",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "✅ **Usuario desbloqueado**\nUsuario liberado para usar comandos.",
@@ -3540,22 +3568,22 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/listabloqueados",
+              "name": "{prefixo}listabloqueados",
               "rawName": "listabloqueados",
               "aliases": [
-                "/blocklist",
-                "/blockedusers",
-                "/usuariosbloqueados",
-                "/bloqueados"
+                "{prefixo}blocklist",
+                "{prefixo}blockedusers",
+                "{prefixo}usuariosbloqueados",
+                "{prefixo}bloqueados"
               ],
               "examples": [
-                "/listabloqueados",
-                "/blockedusers"
+                "{prefixo}listabloqueados",
+                "{prefixo}blockedusers"
               ],
               "tips": [
                 "A lista vale para todos os grupos e conversas do bot."
               ],
-              "usage": "/listabloqueados | /blocklist",
+              "usage": "{prefixo}listabloqueados | {prefixo}blocklist",
               "description": "Listar usuarios bloqueados no bot",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "🚫 **Usuarios bloqueados**\n1. 5511999999999@c.us - spam no bot",
@@ -3568,21 +3596,21 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/novodono",
+              "name": "{prefixo}novodono",
               "rawName": "novodono",
               "aliases": [
-                "/newowner",
-                "/setowner"
+                "{prefixo}newowner",
+                "{prefixo}setowner"
               ],
               "examples": [
-                "/novodono @usuario",
-                "/setowner"
+                "{prefixo}novodono @usuario",
+                "{prefixo}setowner"
               ],
               "tips": [
                 "Use mencao ou responda a mensagem do novo dono.",
                 "O nome do dono sera salvo sem exibir telefone nas respostas do bot."
               ],
-              "usage": "/novodono @usuario | /newowner (respondendo a mensagem)",
+              "usage": "{prefixo}novodono @usuario | {prefixo}newowner (respondendo a mensagem)",
               "description": "Transferir a posse do bot para outro usuario",
               "outputExample": "Confirma a transferencia de dono do bot para o usuario escolhido.",
               "outputPreview": "👑 **Novo dono**\nDono anterior: Edvaldo\nNovo dono: Ana",
@@ -3595,20 +3623,20 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/setbotname",
+              "name": "{prefixo}setbotname",
               "rawName": "setbotname",
               "aliases": [
-                "/nomebot",
-                "/definirnomebot"
+                "{prefixo}nomebot",
+                "{prefixo}definirnomebot"
               ],
               "examples": [
-                "/setbotname Bender",
-                "/nomebot Bender Moderador"
+                "{prefixo}setbotname Bender",
+                "{prefixo}nomebot Bender Moderador"
               ],
               "tips": [
                 "Esse e o nome que aparece no perfil e para quem ainda nao salvou o contato."
               ],
-              "usage": "/setbotname <nome> | /nomebot <nome>",
+              "usage": "{prefixo}setbotname <nome> | {prefixo}nomebot <nome>",
               "description": "Alterar o nome exibido do bot",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "🤖 **Nome do Bot**\nNome atualizado para: ALIEN",
@@ -3621,22 +3649,22 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/setbotphoto",
+              "name": "{prefixo}setbotphoto",
               "rawName": "setbotphoto",
               "aliases": [
-                "/fotobot",
-                "/definirfotobot"
+                "{prefixo}fotobot",
+                "{prefixo}definirfotobot"
               ],
               "examples": [
-                "/setbotphoto",
-                "/fotobot",
-                "/definirfotobot"
+                "{prefixo}setbotphoto",
+                "{prefixo}fotobot",
+                "{prefixo}definirfotobot"
               ],
               "tips": [
                 "Envie o comando na legenda de uma imagem ou responda a uma imagem ja enviada.",
                 "Use uma imagem quadrada ou bem centralizada para um resultado mais profissional."
               ],
-              "usage": "/setbotphoto (envie com foto) | /fotobot (responda uma foto)",
+              "usage": "{prefixo}setbotphoto (envie com foto) | {prefixo}fotobot (responda uma foto)",
               "description": "Alterar a foto de perfil do bot",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "🖼️ **Foto do Bot**\nFoto de perfil atualizada com sucesso.",
@@ -3649,21 +3677,21 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/setbotstatus",
+              "name": "{prefixo}setbotstatus",
               "rawName": "setbotstatus",
               "aliases": [
-                "/statusbot",
-                "/biobot",
-                "/definirstatusbot"
+                "{prefixo}statusbot",
+                "{prefixo}biobot",
+                "{prefixo}definirstatusbot"
               ],
               "examples": [
-                "/setbotstatus Moderacao inteligente e atendimento rapido.",
-                "/biobot Online para moderacao e suporte."
+                "{prefixo}setbotstatus Moderacao inteligente e atendimento rapido.",
+                "{prefixo}biobot Online para moderacao e suporte."
               ],
               "tips": [
                 "Esse texto aparece como a bio do perfil no WhatsApp."
               ],
-              "usage": "/setbotstatus <texto> | /statusbot <texto>",
+              "usage": "{prefixo}setbotstatus <texto> | {prefixo}statusbot <texto>",
               "description": "Alterar a bio do bot",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "💬 **Status do Bot**\nStatus atualizado com sucesso.",
@@ -3676,20 +3704,20 @@
               "categoryTitle": "Configuracao"
             },
             {
-              "name": "/setbotwelcome",
+              "name": "{prefixo}setbotwelcome",
               "rawName": "setbotwelcome",
               "aliases": [
-                "/boasvindasbot",
-                "/apresentacaobot"
+                "{prefixo}boasvindasbot",
+                "{prefixo}apresentacaobot"
               ],
               "examples": [
-                "/setbotwelcome Eu sou o Bender. Eu modero o grupo para voces nao quebrarem tudo.",
-                "/apresentacaobot Bem-vindo. Use /ajuda para ver meus comandos."
+                "{prefixo}setbotwelcome Eu sou o Bender. Eu modero o grupo para voces nao quebrarem tudo.",
+                "{prefixo}apresentacaobot Bem-vindo. Use {prefixo}ajuda para ver meus comandos."
               ],
               "tips": [
                 "Esse texto aparece no comando perfilbot para dar uma apresentacao mais profissional ao bot."
               ],
-              "usage": "/setbotwelcome <texto> | /apresentacaobot <texto>",
+              "usage": "{prefixo}setbotwelcome <texto> | {prefixo}apresentacaobot <texto>",
               "description": "Definir o texto de apresentacao do bot",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "👋 **Boas-vindas do Bot**\nMensagem de boas-vindas atualizada.",
@@ -3782,7 +3810,7 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\bender\\covers\\ativos.png",
           "relativePath": "assets/themes/bender/covers/ativos.png",
           "commands": [
-            "/ativos"
+            "{prefixo}ativos"
           ]
         },
         {
@@ -3791,7 +3819,7 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\bender\\covers\\comandosbloqueados.png",
           "relativePath": "assets/themes/bender/covers/comandosbloqueados.png",
           "commands": [
-            "/comandosbloqueados"
+            "{prefixo}comandosbloqueados"
           ]
         },
         {
@@ -3800,7 +3828,7 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\bender\\covers\\default.png",
           "relativePath": "assets/themes/bender/covers/default.png",
           "commands": [
-            "/theme"
+            "{prefixo}theme"
           ]
         },
         {
@@ -3809,7 +3837,7 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\bender\\covers\\help.png",
           "relativePath": "assets/themes/bender/covers/help.png",
           "commands": [
-            "/help"
+            "{prefixo}help"
           ]
         },
         {
@@ -3818,8 +3846,8 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\bender\\covers\\inativos.png",
           "relativePath": "assets/themes/bender/covers/inativos.png",
           "commands": [
-            "/inativos",
-            "/sumidos"
+            "{prefixo}inativos",
+            "{prefixo}sumidos"
           ]
         },
         {
@@ -3828,7 +3856,7 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\bender\\covers\\infogrupo.png",
           "relativePath": "assets/themes/bender/covers/infogrupo.png",
           "commands": [
-            "/infogrupo"
+            "{prefixo}infogrupo"
           ]
         },
         {
@@ -3837,7 +3865,7 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\bender\\covers\\listabloqueados.png",
           "relativePath": "assets/themes/bender/covers/listabloqueados.png",
           "commands": [
-            "/listabloqueados"
+            "{prefixo}listabloqueados"
           ]
         },
         {
@@ -3846,7 +3874,7 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\bender\\covers\\menu.png",
           "relativePath": "assets/themes/bender/covers/menu.png",
           "commands": [
-            "/menu"
+            "{prefixo}menu"
           ]
         },
         {
@@ -3855,7 +3883,7 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\bender\\covers\\menuadm.png",
           "relativePath": "assets/themes/bender/covers/menuadm.png",
           "commands": [
-            "/menuadm"
+            "{prefixo}menuadm"
           ]
         },
         {
@@ -3864,7 +3892,7 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\bender\\covers\\menubrincadeira.png",
           "relativePath": "assets/themes/bender/covers/menubrincadeira.png",
           "commands": [
-            "/menubrincadeira"
+            "{prefixo}menubrincadeira"
           ]
         },
         {
@@ -3873,7 +3901,7 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\bender\\covers\\menudono.png",
           "relativePath": "assets/themes/bender/covers/menudono.png",
           "commands": [
-            "/menudono"
+            "{prefixo}menudono"
           ]
         },
         {
@@ -3882,7 +3910,7 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\bender\\covers\\perfilbot.png",
           "relativePath": "assets/themes/bender/covers/perfilbot.png",
           "commands": [
-            "/botprofile"
+            "{prefixo}botprofile"
           ]
         },
         {
@@ -3891,7 +3919,7 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\bender\\covers\\regras.png",
           "relativePath": "assets/themes/bender/covers/regras.png",
           "commands": [
-            "/rules"
+            "{prefixo}rules"
           ]
         },
         {
@@ -3900,7 +3928,7 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\bender\\covers\\status.png",
           "relativePath": "assets/themes/bender/covers/status.png",
           "commands": [
-            "/status"
+            "{prefixo}status"
           ]
         },
         {
@@ -3909,7 +3937,7 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\bender\\covers\\warnings.png",
           "relativePath": "assets/themes/bender/covers/warnings.png",
           "commands": [
-            "/warnings"
+            "{prefixo}warnings"
           ]
         }
       ]
@@ -3940,7 +3968,7 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\benderlight\\covers\\ativos.png",
           "relativePath": "assets/themes/benderlight/covers/ativos.png",
           "commands": [
-            "/ativos"
+            "{prefixo}ativos"
           ]
         },
         {
@@ -3949,7 +3977,7 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\benderlight\\covers\\comandosbloqueados.png",
           "relativePath": "assets/themes/benderlight/covers/comandosbloqueados.png",
           "commands": [
-            "/comandosbloqueados"
+            "{prefixo}comandosbloqueados"
           ]
         },
         {
@@ -3958,7 +3986,7 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\benderlight\\covers\\default.png",
           "relativePath": "assets/themes/benderlight/covers/default.png",
           "commands": [
-            "/theme"
+            "{prefixo}theme"
           ]
         },
         {
@@ -3967,7 +3995,7 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\benderlight\\covers\\help.png",
           "relativePath": "assets/themes/benderlight/covers/help.png",
           "commands": [
-            "/help"
+            "{prefixo}help"
           ]
         },
         {
@@ -3976,8 +4004,8 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\benderlight\\covers\\inativos.png",
           "relativePath": "assets/themes/benderlight/covers/inativos.png",
           "commands": [
-            "/inativos",
-            "/sumidos"
+            "{prefixo}inativos",
+            "{prefixo}sumidos"
           ]
         },
         {
@@ -3986,7 +4014,7 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\benderlight\\covers\\infogrupo.png",
           "relativePath": "assets/themes/benderlight/covers/infogrupo.png",
           "commands": [
-            "/infogrupo"
+            "{prefixo}infogrupo"
           ]
         },
         {
@@ -3995,7 +4023,7 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\benderlight\\covers\\listabloqueados.png",
           "relativePath": "assets/themes/benderlight/covers/listabloqueados.png",
           "commands": [
-            "/listabloqueados"
+            "{prefixo}listabloqueados"
           ]
         },
         {
@@ -4004,7 +4032,7 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\benderlight\\covers\\menu.png",
           "relativePath": "assets/themes/benderlight/covers/menu.png",
           "commands": [
-            "/menu"
+            "{prefixo}menu"
           ]
         },
         {
@@ -4013,7 +4041,7 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\benderlight\\covers\\menuadm.png",
           "relativePath": "assets/themes/benderlight/covers/menuadm.png",
           "commands": [
-            "/menuadm"
+            "{prefixo}menuadm"
           ]
         },
         {
@@ -4022,7 +4050,7 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\benderlight\\covers\\menubrincadeira.png",
           "relativePath": "assets/themes/benderlight/covers/menubrincadeira.png",
           "commands": [
-            "/menubrincadeira"
+            "{prefixo}menubrincadeira"
           ]
         },
         {
@@ -4031,7 +4059,7 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\benderlight\\covers\\menudono.png",
           "relativePath": "assets/themes/benderlight/covers/menudono.png",
           "commands": [
-            "/menudono"
+            "{prefixo}menudono"
           ]
         },
         {
@@ -4040,7 +4068,7 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\benderlight\\covers\\perfilbot.png",
           "relativePath": "assets/themes/benderlight/covers/perfilbot.png",
           "commands": [
-            "/botprofile"
+            "{prefixo}botprofile"
           ]
         },
         {
@@ -4049,7 +4077,7 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\benderlight\\covers\\regras.png",
           "relativePath": "assets/themes/benderlight/covers/regras.png",
           "commands": [
-            "/rules"
+            "{prefixo}rules"
           ]
         },
         {
@@ -4058,7 +4086,7 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\benderlight\\covers\\status.png",
           "relativePath": "assets/themes/benderlight/covers/status.png",
           "commands": [
-            "/status"
+            "{prefixo}status"
           ]
         },
         {
@@ -4067,7 +4095,7 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\benderlight\\covers\\warnings.png",
           "relativePath": "assets/themes/benderlight/covers/warnings.png",
           "commands": [
-            "/warnings"
+            "{prefixo}warnings"
           ]
         }
       ]
@@ -4097,7 +4125,7 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\alien\\covers\\ativos.png",
           "relativePath": "assets/themes/alien/covers/ativos.png",
           "commands": [
-            "/ativos"
+            "{prefixo}ativos"
           ]
         },
         {
@@ -4106,7 +4134,7 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\alien\\covers\\comandosbloqueados.png",
           "relativePath": "assets/themes/alien/covers/comandosbloqueados.png",
           "commands": [
-            "/comandosbloqueados"
+            "{prefixo}comandosbloqueados"
           ]
         },
         {
@@ -4115,7 +4143,7 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\alien\\covers\\default.png",
           "relativePath": "assets/themes/alien/covers/default.png",
           "commands": [
-            "/theme"
+            "{prefixo}theme"
           ]
         },
         {
@@ -4124,7 +4152,7 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\alien\\covers\\help.png",
           "relativePath": "assets/themes/alien/covers/help.png",
           "commands": [
-            "/help"
+            "{prefixo}help"
           ]
         },
         {
@@ -4133,8 +4161,8 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\alien\\covers\\inativos.png",
           "relativePath": "assets/themes/alien/covers/inativos.png",
           "commands": [
-            "/inativos",
-            "/sumidos"
+            "{prefixo}inativos",
+            "{prefixo}sumidos"
           ]
         },
         {
@@ -4143,7 +4171,7 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\alien\\covers\\infogrupo.png",
           "relativePath": "assets/themes/alien/covers/infogrupo.png",
           "commands": [
-            "/infogrupo"
+            "{prefixo}infogrupo"
           ]
         },
         {
@@ -4152,7 +4180,7 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\alien\\covers\\listabloqueados.png",
           "relativePath": "assets/themes/alien/covers/listabloqueados.png",
           "commands": [
-            "/listabloqueados"
+            "{prefixo}listabloqueados"
           ]
         },
         {
@@ -4161,7 +4189,7 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\alien\\covers\\menu.png",
           "relativePath": "assets/themes/alien/covers/menu.png",
           "commands": [
-            "/menu"
+            "{prefixo}menu"
           ]
         },
         {
@@ -4170,7 +4198,7 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\alien\\covers\\menuadm.png",
           "relativePath": "assets/themes/alien/covers/menuadm.png",
           "commands": [
-            "/menuadm"
+            "{prefixo}menuadm"
           ]
         },
         {
@@ -4179,7 +4207,7 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\alien\\covers\\menubrincadeira.png",
           "relativePath": "assets/themes/alien/covers/menubrincadeira.png",
           "commands": [
-            "/menubrincadeira"
+            "{prefixo}menubrincadeira"
           ]
         },
         {
@@ -4188,7 +4216,7 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\alien\\covers\\menudono.png",
           "relativePath": "assets/themes/alien/covers/menudono.png",
           "commands": [
-            "/menudono"
+            "{prefixo}menudono"
           ]
         },
         {
@@ -4197,7 +4225,7 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\alien\\covers\\perfilbot.png",
           "relativePath": "assets/themes/alien/covers/perfilbot.png",
           "commands": [
-            "/botprofile"
+            "{prefixo}botprofile"
           ]
         },
         {
@@ -4206,7 +4234,7 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\alien\\covers\\regras.png",
           "relativePath": "assets/themes/alien/covers/regras.png",
           "commands": [
-            "/rules"
+            "{prefixo}rules"
           ]
         },
         {
@@ -4215,7 +4243,7 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\alien\\covers\\status.png",
           "relativePath": "assets/themes/alien/covers/status.png",
           "commands": [
-            "/status"
+            "{prefixo}status"
           ]
         },
         {
@@ -4224,7 +4252,7 @@
           "sourcePath": "D:\\AI\\Bot\\Alien-new\\whatsapp-web.js\\bot\\assets\\themes\\alien\\covers\\warnings.png",
           "relativePath": "assets/themes/alien/covers/warnings.png",
           "commands": [
-            "/warnings"
+            "{prefixo}warnings"
           ]
         }
       ]

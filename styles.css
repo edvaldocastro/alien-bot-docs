@@ -104,6 +104,25 @@ h5 { font-size: 1rem; margin: 0; }
     grid-template-columns: repeat(3, minmax(0, 1fr));
     margin-bottom: 18px;
 }
+.quickstart-grid {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.quickstart-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 14px;
+}
+.quickstart-card h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+.quickstart-card p {
+    color: var(--muted);
+    margin-bottom: 10px;
+}
 .stats-grid article,
 .command-card,
 .theme-card {
