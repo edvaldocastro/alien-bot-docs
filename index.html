@@ -13,7 +13,7 @@
             <p class="eyebrow">Documentacao publica</p>
             <h1>Comandos do Bot</h1>
             <p class="hero__lead">Esta documentacao foi preparada para administradores que querem configurar e usar o bot em seus grupos de WhatsApp. Cada comando abaixo usa o formato {prefixo}comando, porque o prefixo pode mudar de grupo para grupo.</p>
-            <p class="hero__lead">Total documentado: 137 comandos publicos. Use a busca para encontrar configuracoes, moderacao, midia e brincadeiras.</p>
+            <p class="hero__lead">Total documentado: 140 comandos publicos. Use a busca para encontrar configuracoes, moderacao, midia e brincadeiras.</p>
             <div class="search-shell">
                 <label for="command-search">Buscar comandos, aliases, categorias e outputs</label>
                 <input id="command-search" type="search" placeholder="Ex.: {prefixo}casal, lista negra, figurinha, tema" autocomplete="off">
@@ -26,13 +26,13 @@
             <nav aria-label="Navegacao da documentacao">
                 <a href="#comandos">Comandos</a>
                 <a href="#temas">Temas do Bot</a>
-                <a href="#categoria-utilities">Utilitarios <span>12</span></a><a href="#categoria-media">Midia <span>4</span></a><a href="#categoria-entertainment">Entretenimento <span>35</span></a><a href="#categoria-moderation">Moderacao <span>17</span></a><a href="#categoria-administration">Administracao <span>22</span></a><a href="#categoria-configuration">Configuracao <span>47</span></a>
+                <a href="#categoria-utilities">Utilitarios <span>12</span></a><a href="#categoria-media">Midia <span>4</span></a><a href="#categoria-entertainment">Entretenimento <span>35</span></a><a href="#categoria-moderation">Moderacao <span>17</span></a><a href="#categoria-administration">Administracao <span>22</span></a><a href="#categoria-configuration">Configuracao <span>50</span></a>
             </nav>
         </aside>
 
         <section class="content">
             <section class="stats-grid" aria-label="Resumo">
-                <article><strong>137</strong><span>comandos publicos</span></article>
+                <article><strong>140</strong><span>comandos publicos</span></article>
                 <article><strong>6</strong><span>categorias visiveis</span></article>
                 <article><strong>3</strong><span>temas documentados</span></article>
             </section>
@@ -62,7 +62,7 @@
         </article>
         <article class="quickstart-card">
             <h3>4. Configure regras e protecoes essenciais</h3>
-            <p>Cadastre regras do grupo e ajuste protecoes como antilink, antispam, antifake e DDIs permitidos.</p>
+            <p>Cadastre regras do grupo ou defina as regras na descricao do grupo, pois o bot busca o texto de la para exibir. Ajuste tambem protecoes como antilink, antispam, antifake e DDIs permitidos.</p>
             <code>{prefixo}setrules &lt;texto&gt;</code>
         </article>
         <article class="quickstart-card">
@@ -83,7 +83,7 @@
                 <div class="section-heading">
                     <p class="eyebrow">Referencia</p>
                     <h2>Comandos publicos</h2>
-                    <p><span id="result-count">137</span> comandos encontrados.</p>
+                    <p><span id="result-count">140</span> comandos encontrados.</p>
                 </div>
                 
         <section class="role-section" data-role-section="member">
@@ -4542,6 +4542,42 @@ Identidade do Bot
                 <h4>Configuracao</h4>
                 <div class="command-grid">
                     
+        <article class="command-card" data-command-card data-category="configuration" data-role="owner" data-search="{prefixo}adddono {prefixo}adicionardono {prefixo}addowner {prefixo}addownerbot {prefixo}subdono {prefixo}addsubdono adicionar um dono adicional do bot. configuracao dono do bot grupo ou privado {prefixo}adddono @usuario | {prefixo}addowner &lt;numero&gt; {prefixo}adddono @usuario {prefixo}addowner 5511999999999 aceita mencao, resposta a mensagem ou numero. donos adicionais podem usar comandos exclusivos de dono. confirma que um usuario foi adicionado como dono do bot. 👑 **adicionar dono** novo dono: ana id: 5511999999999@c.us resultado: usuario adicionado como dono do bot.">
+            <div class="command-card__top">
+                <h5><code>{prefixo}adddono</code></h5>
+                <button class="copy-button" type="button" data-copy="{prefixo}adddono @usuario | {prefixo}addowner &lt;numero&gt;">Copiar uso</button>
+            </div>
+            <p>Adicionar um dono adicional do bot.</p>
+            <dl>
+                <div><dt>Aliases</dt><dd><code>{prefixo}adicionardono</code> <code>{prefixo}addowner</code> <code>{prefixo}addownerbot</code> <code>{prefixo}subdono</code> <code>{prefixo}addsubdono</code></dd></div>
+                <div><dt>Acesso</dt><dd>Dono do Bot</dd></div>
+                <div><dt>Contexto</dt><dd>grupo ou privado</dd></div>
+                <div><dt>Uso</dt><dd><code>{prefixo}adddono @usuario | {prefixo}addowner &lt;numero&gt;</code></dd></div>
+            </dl>
+            <div class="examples">
+                <strong>Exemplos de uso</strong>
+                <ul><li><code>{prefixo}adddono @usuario</code></li><li><code>{prefixo}addowner 5511999999999</code></li></ul>
+            </div>
+            <div class="output-example">
+                <strong>Exemplo de output</strong>
+                <p>Confirma que um usuario foi adicionado como dono do bot.</p>
+            </div>
+            <div class="whatsapp-preview" aria-label="Previa estilo WhatsApp">
+                <div class="chat-bubble chat-bubble--user">
+                    <span class="chat-name">Voce</span>
+                    <pre>{prefixo}adddono @usuario</pre>
+                </div>
+                <div class="chat-bubble chat-bubble--bot">
+                    <span class="chat-name">ALIEN</span>
+                    <pre>👑 **Adicionar Dono**
+Novo dono: Ana
+ID: 5511999999999@c.us
+Resultado: usuario adicionado como dono do bot.</pre>
+                </div>
+            </div>
+            <div class="tips"><strong>Dicas</strong><ul><li>Aceita mencao, resposta a mensagem ou numero.</li><li>Donos adicionais podem usar comandos exclusivos de dono.</li></ul></div>
+            
+        </article>
         <article class="command-card" data-command-card data-category="configuration" data-role="owner" data-search="{prefixo}antiligacao {prefixo}anticall {prefixo}antiligar {prefixo}bloquearligacao bloquear chamadas recebidas no privado configuracao dono do bot grupo ou privado {prefixo}antiligacao &lt;on|off&gt; {prefixo}antiligacao on {prefixo}anticall off {prefixo}antiligar ligar use sem valor para ver o estado atual. tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao. confirma a configuracao aplicada ou mostra o valor atual. ☎️ **anti-ligacao** valor atualizado: ativado">
             <div class="command-card__top">
                 <h5><code>{prefixo}antiligacao</code></h5>
@@ -4817,6 +4853,47 @@ Usuario liberado para usar comandos.</pre>
             <div class="tips"><strong>Dicas</strong><ul><li>A lista vale para todos os grupos e conversas do bot.</li></ul></div>
             
         </article>
+        <article class="command-card" data-command-card data-category="configuration" data-role="owner" data-search="{prefixo}listardonos {prefixo}donos {prefixo}owners {prefixo}listowners {prefixo}listadonos {prefixo}multidonos listar donos principais e adicionais do bot. configuracao dono do bot grupo ou privado {prefixo}listardonos | {prefixo}donos | {prefixo}multidonos {prefixo}listardonos {prefixo}donos {prefixo}multidonos donos listados aqui podem executar comandos exclusivos do dono do bot. lista o dono principal e os donos adicionais do bot. 👑 **donos do bot**  dono principal: 1. edvaldo id: 5511999999999@c.us  donos adicionais: 1. ana id: 5511888888888@c.us">
+            <div class="command-card__top">
+                <h5><code>{prefixo}listardonos</code></h5>
+                <button class="copy-button" type="button" data-copy="{prefixo}listardonos | {prefixo}donos | {prefixo}multidonos">Copiar uso</button>
+            </div>
+            <p>Listar donos principais e adicionais do bot.</p>
+            <dl>
+                <div><dt>Aliases</dt><dd><code>{prefixo}donos</code> <code>{prefixo}owners</code> <code>{prefixo}listowners</code> <code>{prefixo}listadonos</code> <code>{prefixo}multidonos</code></dd></div>
+                <div><dt>Acesso</dt><dd>Dono do Bot</dd></div>
+                <div><dt>Contexto</dt><dd>grupo ou privado</dd></div>
+                <div><dt>Uso</dt><dd><code>{prefixo}listardonos | {prefixo}donos | {prefixo}multidonos</code></dd></div>
+            </dl>
+            <div class="examples">
+                <strong>Exemplos de uso</strong>
+                <ul><li><code>{prefixo}listardonos</code></li><li><code>{prefixo}donos</code></li><li><code>{prefixo}multidonos</code></li></ul>
+            </div>
+            <div class="output-example">
+                <strong>Exemplo de output</strong>
+                <p>Lista o dono principal e os donos adicionais do bot.</p>
+            </div>
+            <div class="whatsapp-preview" aria-label="Previa estilo WhatsApp">
+                <div class="chat-bubble chat-bubble--user">
+                    <span class="chat-name">Voce</span>
+                    <pre>{prefixo}listardonos</pre>
+                </div>
+                <div class="chat-bubble chat-bubble--bot">
+                    <span class="chat-name">ALIEN</span>
+                    <pre>👑 **Donos do Bot**
+
+Dono principal:
+1. Edvaldo
+ID: 5511999999999@c.us
+
+Donos adicionais:
+1. Ana
+ID: 5511888888888@c.us</pre>
+                </div>
+            </div>
+            <div class="tips"><strong>Dicas</strong><ul><li>Donos listados aqui podem executar comandos exclusivos do dono do bot.</li></ul></div>
+            
+        </article>
         <article class="command-card" data-command-card data-category="configuration" data-role="owner" data-search="{prefixo}novodono {prefixo}newowner {prefixo}setowner transferir a posse do bot para outro usuario configuracao dono do bot grupo ou privado {prefixo}novodono @usuario | {prefixo}newowner (respondendo a mensagem) {prefixo}novodono @usuario {prefixo}setowner use mencao ou responda a mensagem do novo dono. o nome do dono sera salvo sem exibir telefone nas respostas do bot. confirma a transferencia de dono do bot para o usuario escolhido. 👑 **novo dono** dono anterior: edvaldo novo dono: ana">
             <div class="command-card__top">
                 <h5><code>{prefixo}novodono</code></h5>
@@ -4850,6 +4927,42 @@ Novo dono: Ana</pre>
                 </div>
             </div>
             <div class="tips"><strong>Dicas</strong><ul><li>Use mencao ou responda a mensagem do novo dono.</li><li>O nome do dono sera salvo sem exibir telefone nas respostas do bot.</li></ul></div>
+            
+        </article>
+        <article class="command-card" data-command-card data-category="configuration" data-role="owner" data-search="{prefixo}prefixoglobal {prefixo}globalprefix {prefixo}setglobalprefix {prefixo}prefixobot {prefixo}definirprefixoglobal definir o prefixo global do bot que funciona em todos os grupos. configuracao dono do bot grupo ou privado {prefixo}prefixoglobal &lt;prefixo&gt; | {prefixo}globalprefix &lt;prefixo&gt; {prefixo}prefixoglobal / {prefixo}globalprefix {prefixo} este prefixo funciona alem do prefixo configurado individualmente em cada grupo. somente donos do bot podem alterar o prefixo global. confirma o novo prefixo global aceito pelo bot em todos os grupos. 🌐 **prefixo global** prefixo anterior: / novo prefixo global: {prefixo} exemplo de uso: {prefixo}menu">
+            <div class="command-card__top">
+                <h5><code>{prefixo}prefixoglobal</code></h5>
+                <button class="copy-button" type="button" data-copy="{prefixo}prefixoglobal &lt;prefixo&gt; | {prefixo}globalprefix &lt;prefixo&gt;">Copiar uso</button>
+            </div>
+            <p>Definir o prefixo global do bot que funciona em todos os grupos.</p>
+            <dl>
+                <div><dt>Aliases</dt><dd><code>{prefixo}globalprefix</code> <code>{prefixo}setglobalprefix</code> <code>{prefixo}prefixobot</code> <code>{prefixo}definirprefixoglobal</code></dd></div>
+                <div><dt>Acesso</dt><dd>Dono do Bot</dd></div>
+                <div><dt>Contexto</dt><dd>grupo ou privado</dd></div>
+                <div><dt>Uso</dt><dd><code>{prefixo}prefixoglobal &lt;prefixo&gt; | {prefixo}globalprefix &lt;prefixo&gt;</code></dd></div>
+            </dl>
+            <div class="examples">
+                <strong>Exemplos de uso</strong>
+                <ul><li><code>{prefixo}prefixoglobal /</code></li><li><code>{prefixo}globalprefix {prefixo}</code></li></ul>
+            </div>
+            <div class="output-example">
+                <strong>Exemplo de output</strong>
+                <p>Confirma o novo prefixo global aceito pelo bot em todos os grupos.</p>
+            </div>
+            <div class="whatsapp-preview" aria-label="Previa estilo WhatsApp">
+                <div class="chat-bubble chat-bubble--user">
+                    <span class="chat-name">Voce</span>
+                    <pre>{prefixo}prefixoglobal /</pre>
+                </div>
+                <div class="chat-bubble chat-bubble--bot">
+                    <span class="chat-name">ALIEN</span>
+                    <pre>🌐 **Prefixo Global**
+Prefixo anterior: /
+Novo prefixo global: {prefixo}
+Exemplo de uso: {prefixo}menu</pre>
+                </div>
+            </div>
+            <div class="tips"><strong>Dicas</strong><ul><li>Este prefixo funciona alem do prefixo configurado individualmente em cada grupo.</li><li>Somente donos do bot podem alterar o prefixo global.</li></ul></div>
             
         </article>
         <article class="command-card" data-command-card data-category="configuration" data-role="owner" data-search="{prefixo}setbotname {prefixo}nomebot {prefixo}definirnomebot alterar o nome exibido do bot configuracao dono do bot grupo ou privado {prefixo}setbotname &lt;nome&gt; | {prefixo}nomebot &lt;nome&gt; {prefixo}setbotname bender {prefixo}nomebot bender moderador esse e o nome que aparece no perfil e para quem ainda nao salvou o contato. confirma a configuracao aplicada ou mostra o valor atual. 🤖 **nome do bot** nome atualizado para: alien">

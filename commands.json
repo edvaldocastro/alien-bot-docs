@@ -27,7 +27,7 @@
     {
       "title": "4. Configure regras e protecoes essenciais",
       "command": "{prefixo}setrules <texto>",
-      "description": "Cadastre regras do grupo e ajuste protecoes como antilink, antispam, antifake e DDIs permitidos."
+      "description": "Cadastre regras do grupo ou defina as regras na descricao do grupo, pois o bot busca o texto de la para exibir. Ajuste tambem protecoes como antilink, antispam, antifake e DDIs permitidos."
     },
     {
       "title": "5. Confira o estado final",
@@ -3374,6 +3374,36 @@
           "title": "Configuracao",
           "commands": [
             {
+              "name": "{prefixo}adddono",
+              "rawName": "adddono",
+              "aliases": [
+                "{prefixo}adicionardono",
+                "{prefixo}addowner",
+                "{prefixo}addownerbot",
+                "{prefixo}subdono",
+                "{prefixo}addsubdono"
+              ],
+              "examples": [
+                "{prefixo}adddono @usuario",
+                "{prefixo}addowner 5511999999999"
+              ],
+              "tips": [
+                "Aceita mencao, resposta a mensagem ou numero.",
+                "Donos adicionais podem usar comandos exclusivos de dono."
+              ],
+              "usage": "{prefixo}adddono @usuario | {prefixo}addowner <numero>",
+              "description": "Adicionar um dono adicional do bot.",
+              "outputExample": "Confirma que um usuario foi adicionado como dono do bot.",
+              "outputPreview": "👑 **Adicionar Dono**\nNovo dono: Ana\nID: 5511999999999@c.us\nResultado: usuario adicionado como dono do bot.",
+              "requiredRole": "owner",
+              "requiredRoleLabel": "Dono do Bot",
+              "requiredChatType": "any",
+              "requiredChatTypeLabel": "grupo ou privado",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
               "name": "{prefixo}antiligacao",
               "rawName": "antiligacao",
               "aliases": [
@@ -3596,6 +3626,36 @@
               "categoryTitle": "Configuracao"
             },
             {
+              "name": "{prefixo}listardonos",
+              "rawName": "listardonos",
+              "aliases": [
+                "{prefixo}donos",
+                "{prefixo}owners",
+                "{prefixo}listowners",
+                "{prefixo}listadonos",
+                "{prefixo}multidonos"
+              ],
+              "examples": [
+                "{prefixo}listardonos",
+                "{prefixo}donos",
+                "{prefixo}multidonos"
+              ],
+              "tips": [
+                "Donos listados aqui podem executar comandos exclusivos do dono do bot."
+              ],
+              "usage": "{prefixo}listardonos | {prefixo}donos | {prefixo}multidonos",
+              "description": "Listar donos principais e adicionais do bot.",
+              "outputExample": "Lista o dono principal e os donos adicionais do bot.",
+              "outputPreview": "👑 **Donos do Bot**\n\nDono principal:\n1. Edvaldo\nID: 5511999999999@c.us\n\nDonos adicionais:\n1. Ana\nID: 5511888888888@c.us",
+              "requiredRole": "owner",
+              "requiredRoleLabel": "Dono do Bot",
+              "requiredChatType": "any",
+              "requiredChatTypeLabel": "grupo ou privado",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
               "name": "{prefixo}novodono",
               "rawName": "novodono",
               "aliases": [
@@ -3614,6 +3674,35 @@
               "description": "Transferir a posse do bot para outro usuario",
               "outputExample": "Confirma a transferencia de dono do bot para o usuario escolhido.",
               "outputPreview": "👑 **Novo dono**\nDono anterior: Edvaldo\nNovo dono: Ana",
+              "requiredRole": "owner",
+              "requiredRoleLabel": "Dono do Bot",
+              "requiredChatType": "any",
+              "requiredChatTypeLabel": "grupo ou privado",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
+              "name": "{prefixo}prefixoglobal",
+              "rawName": "prefixoglobal",
+              "aliases": [
+                "{prefixo}globalprefix",
+                "{prefixo}setglobalprefix",
+                "{prefixo}prefixobot",
+                "{prefixo}definirprefixoglobal"
+              ],
+              "examples": [
+                "{prefixo}prefixoglobal /",
+                "{prefixo}globalprefix {prefixo}"
+              ],
+              "tips": [
+                "Este prefixo funciona alem do prefixo configurado individualmente em cada grupo.",
+                "Somente donos do bot podem alterar o prefixo global."
+              ],
+              "usage": "{prefixo}prefixoglobal <prefixo> | {prefixo}globalprefix <prefixo>",
+              "description": "Definir o prefixo global do bot que funciona em todos os grupos.",
+              "outputExample": "Confirma o novo prefixo global aceito pelo bot em todos os grupos.",
+              "outputPreview": "🌐 **Prefixo Global**\nPrefixo anterior: /\nNovo prefixo global: {prefixo}\nExemplo de uso: {prefixo}menu",
               "requiredRole": "owner",
               "requiredRoleLabel": "Dono do Bot",
               "requiredChatType": "any",
@@ -3763,7 +3852,7 @@
     {
       "key": "configuration",
       "title": "Configuracao",
-      "count": 47
+      "count": 50
     }
   ],
   "roles": [
@@ -3780,10 +3869,10 @@
     {
       "key": "owner",
       "title": "Dono do Bot",
-      "count": 14
+      "count": 17
     }
   ],
-  "commandCount": 137,
+  "commandCount": 140,
   "themes": [
     {
       "key": "bender",
