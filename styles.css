@@ -190,6 +190,45 @@ ul { margin: 8px 0 0; padding-left: 18px; }
     padding: 10px 12px;
 }
 .output-example p { margin-bottom: 0; }
+.whatsapp-preview {
+    background:
+        linear-gradient(135deg, rgba(231, 221, 212, 0.88), rgba(238, 234, 226, 0.88)),
+        repeating-linear-gradient(45deg, rgba(255,255,255,0.28) 0 12px, transparent 12px 24px);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    display: grid;
+    gap: 8px;
+    margin-top: 12px;
+    padding: 12px;
+}
+.chat-bubble {
+    border-radius: 8px;
+    box-shadow: 0 1px 1px rgba(15, 23, 42, 0.12);
+    max-width: min(92%, 520px);
+    padding: 8px 10px;
+}
+.chat-bubble--user {
+    background: #d9fdd3;
+    justify-self: end;
+}
+.chat-bubble--bot {
+    background: #ffffff;
+    justify-self: start;
+}
+.chat-name {
+    color: #0b7285;
+    display: block;
+    font-size: 0.76rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+.chat-bubble pre {
+    font-family: inherit;
+    font-size: 0.9rem;
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
 .hidden-tag {
     border: 1px solid var(--accent-2);
     border-radius: 999px;

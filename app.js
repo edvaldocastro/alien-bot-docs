@@ -4,7 +4,9 @@ const search = document.querySelector('#command-search');
 const resultCount = document.querySelector('#result-count');
 const emptyState = document.querySelector('#empty-state');
 const cards = [...document.querySelectorAll('[data-command-card]')];
-const categorySections = [...document.querySelectorAll('[data-category-section]')];
+const categorySections = [
+    ...document.querySelectorAll('[data-category-section]'),
+];
 const roleSections = [...document.querySelectorAll('[data-role-section]')];
 const chips = [...document.querySelectorAll('[data-filter-type]')];
 let activeFilter = { type: 'all', value: 'all' };
@@ -24,11 +26,15 @@ function applyFilters() {
     }
 
     for (const section of categorySections) {
-        section.hidden = !section.querySelector('[data-command-card]:not([hidden])');
+        section.hidden = !section.querySelector(
+            '[data-command-card]:not([hidden])',
+        );
     }
 
     for (const section of roleSections) {
-        section.hidden = !section.querySelector('[data-command-card]:not([hidden])');
+        section.hidden = !section.querySelector(
+            '[data-command-card]:not([hidden])',
+        );
     }
 
     if (resultCount) resultCount.textContent = String(visibleCount);
@@ -43,7 +49,9 @@ for (const chip of chips) {
             type: chip.dataset.filterType,
             value: chip.dataset.filterValue,
         };
-        chips.forEach((item) => item.classList.toggle('is-active', item === chip));
+        chips.forEach((item) =>
+            item.classList.toggle('is-active', item === chip),
+        );
         applyFilters();
     });
 }
