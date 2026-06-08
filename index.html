@@ -12,7 +12,7 @@
         <div class="hero__content">
             <p class="eyebrow">Documentacao publica</p>
             <h1>Comandos do Bot</h1>
-            <p class="hero__lead">Arquivo gerado automaticamente a partir da metadata real dos comandos. Esta versao documenta 131 comandos publicos liberados para consulta geral.</p>
+            <p class="hero__lead">Arquivo gerado automaticamente a partir da metadata real dos comandos. Esta versao documenta 136 comandos publicos liberados para consulta geral.</p>
             <p class="hero__lead">Para atualizar automaticamente, rode <code>npm run generate:commands-docs</code>.</p>
             <div class="search-shell">
                 <label for="command-search">Buscar comandos, aliases, categorias e outputs</label>
@@ -26,13 +26,13 @@
             <nav aria-label="Navegacao da documentacao">
                 <a href="#comandos">Comandos</a>
                 <a href="#temas">Temas do Bot</a>
-                <a href="#categoria-utilities">Utilitarios <span>11</span></a><a href="#categoria-media">Midia <span>4</span></a><a href="#categoria-entertainment">Entretenimento <span>35</span></a><a href="#categoria-moderation">Moderacao <span>16</span></a><a href="#categoria-administration">Administracao <span>18</span></a><a href="#categoria-configuration">Configuracao <span>47</span></a>
+                <a href="#categoria-utilities">Utilitarios <span>11</span></a><a href="#categoria-media">Midia <span>4</span></a><a href="#categoria-entertainment">Entretenimento <span>35</span></a><a href="#categoria-moderation">Moderacao <span>17</span></a><a href="#categoria-administration">Administracao <span>22</span></a><a href="#categoria-configuration">Configuracao <span>47</span></a>
             </nav>
         </aside>
 
         <section class="content">
             <section class="stats-grid" aria-label="Resumo">
-                <article><strong>131</strong><span>comandos publicos</span></article>
+                <article><strong>136</strong><span>comandos publicos</span></article>
                 <article><strong>6</strong><span>categorias visiveis</span></article>
                 <article><strong>3</strong><span>temas documentados</span></article>
             </section>
@@ -47,7 +47,7 @@
                 <div class="section-heading">
                     <p class="eyebrow">Referencia</p>
                     <h2>Comandos publicos</h2>
-                    <p><span id="result-count">131</span> comandos encontrados.</p>
+                    <p><span id="result-count">136</span> comandos encontrados.</p>
                 </div>
                 
         <section class="role-section" data-role-section="member">
@@ -1237,6 +1237,29 @@
             <div class="tips"><strong>Dicas</strong><ul><li>Use !fechargrupo para configurar a acao oposta.</li><li>Sem horario, a acao acontece imediatamente.</li></ul></div>
             
         </article>
+        <article class="command-card" data-command-card data-category="moderation" data-role="group_admin" data-search="/agendamentos /agendamento /agenda mostrar os agendamentos de abertura e fechamento do grupo. moderacao administrador do grupo somente grupos /agendamentos | /agenda /agendamentos /agenda apenas exibe os agendamentos atuais; use abrirgrupo e fechargrupo para alterar. mostra os horarios agendados para abrir e fechar o grupo.">
+            <div class="command-card__top">
+                <h5><code>/agendamentos</code></h5>
+                <button class="copy-button" type="button" data-copy="/agendamentos | /agenda">Copiar uso</button>
+            </div>
+            <p>Mostrar os agendamentos de abertura e fechamento do grupo.</p>
+            <dl>
+                <div><dt>Aliases</dt><dd><code>/agendamento</code> <code>/agenda</code></dd></div>
+                <div><dt>Acesso</dt><dd>Administrador do Grupo</dd></div>
+                <div><dt>Contexto</dt><dd>somente grupos</dd></div>
+                <div><dt>Uso</dt><dd><code>/agendamentos | /agenda</code></dd></div>
+            </dl>
+            <div class="examples">
+                <strong>Exemplos de uso</strong>
+                <ul><li><code>/agendamentos</code></li><li><code>/agenda</code></li></ul>
+            </div>
+            <div class="output-example">
+                <strong>Exemplo de output</strong>
+                <p>Mostra os horarios agendados para abrir e fechar o grupo.</p>
+            </div>
+            <div class="tips"><strong>Dicas</strong><ul><li>Apenas exibe os agendamentos atuais; use abrirgrupo e fechargrupo para alterar.</li></ul></div>
+            
+        </article>
         <article class="command-card" data-command-card data-category="moderation" data-role="group_admin" data-search="/ban /banir /abduzir banir um membro: remove do grupo e adiciona a lista negra do grupo. moderacao administrador do grupo somente grupos /ban @usuario [motivo] | /banir @usuario [motivo] | /abduzir @usuario [motivo] /ban @usuario golpe, spam e desrespeito as regras /banir @usuario tentativa de fraude /abduzir @usuario sumiu com as regras da nave voce pode mencionar, responder uma mensagem ou informar um numero. confirma a acao de moderacao e registra auditoria interna.">
             <div class="command-card__top">
                 <h5><code>/ban</code></h5>
@@ -1680,6 +1703,29 @@
             <div class="tips"><strong>Dicas</strong><ul><li>O ranking usa mensagens como criterio principal.</li><li>O card mostra mensagens, figurinhas, videos e total.</li><li>Apenas participantes atuais do grupo aparecem no ranking.</li></ul></div>
             
         </article>
+        <article class="command-card" data-command-card data-category="administration" data-role="group_admin" data-search="/aviso /avisar /comunicado /comunicar enviar um aviso no grupo marcando todos silenciosamente. administracao administrador do grupo somente grupos /aviso &lt;mensagem&gt; | /comunicado &lt;mensagem&gt; /aviso leiam as regras fixadas. /avisar respondendo uma mensagem /comunicado respondendo uma midia funciona com texto direto ou respondendo a uma mensagem ou midia. marca todos silenciosamente sem listar os membros no texto. mostra um resumo da acao administrativa executada.">
+            <div class="command-card__top">
+                <h5><code>/aviso</code></h5>
+                <button class="copy-button" type="button" data-copy="/aviso &lt;mensagem&gt; | /comunicado &lt;mensagem&gt;">Copiar uso</button>
+            </div>
+            <p>Enviar um aviso no grupo marcando todos silenciosamente.</p>
+            <dl>
+                <div><dt>Aliases</dt><dd><code>/avisar</code> <code>/comunicado</code> <code>/comunicar</code></dd></div>
+                <div><dt>Acesso</dt><dd>Administrador do Grupo</dd></div>
+                <div><dt>Contexto</dt><dd>somente grupos</dd></div>
+                <div><dt>Uso</dt><dd><code>/aviso &lt;mensagem&gt; | /comunicado &lt;mensagem&gt;</code></dd></div>
+            </dl>
+            <div class="examples">
+                <strong>Exemplos de uso</strong>
+                <ul><li><code>/aviso Leiam as regras fixadas.</code></li><li><code>/avisar respondendo uma mensagem</code></li><li><code>/comunicado respondendo uma midia</code></li></ul>
+            </div>
+            <div class="output-example">
+                <strong>Exemplo de output</strong>
+                <p>Mostra um resumo da acao administrativa executada.</p>
+            </div>
+            <div class="tips"><strong>Dicas</strong><ul><li>Funciona com texto direto ou respondendo a uma mensagem ou midia.</li><li>Marca todos silenciosamente sem listar os membros no texto.</li></ul></div>
+            
+        </article>
         <article class="command-card" data-command-card data-category="administration" data-role="group_admin" data-search="/demote /rebaixar /despromover rebaixar um administrador para membro comum administracao administrador do grupo somente grupos /demote @usuario | /rebaixar @usuario /demote @usuario /rebaixar @usuario esse comando remove a administracao real do grupo no whatsapp. mostra um resumo da acao administrativa executada.">
             <div class="command-card__top">
                 <h5><code>/demote</code></h5>
@@ -1749,6 +1795,29 @@
             <div class="tips"><strong>Dicas</strong><ul><li>O criterio usa quantidade de mensagens no periodo.</li><li>O card mostra mensagens, figurinhas, videos e total.</li><li>Apenas participantes atuais do grupo aparecem na lista.</li></ul></div>
             
         </article>
+        <article class="command-card" data-command-card data-category="administration" data-role="group_admin" data-search="/listamembros listar os membros atuais do grupo. administracao administrador do grupo somente grupos /listamembros /listamembros lista membros sem marcar ou notificar participantes. mostra um resumo da acao administrativa executada.">
+            <div class="command-card__top">
+                <h5><code>/listamembros</code></h5>
+                <button class="copy-button" type="button" data-copy="/listamembros">Copiar uso</button>
+            </div>
+            <p>Listar os membros atuais do grupo.</p>
+            <dl>
+                <div><dt>Aliases</dt><dd>nenhum</dd></div>
+                <div><dt>Acesso</dt><dd>Administrador do Grupo</dd></div>
+                <div><dt>Contexto</dt><dd>somente grupos</dd></div>
+                <div><dt>Uso</dt><dd><code>/listamembros</code></dd></div>
+            </dl>
+            <div class="examples">
+                <strong>Exemplos de uso</strong>
+                <ul><li><code>/listamembros</code></li></ul>
+            </div>
+            <div class="output-example">
+                <strong>Exemplo de output</strong>
+                <p>Mostra um resumo da acao administrativa executada.</p>
+            </div>
+            <div class="tips"><strong>Dicas</strong><ul><li>Lista membros sem marcar ou notificar participantes.</li></ul></div>
+            
+        </article>
         <article class="command-card" data-command-card data-category="administration" data-role="group_admin" data-search="/listargringo /listargringos /gringos /listarestrangeiros /estrangeiros /ddibloqueados listar participantes com ddi fora da lista permitida. administracao administrador do grupo somente grupos /listargringo | /listargringos /listargringo /gringos esse comando apenas lista; remocoes automaticas acontecem quando alguem entra no grupo. mostra um resumo da acao administrativa executada.">
             <div class="command-card__top">
                 <h5><code>/listargringo</code></h5>
@@ -1772,27 +1841,27 @@
             <div class="tips"><strong>Dicas</strong><ul><li>Esse comando apenas lista; remocoes automaticas acontecem quando alguem entra no grupo.</li></ul></div>
             
         </article>
-        <article class="command-card" data-command-card data-category="administration" data-role="group_admin" data-search="/marcar /cita /tagall marcar todos os membros do grupo administracao administrador do grupo somente grupos /marcar &lt;mensagem&gt; | /cita &lt;mensagem&gt; | /tagall respondendo uma midia /marcar bora alinhar isso agora /cita reuniao em 5 minutos /tagall respondendo a uma midia funciona com texto direto ou respondendo a uma midia do grupo. a marcacao usa mentions do whatsapp sem despejar numeros no texto. mostra um resumo da acao administrativa executada.">
+        <article class="command-card" data-command-card data-category="administration" data-role="group_admin" data-search="/marcar /tagall marcar todos os membros do grupo exibindo as marcacoes administracao administrador do grupo somente grupos /marcar &lt;mensagem&gt; | /tagall respondendo uma midia /marcar bora alinhar isso agora /tagall respondendo a uma midia funciona com texto direto ou respondendo a uma mensagem ou midia do grupo. exibe as marcacoes no texto para todos verem quem foi chamado. mostra um resumo da acao administrativa executada.">
             <div class="command-card__top">
                 <h5><code>/marcar</code></h5>
-                <button class="copy-button" type="button" data-copy="/marcar &lt;mensagem&gt; | /cita &lt;mensagem&gt; | /tagall respondendo uma midia">Copiar uso</button>
+                <button class="copy-button" type="button" data-copy="/marcar &lt;mensagem&gt; | /tagall respondendo uma midia">Copiar uso</button>
             </div>
-            <p>Marcar todos os membros do grupo</p>
+            <p>Marcar todos os membros do grupo exibindo as marcacoes</p>
             <dl>
-                <div><dt>Aliases</dt><dd><code>/cita</code> <code>/tagall</code></dd></div>
+                <div><dt>Aliases</dt><dd><code>/tagall</code></dd></div>
                 <div><dt>Acesso</dt><dd>Administrador do Grupo</dd></div>
                 <div><dt>Contexto</dt><dd>somente grupos</dd></div>
-                <div><dt>Uso</dt><dd><code>/marcar &lt;mensagem&gt; | /cita &lt;mensagem&gt; | /tagall respondendo uma midia</code></dd></div>
+                <div><dt>Uso</dt><dd><code>/marcar &lt;mensagem&gt; | /tagall respondendo uma midia</code></dd></div>
             </dl>
             <div class="examples">
                 <strong>Exemplos de uso</strong>
-                <ul><li><code>/marcar Bora alinhar isso agora</code></li><li><code>/cita Reuniao em 5 minutos</code></li><li><code>/tagall respondendo a uma midia</code></li></ul>
+                <ul><li><code>/marcar Bora alinhar isso agora</code></li><li><code>/tagall respondendo a uma midia</code></li></ul>
             </div>
             <div class="output-example">
                 <strong>Exemplo de output</strong>
                 <p>Mostra um resumo da acao administrativa executada.</p>
             </div>
-            <div class="tips"><strong>Dicas</strong><ul><li>Funciona com texto direto ou respondendo a uma midia do grupo.</li><li>A marcacao usa mentions do WhatsApp sem despejar numeros no texto.</li></ul></div>
+            <div class="tips"><strong>Dicas</strong><ul><li>Funciona com texto direto ou respondendo a uma mensagem ou midia do grupo.</li><li>Exibe as marcacoes no texto para todos verem quem foi chamado.</li></ul></div>
             
         </article>
         <article class="command-card" data-command-card data-category="administration" data-role="group_admin" data-search="/mod /addmod /moderador dar privilegios de moderador do bot a um membro administracao administrador do grupo somente grupos /mod @usuario | /moderador @usuario /mod @usuario /moderador @usuario moderador do bot nao e a mesma coisa que admin do whatsapp. mostra um resumo da acao administrativa executada.">
@@ -1977,6 +2046,52 @@
                 <p>Mostra um resumo da acao administrativa executada.</p>
             </div>
             <div class="tips"><strong>Dicas</strong><ul><li>O limite padrao e 500 mensagens e pode ser ajustado ate 1000.</li><li>A leitura usa apenas participantes atuais do grupo.</li><li>As frases sao zoeiras leves baseadas na atividade real do recorte.</li></ul></div>
+            
+        </article>
+        <article class="command-card" data-command-card data-category="administration" data-role="group_admin" data-search="/tagadmins marcar somente os administradores do grupo com mencoes invisiveis. administracao administrador do grupo somente grupos /tagadmins &lt;mensagem&gt; /tagadmins preciso de apoio aqui /tagadmins respondendo uma mensagem /tagadmins respondendo uma midia funciona com texto direto ou respondendo a uma mensagem ou midia. marca apenas admins e super admins atuais do grupo. mostra um resumo da acao administrativa executada.">
+            <div class="command-card__top">
+                <h5><code>/tagadmins</code></h5>
+                <button class="copy-button" type="button" data-copy="/tagadmins &lt;mensagem&gt;">Copiar uso</button>
+            </div>
+            <p>Marcar somente os administradores do grupo com mencoes invisiveis.</p>
+            <dl>
+                <div><dt>Aliases</dt><dd>nenhum</dd></div>
+                <div><dt>Acesso</dt><dd>Administrador do Grupo</dd></div>
+                <div><dt>Contexto</dt><dd>somente grupos</dd></div>
+                <div><dt>Uso</dt><dd><code>/tagadmins &lt;mensagem&gt;</code></dd></div>
+            </dl>
+            <div class="examples">
+                <strong>Exemplos de uso</strong>
+                <ul><li><code>/tagadmins Preciso de apoio aqui</code></li><li><code>/tagadmins respondendo uma mensagem</code></li><li><code>/tagadmins respondendo uma midia</code></li></ul>
+            </div>
+            <div class="output-example">
+                <strong>Exemplo de output</strong>
+                <p>Mostra um resumo da acao administrativa executada.</p>
+            </div>
+            <div class="tips"><strong>Dicas</strong><ul><li>Funciona com texto direto ou respondendo a uma mensagem ou midia.</li><li>Marca apenas admins e super admins atuais do grupo.</li></ul></div>
+            
+        </article>
+        <article class="command-card" data-command-card data-category="administration" data-role="group_admin" data-search="/totag /cita /citar /mencionar marcar todos os membros do grupo com mencoes invisiveis. administracao administrador do grupo somente grupos /totag &lt;mensagem&gt; | /cita &lt;mensagem&gt; /totag reuniao em 5 minutos /citar respondendo uma mensagem /mencionar respondendo uma midia funciona com texto direto ou respondendo a uma mensagem ou midia. usa mencoes invisiveis: notifica sem listar os membros no texto. mostra um resumo da acao administrativa executada.">
+            <div class="command-card__top">
+                <h5><code>/totag</code></h5>
+                <button class="copy-button" type="button" data-copy="/totag &lt;mensagem&gt; | /cita &lt;mensagem&gt;">Copiar uso</button>
+            </div>
+            <p>Marcar todos os membros do grupo com mencoes invisiveis.</p>
+            <dl>
+                <div><dt>Aliases</dt><dd><code>/cita</code> <code>/citar</code> <code>/mencionar</code></dd></div>
+                <div><dt>Acesso</dt><dd>Administrador do Grupo</dd></div>
+                <div><dt>Contexto</dt><dd>somente grupos</dd></div>
+                <div><dt>Uso</dt><dd><code>/totag &lt;mensagem&gt; | /cita &lt;mensagem&gt;</code></dd></div>
+            </dl>
+            <div class="examples">
+                <strong>Exemplos de uso</strong>
+                <ul><li><code>/totag Reuniao em 5 minutos</code></li><li><code>/citar respondendo uma mensagem</code></li><li><code>/mencionar respondendo uma midia</code></li></ul>
+            </div>
+            <div class="output-example">
+                <strong>Exemplo de output</strong>
+                <p>Mostra um resumo da acao administrativa executada.</p>
+            </div>
+            <div class="tips"><strong>Dicas</strong><ul><li>Funciona com texto direto ou respondendo a uma mensagem ou midia.</li><li>Usa mencoes invisiveis: notifica sem listar os membros no texto.</li></ul></div>
             
         </article>
         <article class="command-card" data-command-card data-category="administration" data-role="group_admin" data-search="/unmod /removemod /tirarmoderador remover privilegios de moderador do bot administracao administrador do grupo somente grupos /unmod @usuario | /tirarmoderador @usuario /unmod @usuario /tirarmoderador @usuario use quando quiser reduzir o acesso de moderacao sem mexer no admin do whatsapp. mostra um resumo da acao administrativa executada.">

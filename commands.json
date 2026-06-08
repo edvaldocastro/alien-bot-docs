@@ -1277,6 +1277,31 @@
               "categoryTitle": "Moderacao"
             },
             {
+              "name": "/agendamentos",
+              "rawName": "agendamentos",
+              "aliases": [
+                "/agendamento",
+                "/agenda"
+              ],
+              "examples": [
+                "/agendamentos",
+                "/agenda"
+              ],
+              "tips": [
+                "Apenas exibe os agendamentos atuais; use abrirgrupo e fechargrupo para alterar."
+              ],
+              "usage": "/agendamentos | /agenda",
+              "description": "Mostrar os agendamentos de abertura e fechamento do grupo.",
+              "outputExample": "Mostra os horarios agendados para abrir e fechar o grupo.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "moderation",
+              "categoryTitle": "Moderacao"
+            },
+            {
               "name": "/ban",
               "rawName": "ban",
               "aliases": [
@@ -1771,6 +1796,34 @@
               "categoryTitle": "Administracao"
             },
             {
+              "name": "/aviso",
+              "rawName": "aviso",
+              "aliases": [
+                "/avisar",
+                "/comunicado",
+                "/comunicar"
+              ],
+              "examples": [
+                "/aviso Leiam as regras fixadas.",
+                "/avisar respondendo uma mensagem",
+                "/comunicado respondendo uma midia"
+              ],
+              "tips": [
+                "Funciona com texto direto ou respondendo a uma mensagem ou midia.",
+                "Marca todos silenciosamente sem listar os membros no texto."
+              ],
+              "usage": "/aviso <mensagem> | /comunicado <mensagem>",
+              "description": "Enviar um aviso no grupo marcando todos silenciosamente.",
+              "outputExample": "Mostra um resumo da acao administrativa executada.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "administration",
+              "categoryTitle": "Administracao"
+            },
+            {
               "name": "/demote",
               "rawName": "demote",
               "aliases": [
@@ -1850,6 +1903,27 @@
               "categoryTitle": "Administracao"
             },
             {
+              "name": "/listamembros",
+              "rawName": "listamembros",
+              "aliases": [],
+              "examples": [
+                "/listamembros"
+              ],
+              "tips": [
+                "Lista membros sem marcar ou notificar participantes."
+              ],
+              "usage": "/listamembros",
+              "description": "Listar os membros atuais do grupo.",
+              "outputExample": "Mostra um resumo da acao administrativa executada.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "administration",
+              "categoryTitle": "Administracao"
+            },
+            {
               "name": "/listargringo",
               "rawName": "listargringo",
               "aliases": [
@@ -1881,20 +1955,18 @@
               "name": "/marcar",
               "rawName": "marcar",
               "aliases": [
-                "/cita",
                 "/tagall"
               ],
               "examples": [
                 "/marcar Bora alinhar isso agora",
-                "/cita Reuniao em 5 minutos",
                 "/tagall respondendo a uma midia"
               ],
               "tips": [
-                "Funciona com texto direto ou respondendo a uma midia do grupo.",
-                "A marcacao usa mentions do WhatsApp sem despejar numeros no texto."
+                "Funciona com texto direto ou respondendo a uma mensagem ou midia do grupo.",
+                "Exibe as marcacoes no texto para todos verem quem foi chamado."
               ],
-              "usage": "/marcar <mensagem> | /cita <mensagem> | /tagall respondendo uma midia",
-              "description": "Marcar todos os membros do grupo",
+              "usage": "/marcar <mensagem> | /tagall respondendo uma midia",
+              "description": "Marcar todos os membros do grupo exibindo as marcacoes",
               "outputExample": "Mostra um resumo da acao administrativa executada.",
               "requiredRole": "group_admin",
               "requiredRoleLabel": "Administrador do Grupo",
@@ -2099,6 +2171,58 @@
               ],
               "usage": "/sumidos [limite]",
               "description": "Detectar quem quase nao falou nas ultimas mensagens",
+              "outputExample": "Mostra um resumo da acao administrativa executada.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "administration",
+              "categoryTitle": "Administracao"
+            },
+            {
+              "name": "/tagadmins",
+              "rawName": "tagadmins",
+              "aliases": [],
+              "examples": [
+                "/tagadmins Preciso de apoio aqui",
+                "/tagadmins respondendo uma mensagem",
+                "/tagadmins respondendo uma midia"
+              ],
+              "tips": [
+                "Funciona com texto direto ou respondendo a uma mensagem ou midia.",
+                "Marca apenas admins e super admins atuais do grupo."
+              ],
+              "usage": "/tagadmins <mensagem>",
+              "description": "Marcar somente os administradores do grupo com mencoes invisiveis.",
+              "outputExample": "Mostra um resumo da acao administrativa executada.",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "administration",
+              "categoryTitle": "Administracao"
+            },
+            {
+              "name": "/totag",
+              "rawName": "totag",
+              "aliases": [
+                "/cita",
+                "/citar",
+                "/mencionar"
+              ],
+              "examples": [
+                "/totag Reuniao em 5 minutos",
+                "/citar respondendo uma mensagem",
+                "/mencionar respondendo uma midia"
+              ],
+              "tips": [
+                "Funciona com texto direto ou respondendo a uma mensagem ou midia.",
+                "Usa mencoes invisiveis: notifica sem listar os membros no texto."
+              ],
+              "usage": "/totag <mensagem> | /cita <mensagem>",
+              "description": "Marcar todos os membros do grupo com mencoes invisiveis.",
               "outputExample": "Mostra um resumo da acao administrativa executada.",
               "requiredRole": "group_admin",
               "requiredRoleLabel": "Administrador do Grupo",
@@ -3438,12 +3562,12 @@
     {
       "key": "moderation",
       "title": "Moderacao",
-      "count": 16
+      "count": 17
     },
     {
       "key": "administration",
       "title": "Administracao",
-      "count": 18
+      "count": 22
     },
     {
       "key": "configuration",
@@ -3460,7 +3584,7 @@
     {
       "key": "group_admin",
       "title": "Administrador do Grupo",
-      "count": 70
+      "count": 75
     },
     {
       "key": "owner",
@@ -3468,7 +3592,7 @@
       "count": 14
     }
   ],
-  "commandCount": 131,
+  "commandCount": 136,
   "themes": [
     {
       "key": "bender",
