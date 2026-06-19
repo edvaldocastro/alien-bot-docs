@@ -2450,6 +2450,36 @@
               "categoryTitle": "Configuracao"
             },
             {
+              "name": "{prefixo}antiaudio",
+              "rawName": "antiaudio",
+              "aliases": [
+                "{prefixo}antivoz",
+                "{prefixo}antiaudios",
+                "{prefixo}antiptt"
+              ],
+              "examples": [
+                "{prefixo}antiaudio on",
+                "{prefixo}antivoz off"
+              ],
+              "tips": [
+                "Use sem valor para ver o estado atual.",
+                "Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao.",
+                "Apaga apenas audios e mensagens de voz; outros tipos continuam liberados.",
+                "Avisa na primeira tentativa, tolera mais tres e bane na tentativa seguinte."
+              ],
+              "usage": "{prefixo}antiaudio <on|off>",
+              "description": "Bloquear audios e mensagens de voz enviados por membros comuns.",
+              "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
+              "outputPreview": "🛡️ **Antiaudio**\nValor atualizado: Ativado",
+              "requiredRole": "group_admin",
+              "requiredRoleLabel": "Administrador do Grupo",
+              "requiredChatType": "group",
+              "requiredChatTypeLabel": "somente grupos",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
               "name": "{prefixo}anticontato",
               "rawName": "anticontato",
               "aliases": [
@@ -2461,7 +2491,9 @@
               ],
               "tips": [
                 "Use sem valor para ver o estado atual.",
-                "Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao."
+                "Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao.",
+                "Apaga apenas contatos; outros tipos continuam liberados.",
+                "Avisa na primeira tentativa, tolera mais tres e bane na tentativa seguinte."
               ],
               "usage": "{prefixo}anticontato <on|off>",
               "description": "Bloquear envio de contatos por membros comuns.",
@@ -2626,7 +2658,9 @@
               ],
               "tips": [
                 "Use sem valor para ver o estado atual.",
-                "Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao."
+                "Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao.",
+                "Apaga apenas imagens; outros tipos continuam liberados.",
+                "Avisa na primeira tentativa, tolera mais tres e bane na tentativa seguinte."
               ],
               "usage": "{prefixo}antiimagem <on|off>",
               "description": "Bloquear envio de imagens por membros comuns.",
@@ -2708,7 +2742,9 @@
               ],
               "tips": [
                 "Use sem valor para ver o estado atual.",
-                "Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao."
+                "Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao.",
+                "Apaga apenas figurinhas; outros tipos continuam liberados.",
+                "Avisa na primeira tentativa, tolera mais tres e bane na tentativa seguinte."
               ],
               "usage": "{prefixo}antisticker <on|off>",
               "description": "Bloquear envio de figurinhas por membros comuns.",
@@ -2734,7 +2770,9 @@
               ],
               "tips": [
                 "Use sem valor para ver o estado atual.",
-                "Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao."
+                "Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao.",
+                "Apaga apenas videos; outros tipos continuam liberados.",
+                "Avisa na primeira tentativa, tolera mais tres e bane na tentativa seguinte."
               ],
               "usage": "{prefixo}antivideo <on|off>",
               "description": "Bloquear envio de videos por membros comuns.",
@@ -3900,7 +3938,7 @@
     {
       "key": "configuration",
       "title": "Configuracao",
-      "count": 51
+      "count": 52
     }
   ],
   "roles": [
@@ -3912,7 +3950,7 @@
     {
       "key": "group_admin",
       "title": "Administrador do Grupo",
-      "count": 75
+      "count": 76
     },
     {
       "key": "owner",
@@ -3920,7 +3958,7 @@
       "count": 18
     }
   ],
-  "commandCount": 141,
+  "commandCount": 142,
   "themes": [
     {
       "key": "bender",

@@ -13,7 +13,7 @@
             <p class="eyebrow">Documentacao publica</p>
             <h1>Comandos do Bot</h1>
             <p class="hero__lead">Esta documentacao foi preparada para administradores que querem configurar e usar o bot em seus grupos de WhatsApp. Cada comando abaixo usa o formato {prefixo}comando, porque o prefixo pode mudar de grupo para grupo.</p>
-            <p class="hero__lead">Total documentado: 141 comandos publicos. Use a busca para encontrar configuracoes, moderacao, midia e brincadeiras.</p>
+            <p class="hero__lead">Total documentado: 142 comandos publicos. Use a busca para encontrar configuracoes, moderacao, midia e brincadeiras.</p>
             <div class="search-shell">
                 <label for="command-search">Buscar comandos, aliases, categorias e outputs</label>
                 <input id="command-search" type="search" placeholder="Ex.: {prefixo}casal, lista negra, figurinha, tema" autocomplete="off">
@@ -26,13 +26,13 @@
             <nav aria-label="Navegacao da documentacao">
                 <a href="#comandos">Comandos</a>
                 <a href="#temas">Temas do Bot</a>
-                <a href="#categoria-utilities">Utilitarios <span>12</span></a><a href="#categoria-media">Midia <span>4</span></a><a href="#categoria-entertainment">Entretenimento <span>35</span></a><a href="#categoria-moderation">Moderacao <span>17</span></a><a href="#categoria-administration">Administracao <span>22</span></a><a href="#categoria-configuration">Configuracao <span>51</span></a>
+                <a href="#categoria-utilities">Utilitarios <span>12</span></a><a href="#categoria-media">Midia <span>4</span></a><a href="#categoria-entertainment">Entretenimento <span>35</span></a><a href="#categoria-moderation">Moderacao <span>17</span></a><a href="#categoria-administration">Administracao <span>22</span></a><a href="#categoria-configuration">Configuracao <span>52</span></a>
             </nav>
         </aside>
 
         <section class="content">
             <section class="stats-grid" aria-label="Resumo">
-                <article><strong>141</strong><span>comandos publicos</span></article>
+                <article><strong>142</strong><span>comandos publicos</span></article>
                 <article><strong>6</strong><span>categorias visiveis</span></article>
                 <article><strong>3</strong><span>temas documentados</span></article>
             </section>
@@ -83,7 +83,7 @@
                 <div class="section-heading">
                     <p class="eyebrow">Referencia</p>
                     <h2>Comandos publicos</h2>
-                    <p><span id="result-count">141</span> comandos encontrados.</p>
+                    <p><span id="result-count">142</span> comandos encontrados.</p>
                 </div>
                 
         <section class="role-section" data-role-section="member">
@@ -3368,7 +3368,41 @@ Valor atualizado: Remover</pre>
             <div class="tips"><strong>Dicas</strong><ul><li>Use sem valor para ver o valor atual.</li><li>Aceita entradas em portugues e ingles.</li></ul></div>
             
         </article>
-        <article class="command-card" data-command-card data-category="configuration" data-role="group_admin" data-search="{prefixo}anticontato {prefixo}anticontact bloquear envio de contatos por membros comuns. configuracao administrador do grupo somente grupos {prefixo}anticontato &lt;on|off&gt; {prefixo}anticontato on {prefixo}anticontato off use sem valor para ver o estado atual. tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao. confirma a configuracao aplicada ou mostra o valor atual. 🛡️ **anticontato** valor atualizado: ativado">
+        <article class="command-card" data-command-card data-category="configuration" data-role="group_admin" data-search="{prefixo}antiaudio {prefixo}antivoz {prefixo}antiaudios {prefixo}antiptt bloquear audios e mensagens de voz enviados por membros comuns. configuracao administrador do grupo somente grupos {prefixo}antiaudio &lt;on|off&gt; {prefixo}antiaudio on {prefixo}antivoz off use sem valor para ver o estado atual. tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao. apaga apenas audios e mensagens de voz; outros tipos continuam liberados. avisa na primeira tentativa, tolera mais tres e bane na tentativa seguinte. confirma a configuracao aplicada ou mostra o valor atual. 🛡️ **antiaudio** valor atualizado: ativado">
+            <div class="command-card__top">
+                <h5><code>{prefixo}antiaudio</code></h5>
+                <button class="copy-button" type="button" data-copy="{prefixo}antiaudio &lt;on|off&gt;">Copiar uso</button>
+            </div>
+            <p>Bloquear audios e mensagens de voz enviados por membros comuns.</p>
+            <dl>
+                <div><dt>Aliases</dt><dd><code>{prefixo}antivoz</code> <code>{prefixo}antiaudios</code> <code>{prefixo}antiptt</code></dd></div>
+                <div><dt>Acesso</dt><dd>Administrador do Grupo</dd></div>
+                <div><dt>Contexto</dt><dd>somente grupos</dd></div>
+                <div><dt>Uso</dt><dd><code>{prefixo}antiaudio &lt;on|off&gt;</code></dd></div>
+            </dl>
+            <div class="examples">
+                <strong>Exemplos de uso</strong>
+                <ul><li><code>{prefixo}antiaudio on</code></li><li><code>{prefixo}antivoz off</code></li></ul>
+            </div>
+            <div class="output-example">
+                <strong>Exemplo de output</strong>
+                <p>Confirma a configuracao aplicada ou mostra o valor atual.</p>
+            </div>
+            <div class="whatsapp-preview" aria-label="Previa estilo WhatsApp">
+                <div class="chat-bubble chat-bubble--user">
+                    <span class="chat-name">Voce</span>
+                    <pre>{prefixo}antiaudio on</pre>
+                </div>
+                <div class="chat-bubble chat-bubble--bot">
+                    <span class="chat-name">ALIEN</span>
+                    <pre>🛡️ **Antiaudio**
+Valor atualizado: Ativado</pre>
+                </div>
+            </div>
+            <div class="tips"><strong>Dicas</strong><ul><li>Use sem valor para ver o estado atual.</li><li>Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao.</li><li>Apaga apenas audios e mensagens de voz; outros tipos continuam liberados.</li><li>Avisa na primeira tentativa, tolera mais tres e bane na tentativa seguinte.</li></ul></div>
+            
+        </article>
+        <article class="command-card" data-command-card data-category="configuration" data-role="group_admin" data-search="{prefixo}anticontato {prefixo}anticontact bloquear envio de contatos por membros comuns. configuracao administrador do grupo somente grupos {prefixo}anticontato &lt;on|off&gt; {prefixo}anticontato on {prefixo}anticontato off use sem valor para ver o estado atual. tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao. apaga apenas contatos; outros tipos continuam liberados. avisa na primeira tentativa, tolera mais tres e bane na tentativa seguinte. confirma a configuracao aplicada ou mostra o valor atual. 🛡️ **anticontato** valor atualizado: ativado">
             <div class="command-card__top">
                 <h5><code>{prefixo}anticontato</code></h5>
                 <button class="copy-button" type="button" data-copy="{prefixo}anticontato &lt;on|off&gt;">Copiar uso</button>
@@ -3399,7 +3433,7 @@ Valor atualizado: Remover</pre>
 Valor atualizado: Ativado</pre>
                 </div>
             </div>
-            <div class="tips"><strong>Dicas</strong><ul><li>Use sem valor para ver o estado atual.</li><li>Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao.</li></ul></div>
+            <div class="tips"><strong>Dicas</strong><ul><li>Use sem valor para ver o estado atual.</li><li>Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao.</li><li>Apaga apenas contatos; outros tipos continuam liberados.</li><li>Avisa na primeira tentativa, tolera mais tres e bane na tentativa seguinte.</li></ul></div>
             
         </article>
         <article class="command-card" data-command-card data-category="configuration" data-role="group_admin" data-search="{prefixo}antifake {prefixo}antinumerofake {prefixo}antifakes {prefixo}anti-fake bloquear numeros fora dos ddis permitidos por membros comuns. configuracao administrador do grupo somente grupos {prefixo}antifake &lt;on|off&gt; {prefixo}antifake on {prefixo}antifake off use sem valor para ver o estado atual. tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao. confirma a configuracao aplicada ou mostra o valor atual. 🛡️ **antifake** valor atualizado: ativado">
@@ -3572,7 +3606,7 @@ Valor atualizado: Ativado</pre>
             <div class="tips"><strong>Dicas</strong><ul><li>Use sem valor para ver o estado atual.</li><li>Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao.</li></ul></div>
             
         </article>
-        <article class="command-card" data-command-card data-category="configuration" data-role="group_admin" data-search="{prefixo}antiimagem {prefixo}antiimage bloquear envio de imagens por membros comuns. configuracao administrador do grupo somente grupos {prefixo}antiimagem &lt;on|off&gt; {prefixo}antiimagem on {prefixo}antiimagem off use sem valor para ver o estado atual. tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao. confirma a configuracao aplicada ou mostra o valor atual. 🛡️ **antiimagem** valor atualizado: ativado">
+        <article class="command-card" data-command-card data-category="configuration" data-role="group_admin" data-search="{prefixo}antiimagem {prefixo}antiimage bloquear envio de imagens por membros comuns. configuracao administrador do grupo somente grupos {prefixo}antiimagem &lt;on|off&gt; {prefixo}antiimagem on {prefixo}antiimagem off use sem valor para ver o estado atual. tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao. apaga apenas imagens; outros tipos continuam liberados. avisa na primeira tentativa, tolera mais tres e bane na tentativa seguinte. confirma a configuracao aplicada ou mostra o valor atual. 🛡️ **antiimagem** valor atualizado: ativado">
             <div class="command-card__top">
                 <h5><code>{prefixo}antiimagem</code></h5>
                 <button class="copy-button" type="button" data-copy="{prefixo}antiimagem &lt;on|off&gt;">Copiar uso</button>
@@ -3603,7 +3637,7 @@ Valor atualizado: Ativado</pre>
 Valor atualizado: Ativado</pre>
                 </div>
             </div>
-            <div class="tips"><strong>Dicas</strong><ul><li>Use sem valor para ver o estado atual.</li><li>Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao.</li></ul></div>
+            <div class="tips"><strong>Dicas</strong><ul><li>Use sem valor para ver o estado atual.</li><li>Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao.</li><li>Apaga apenas imagens; outros tipos continuam liberados.</li><li>Avisa na primeira tentativa, tolera mais tres e bane na tentativa seguinte.</li></ul></div>
             
         </article>
         <article class="command-card" data-command-card data-category="configuration" data-role="group_admin" data-search="{prefixo}antilink {prefixo}anti-link {prefixo}antilinks {prefixo}linkguard bloquear links enviados no grupo. configuracao administrador do grupo somente grupos {prefixo}antilink &lt;on|off&gt; {prefixo}antilink on {prefixo}antilink off use sem valor para ver o estado atual. tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao. confirma a configuracao aplicada ou mostra o valor atual. 🛡️ **antilink** valor atualizado: ativado">
@@ -3674,7 +3708,7 @@ Valor atualizado: Ativado</pre>
             <div class="tips"><strong>Dicas</strong><ul><li>Use sem valor para ver o estado atual.</li><li>Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao.</li></ul></div>
             
         </article>
-        <article class="command-card" data-command-card data-category="configuration" data-role="group_admin" data-search="{prefixo}antisticker {prefixo}antifigurinha bloquear envio de figurinhas por membros comuns. configuracao administrador do grupo somente grupos {prefixo}antisticker &lt;on|off&gt; {prefixo}antisticker on {prefixo}antisticker off use sem valor para ver o estado atual. tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao. confirma a configuracao aplicada ou mostra o valor atual. 🛡️ **antisticker** valor atualizado: ativado">
+        <article class="command-card" data-command-card data-category="configuration" data-role="group_admin" data-search="{prefixo}antisticker {prefixo}antifigurinha bloquear envio de figurinhas por membros comuns. configuracao administrador do grupo somente grupos {prefixo}antisticker &lt;on|off&gt; {prefixo}antisticker on {prefixo}antisticker off use sem valor para ver o estado atual. tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao. apaga apenas figurinhas; outros tipos continuam liberados. avisa na primeira tentativa, tolera mais tres e bane na tentativa seguinte. confirma a configuracao aplicada ou mostra o valor atual. 🛡️ **antisticker** valor atualizado: ativado">
             <div class="command-card__top">
                 <h5><code>{prefixo}antisticker</code></h5>
                 <button class="copy-button" type="button" data-copy="{prefixo}antisticker &lt;on|off&gt;">Copiar uso</button>
@@ -3705,10 +3739,10 @@ Valor atualizado: Ativado</pre>
 Valor atualizado: Ativado</pre>
                 </div>
             </div>
-            <div class="tips"><strong>Dicas</strong><ul><li>Use sem valor para ver o estado atual.</li><li>Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao.</li></ul></div>
+            <div class="tips"><strong>Dicas</strong><ul><li>Use sem valor para ver o estado atual.</li><li>Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao.</li><li>Apaga apenas figurinhas; outros tipos continuam liberados.</li><li>Avisa na primeira tentativa, tolera mais tres e bane na tentativa seguinte.</li></ul></div>
             
         </article>
-        <article class="command-card" data-command-card data-category="configuration" data-role="group_admin" data-search="{prefixo}antivideo {prefixo}anti-video bloquear envio de videos por membros comuns. configuracao administrador do grupo somente grupos {prefixo}antivideo &lt;on|off&gt; {prefixo}antivideo on {prefixo}antivideo off use sem valor para ver o estado atual. tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao. confirma a configuracao aplicada ou mostra o valor atual. 🛡️ **antivideo** valor atualizado: ativado">
+        <article class="command-card" data-command-card data-category="configuration" data-role="group_admin" data-search="{prefixo}antivideo {prefixo}anti-video bloquear envio de videos por membros comuns. configuracao administrador do grupo somente grupos {prefixo}antivideo &lt;on|off&gt; {prefixo}antivideo on {prefixo}antivideo off use sem valor para ver o estado atual. tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao. apaga apenas videos; outros tipos continuam liberados. avisa na primeira tentativa, tolera mais tres e bane na tentativa seguinte. confirma a configuracao aplicada ou mostra o valor atual. 🛡️ **antivideo** valor atualizado: ativado">
             <div class="command-card__top">
                 <h5><code>{prefixo}antivideo</code></h5>
                 <button class="copy-button" type="button" data-copy="{prefixo}antivideo &lt;on|off&gt;">Copiar uso</button>
@@ -3739,7 +3773,7 @@ Valor atualizado: Ativado</pre>
 Valor atualizado: Ativado</pre>
                 </div>
             </div>
-            <div class="tips"><strong>Dicas</strong><ul><li>Use sem valor para ver o estado atual.</li><li>Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao.</li></ul></div>
+            <div class="tips"><strong>Dicas</strong><ul><li>Use sem valor para ver o estado atual.</li><li>Tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao.</li><li>Apaga apenas videos; outros tipos continuam liberados.</li><li>Avisa na primeira tentativa, tolera mais tres e bane na tentativa seguinte.</li></ul></div>
             
         </article>
         <article class="command-card" data-command-card data-category="configuration" data-role="group_admin" data-search="{prefixo}avisaradmins {prefixo}notifyadmins {prefixo}notificaradmins {prefixo}alertaradmins definir se os admins serao avisados nas acoes automaticas. configuracao administrador do grupo somente grupos {prefixo}avisaradmins &lt;on|off&gt; {prefixo}avisaradmins on {prefixo}notifyadmins off use sem valor para ver o estado atual. tambem aceita 1/0, on/off, true/false, ligar/desligar e sim/nao. confirma a configuracao aplicada ou mostra o valor atual. ⚙️ **avisaradmins** configuracao atualizada com sucesso.">
