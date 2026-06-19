@@ -5,6 +5,7 @@
   "readingTips": [
     "Substitua `{prefixo}` pelo prefixo configurado no seu grupo. Exemplo: se o prefixo for `.`, use `.menuadm`.",
     "O bot respeita o prefixo configurado no grupo em runtime; o padrao inicial costuma ser `/` ate voce alterar.",
+    "Administradores e donos podem acrescentar `pv` ao final de qualquer comando em grupo para receber a resposta no privado, por exemplo `{prefixo}status pv`.",
     "Os comandos estao organizados por hierarquia de acesso e, dentro dela, por categoria.",
     "A documentacao publica mostra apenas comandos e imagens liberados para consulta geral."
   ],
@@ -86,13 +87,14 @@
               ],
               "examples": [
                 "{prefixo}help",
-                "{prefixo}ajuda banir",
+                "{prefixo}help pv",
+                "{prefixo}ajuda banir pv",
                 "{prefixo}help antilink"
               ],
               "tips": [
                 "Voce pode pedir ajuda usando o nome principal ou qualquer atalho do comando."
               ],
-              "usage": "{prefixo}help [comando] | {prefixo}ajuda [comando]",
+              "usage": "{prefixo}help [comando] [pv] | {prefixo}ajuda [comando] [pv]",
               "description": "Mostrar os comandos disponiveis do bot",
               "outputExample": "Exibe uma lista organizada de comandos disponiveis ou a ajuda detalhada de um comando especifico.",
               "outputPreview": "📚 **Ajuda do Bot**\nUse {prefixo}menu para ver os comandos principais.\nUse {prefixo}ajuda ban para detalhes de um comando.",
@@ -167,12 +169,13 @@
               ],
               "examples": [
                 "{prefixo}menu",
+                "{prefixo}menu pv",
                 "{prefixo}cardapio"
               ],
               "tips": [
                 "Os menus usam PT-BR na exibicao e mantem aliases em ingles para consulta rapida."
               ],
-              "usage": "{prefixo}menu | {prefixo}cardapio",
+              "usage": "{prefixo}menu [pv] | {prefixo}cardapio [pv]",
               "description": "Mostrar o menu para usuarios comuns",
               "outputExample": "Envia o menu principal do bot com uma imagem do tema atual e os atalhos principais.",
               "outputPreview": "🌟 **Menu de Usuario**\nCentral de Comandos\n\n{prefixo}menu - Abrir o menu principal.\n{prefixo}regras - Ler as regras do grupo.\n{prefixo}hora - Mostrar o horario atual do bot.",
@@ -192,12 +195,13 @@
               ],
               "examples": [
                 "{prefixo}menumembro",
+                "{prefixo}menumembro pv",
                 "{prefixo}membermenu"
               ],
               "tips": [
                 "Os menus usam PT-BR na exibicao e mantem aliases em ingles para consulta rapida."
               ],
-              "usage": "{prefixo}menumembro | {prefixo}membermenu",
+              "usage": "{prefixo}menumembro [pv] | {prefixo}membermenu [pv]",
               "description": "Mostrar o menu para membros comuns",
               "outputExample": "Mostra o menu para membros comuns, com comandos de utilidade, midia e brincadeiras.",
               "outputPreview": "🌟 **Menu de Usuario**\nComandos essenciais do dia a dia.\n\n{prefixo}regras\n{prefixo}ping\n{prefixo}play\n{prefixo}menubrincadeira",
@@ -330,12 +334,13 @@
               ],
               "examples": [
                 "{prefixo}menumidia",
+                "{prefixo}menumidia pv",
                 "{prefixo}midia"
               ],
               "tips": [
                 "Use esses comandos respondendo a uma midia ou na legenda da midia."
               ],
-              "usage": "{prefixo}menumidia | {prefixo}midia",
+              "usage": "{prefixo}menumidia [pv] | {prefixo}midia [pv]",
               "description": "Mostrar apenas os comandos de midia",
               "outputExample": "Exibe comandos de midia como figurinha, conversao de sticker e GIF.",
               "outputPreview": "🎬 **Menu de Midia**\n{prefixo}sticker - Criar figurinha.\n{prefixo}toimg - Converter sticker em imagem.\n{prefixo}gif - Converter midia animada.",
@@ -628,12 +633,13 @@
               ],
               "examples": [
                 "{prefixo}menubrincadeira",
+                "{prefixo}menubrincadeira pv",
                 "{prefixo}brincadeiras"
               ],
               "tips": [
                 "Admins ativam ou desativam esses comandos com modobrincadeira."
               ],
-              "usage": "{prefixo}menubrincadeira | {prefixo}brincadeiras",
+              "usage": "{prefixo}menubrincadeira [pv] | {prefixo}brincadeiras [pv]",
               "description": "Mostrar apenas os comandos de entretenimento",
               "outputExample": "Mostra comandos de jogos e brincadeiras disponiveis para o grupo.",
               "outputPreview": "🎮 **Menu Brincadeira**\n{prefixo}piada\n{prefixo}frase\n{prefixo}chance\n{prefixo}rank",
@@ -990,12 +996,13 @@
               ],
               "examples": [
                 "{prefixo}rank",
+                "{prefixo}rank pv",
                 "{prefixo}rankhelp"
               ],
               "tips": [
                 "Os ranks funcionam apenas em grupos com o modo brincadeira ativado."
               ],
-              "usage": "{prefixo}rank | {prefixo}rankhelp",
+              "usage": "{prefixo}rank [pv] | {prefixo}rankhelp [pv]",
               "description": "Listar os ranks aleatorios disponiveis",
               "outputExample": "Responde com um resultado divertido e variavel para o grupo.",
               "outputPreview": "🏆 **Ranks disponiveis**\n{prefixo}rankcorno\n{prefixo}rankrico\n{prefixo}rankfofoqueiro",
@@ -1329,12 +1336,13 @@
               ],
               "examples": [
                 "{prefixo}menuadm",
+                "{prefixo}menuadm pv",
                 "{prefixo}adminmenu"
               ],
               "tips": [
                 "Os menus usam PT-BR na exibicao e mantem aliases em ingles para consulta rapida."
               ],
-              "usage": "{prefixo}menuadm | {prefixo}adminmenu",
+              "usage": "{prefixo}menuadm [pv] | {prefixo}adminmenu [pv]",
               "description": "Mostrar o menu de administracao do grupo",
               "outputExample": "Envia o menu administrativo com controles de moderacao, configuracao e gestao do grupo.",
               "outputPreview": "🛡️ **Menu de Administracao**\nProtecoes e Regras\n\n{prefixo}antilink\n{prefixo}antispam\n{prefixo}listanegra\n{prefixo}agendamentos",
@@ -1390,12 +1398,13 @@
               ],
               "examples": [
                 "{prefixo}agendamentos",
+                "{prefixo}agendamentos pv",
                 "{prefixo}agenda"
               ],
               "tips": [
                 "Apenas exibe os agendamentos atuais; use abrirgrupo e fechargrupo para alterar."
               ],
-              "usage": "{prefixo}agendamentos | {prefixo}agenda",
+              "usage": "{prefixo}agendamentos [pv] | {prefixo}agenda [pv]",
               "description": "Mostrar os agendamentos de abertura e fechamento do grupo.",
               "outputExample": "Mostra os horarios agendados para abrir e fechar o grupo.",
               "outputPreview": "📅 **Agendamentos do Grupo**\nAbertura: 05:00 (America/Sao_Paulo)\nFechamento: 01:00 (Europe/Dublin)\nFrequencia: todos os dias",
@@ -1582,6 +1591,7 @@
               ],
               "examples": [
                 "{prefixo}listanegra",
+                "{prefixo}listanegra pv",
                 "{prefixo}listanegra 353871234567 Nao permitir entrada",
                 "{prefixo}listanegra @usuario Spam"
               ],
@@ -1589,7 +1599,7 @@
                 "Sem parametro lista os usuarios na lista negra do grupo.",
                 "Com parametro adiciona o usuario a lista negra."
               ],
-              "usage": "{prefixo}listanegra [@usuario|numero|nome] [motivo]",
+              "usage": "{prefixo}listanegra [pv] | {prefixo}listanegra [@usuario|numero|nome] [motivo]",
               "description": "Listar ou adicionar usuarios a lista negra do grupo.",
               "outputExample": "Confirma que o usuario foi adicionado a lista negra e que entradas futuras serao bloqueadas.",
               "outputPreview": "🧾 **Lista Negra**\nTotal: 1\n\n1. Nome: Golpista\nTelefone: +353871234567\nID(s): 353871234567@c.us",
@@ -1710,15 +1720,16 @@
               ],
               "examples": [
                 "{prefixo}unban @usuario",
-                "{prefixo}desbanir @usuario"
+                "{prefixo}desbanir 5511999999999",
+                "{prefixo}desbanir Nome Conhecido"
               ],
               "tips": [
                 "Esse comando remove o banimento do bot, mas nao adiciona a pessoa de volta no grupo automaticamente."
               ],
-              "usage": "{prefixo}unban @usuario | {prefixo}desbanir @usuario",
+              "usage": "{prefixo}unban @usuario|numero|nome | {prefixo}desbanir @usuario|numero|nome",
               "description": "Remover um membro da lista de banidos do bot",
               "outputExample": "Confirma a acao de moderacao e registra auditoria interna.",
-              "outputPreview": "✅ **Unban**\nUsuario removido da lista de banidos.",
+              "outputPreview": "💚 **Desbanir**\n+5511999999999 foi removido da lista de banidos.\nIDs liberados: 5511999999999@c.us, pessoa@lid\nA pessoa agora pode ser adicionada ou aprovada novamente.",
               "requiredRole": "group_admin",
               "requiredRoleLabel": "Administrador do Grupo",
               "requiredChatType": "group",
@@ -2022,7 +2033,7 @@
               "usage": "{prefixo}inativos <dias> <maximo>",
               "description": "Listar membros inativos ou abaixo de um limite",
               "outputExample": "Mostra um resumo da acao administrativa executada.",
-              "outputPreview": "📉 **Inativos**\n1. Carla - 0 mensagens\n2. Diego - 1 mensagem",
+              "outputPreview": "📉 **Inativos**\n1. Diego - 1 mensagem\n2. Carla - 5 mensagens",
               "requiredRole": "group_admin",
               "requiredRoleLabel": "Administrador do Grupo",
               "requiredChatType": "group",
@@ -2036,12 +2047,13 @@
               "rawName": "listamembros",
               "aliases": [],
               "examples": [
-                "{prefixo}listamembros"
+                "{prefixo}listamembros",
+                "{prefixo}listamembros pv"
               ],
               "tips": [
                 "Lista membros sem marcar ou notificar participantes."
               ],
-              "usage": "{prefixo}listamembros",
+              "usage": "{prefixo}listamembros [pv]",
               "description": "Listar os membros atuais do grupo.",
               "outputExample": "Mostra um resumo da acao administrativa executada.",
               "outputPreview": "👥 **Lista de membros**\nTotal: 3\n\n1. Ana - admin - 5511999999999@c.us\n2. Bruno - membro - 5511888888888@c.us",
@@ -2065,12 +2077,13 @@
               ],
               "examples": [
                 "{prefixo}listargringo",
+                "{prefixo}listargringo pv",
                 "{prefixo}gringos"
               ],
               "tips": [
                 "Esse comando apenas lista; remocoes automaticas acontecem quando alguem entra no grupo."
               ],
-              "usage": "{prefixo}listargringo | {prefixo}listargringos",
+              "usage": "{prefixo}listargringo [pv] | {prefixo}listargringos [pv]",
               "description": "Listar participantes com DDI fora da lista permitida.",
               "outputExample": "Mostra um resumo da acao administrativa executada.",
               "outputPreview": "🌍 **Estrangeiros no Grupo**\n1. Visitante\nPais: Irlanda (+353)\nID: 353871234567@c.us",
@@ -2359,13 +2372,15 @@
                 "{prefixo}mencionar respondendo uma midia"
               ],
               "tips": [
-                "Funciona com texto direto ou respondendo a uma mensagem ou midia.",
-                "Usa mencoes invisiveis: notifica sem listar os membros no texto."
+                "Reposta texto, enquete, figurinha, imagem, video, audio, documento e outros tipos respondidos.",
+                "Texto informado no comando substitui a legenda da midia respondida.",
+                "Usa mencoes invisiveis: notifica sem listar os membros no texto.",
+                "Depois do repost, tenta apagar a mensagem usada para chamar o comando."
               ],
-              "usage": "{prefixo}totag <mensagem> | {prefixo}cita <mensagem>",
-              "description": "Marcar todos os membros do grupo com mencoes invisiveis.",
+              "usage": "{prefixo}totag <mensagem> | {prefixo}totag respondendo texto, enquete, sticker ou midia",
+              "description": "Repostar mensagens e marcar todos os membros com mencoes invisiveis.",
               "outputExample": "Mostra um resumo da acao administrativa executada.",
-              "outputPreview": "Reuniao em 5 minutos.",
+              "outputPreview": "📣 **Totag**\nA mensagem respondida foi repostada pelo bot com mencoes invisiveis para todos os membros.",
               "requiredRole": "group_admin",
               "requiredRoleLabel": "Administrador do Grupo",
               "requiredChatType": "group",
@@ -3350,12 +3365,13 @@
               ],
               "examples": [
                 "{prefixo}menudono",
+                "{prefixo}menudono pv",
                 "{prefixo}ownermenu"
               ],
               "tips": [
                 "Os menus usam PT-BR na exibicao e mantem aliases em ingles para consulta rapida."
               ],
-              "usage": "{prefixo}menudono | {prefixo}ownermenu",
+              "usage": "{prefixo}menudono [pv] | {prefixo}ownermenu [pv]",
               "description": "Mostrar o menu de configuracao do bot",
               "outputExample": "Mostra comandos exclusivos do dono do bot, incluindo identidade, bloqueios globais e seguranca.",
               "outputPreview": "💎 **Menu do Dono**\nIdentidade do Bot\n\n{prefixo}nomedobot\n{prefixo}fotobot\n{prefixo}antipv",
@@ -3598,6 +3614,36 @@
               "categoryTitle": "Configuracao"
             },
             {
+              "name": "{prefixo}grupos",
+              "rawName": "grupos",
+              "aliases": [
+                "{prefixo}listagrupos",
+                "{prefixo}listargrupos",
+                "{prefixo}groups",
+                "{prefixo}botgroups"
+              ],
+              "examples": [
+                "{prefixo}grupos",
+                "{prefixo}grupos pv",
+                "{prefixo}listargrupos"
+              ],
+              "tips": [
+                "Use o parametro pv para receber a lista no privado.",
+                "A listagem mostra apenas grupos presentes na sessao atual do WhatsApp."
+              ],
+              "usage": "{prefixo}grupos [pv] | {prefixo}listagrupos [pv]",
+              "description": "Listar todos os grupos atuais onde o bot esta presente.",
+              "outputExample": "Lista os grupos atuais onde o bot esta presente.",
+              "outputPreview": "🌐 **Grupos do Bot**\nGrupos ativos na sessao: 2\n\n1o Grupo\nNome: Amigos\nParticipantes: 42\nAdmins: 3\nPrefixo: .\nID: 120363000000000000@g.us\n\n2o Grupo\nNome: Familia\nParticipantes: 18\nAdmins: 2\nPrefixo: /\nID: 120363111111111111@g.us",
+              "requiredRole": "owner",
+              "requiredRoleLabel": "Dono do Bot",
+              "requiredChatType": "any",
+              "requiredChatTypeLabel": "grupo ou privado",
+              "hidden": false,
+              "category": "configuration",
+              "categoryTitle": "Configuracao"
+            },
+            {
               "name": "{prefixo}listabloqueados",
               "rawName": "listabloqueados",
               "aliases": [
@@ -3608,12 +3654,13 @@
               ],
               "examples": [
                 "{prefixo}listabloqueados",
+                "{prefixo}listabloqueados pv",
                 "{prefixo}blockedusers"
               ],
               "tips": [
                 "A lista vale para todos os grupos e conversas do bot."
               ],
-              "usage": "{prefixo}listabloqueados | {prefixo}blocklist",
+              "usage": "{prefixo}listabloqueados [pv] | {prefixo}blocklist [pv]",
               "description": "Listar usuarios bloqueados no bot",
               "outputExample": "Confirma a configuracao aplicada ou mostra o valor atual.",
               "outputPreview": "🚫 **Usuarios bloqueados**\n1. 5511999999999@c.us - spam no bot",
@@ -3637,13 +3684,14 @@
               ],
               "examples": [
                 "{prefixo}listardonos",
+                "{prefixo}listardonos pv",
                 "{prefixo}donos",
                 "{prefixo}multidonos"
               ],
               "tips": [
                 "Donos listados aqui podem executar comandos exclusivos do dono do bot."
               ],
-              "usage": "{prefixo}listardonos | {prefixo}donos | {prefixo}multidonos",
+              "usage": "{prefixo}listardonos [pv] | {prefixo}donos [pv] | {prefixo}multidonos [pv]",
               "description": "Listar donos principais e adicionais do bot.",
               "outputExample": "Lista o dono principal e os donos adicionais do bot.",
               "outputPreview": "👑 **Donos do Bot**\n\nDono principal:\n1. Edvaldo\nID: 5511999999999@c.us\n\nDonos adicionais:\n1. Ana\nID: 5511888888888@c.us",
@@ -3852,7 +3900,7 @@
     {
       "key": "configuration",
       "title": "Configuracao",
-      "count": 50
+      "count": 51
     }
   ],
   "roles": [
@@ -3869,10 +3917,10 @@
     {
       "key": "owner",
       "title": "Dono do Bot",
-      "count": 17
+      "count": 18
     }
   ],
-  "commandCount": 140,
+  "commandCount": 141,
   "themes": [
     {
       "key": "bender",
